@@ -1,0 +1,102 @@
+---
+import "@fontsource-variable/dm-sans";
+import "@fontsource/cormorant-garamond/500.css";
+import "@fontsource/cormorant-garamond/500-italic.css";
+import "../styles/global.css";
+import { url } from "../data/apps";
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const is404 = Astro.url.pathname.replace(/\/$/, "").endsWith("/404");
+const canonical = new URL(
+  is404 ? url("404.html") : Astro.url.pathname,
+  Astro.site,
+);
+const nav = [
+  ["apps/", "Apps & Games"],
+  ["support/", "Support"],
+  ["#hire", "Hire the studio"],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title} · Velvet & Pixel</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {is404 && <meta name="robots" content="noindex" />}
+    <link rel="icon" type="image/svg+xml" href={url("favicon.svg")} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Velvet & Pixel" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta
+      property="og:image"
+      content={new URL(url("social.jpg"), Astro.site)}
+    />
+    <meta
+      property="og:image:alt"
+      content="Velvet & Pixel in hot-pink neon script"
+    />
+    <meta name="theme-color" content="#09090b" />
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <header class="header wrap">
+      <a class="wordmark" href={url()} aria-label="Velvet & Pixel home">
+        Velvet <span>&amp; Pixel</span>
+        <i aria-hidden="true">+</i>
+      </a>
+      <nav aria-label="Main navigation">
+        {nav.map(([path, label]) => (
+          <a
+            href={url(path)}
+            aria-current={
+              !path.includes("#") && Astro.url.pathname.startsWith(url(path))
+                ? "page"
+                : undefined
+            }
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="wrap footer">
+      <div>
+        <a class="wordmark" href={url()}>
+          Velvet <span>&amp; Pixel</span>
+        </a>
+        <p>Beautifully Strange Software</p>
+      </div>
+      <div class="footer-links">
+        <a href={url("apps/")}>Apps & Games</a>
+        <a href={url("support/")}>Support</a>
+        <a href={url("#hire")}>Hire the studio</a>
+        <a href={url("privacy/before-after-studio/")}>App privacy policy</a>
+        <a href="mailto:velvetandpixel@gmail.com">
+          Get in touch{" "}
+          <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M4 16 16 4M4 4h12v12"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+          </svg>
+        </a>
+      </div>
+      <small>© {new Date().getFullYear()} Velvet & Pixel</small>
+    </footer>
+  </body>
+</html>

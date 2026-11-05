@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AppCard from "../components/AppCard.astro";
+import HireStudio from "../components/HireStudio.astro";
+import { apps, categories, url } from "../data/apps";
+import { Image } from "astro:assets";
+import logo from "../assets/velvet-and-pixel.jpg";
+---
+
+<Layout
+  title="Beautifully Strange Software"
+  description="Velvet & Pixel is an independent Android app and game studio. Discover creative tools and games built with personality."
+>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span class="dot"></span> Independent Android studio
+      </p>
+      <h1>
+        Beautifully
+        <br />
+        <em>strange</em>
+        <br />
+        software<span class="pink">.</span>
+      </h1>
+      <p class="intro">
+        Independent apps, creative tools and games built with personality.
+      </p>
+      <a class="button" href={url("apps/")}>
+        Discover our work{" "}
+        <span aria-hidden="true">
+          <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M4 16 16 4M4 4h12v12"
+              stroke="currentColor"
+              stroke-width="1.5"
+            />
+          </svg>
+        </span>
+      </a>
+      <a class="hero-hire-link" href="#hire">
+        Have an app in mind? Hire the studio →
+      </a>
+    </div>
+    <div class="hero-brand">
+      <Image
+        src={logo}
+        alt="Velvet & Pixel"
+        widths={[480, 800, 1280]}
+        sizes="(max-width: 760px) 90vw, 52vw"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="brand-note">
+        <span>CREATIVE TOOLS. CURIOUS WORLDS.</span>
+        <span>V&P / STUDIO</span>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <span>A little darkness. A different spark.</span>
+      <a href="#work">Explore below ↓</a>
+    </div>
+  </section>
+  <HireStudio />
+  <section id="work" class="wrap section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Made with personality</p>
+        <h2>From the studio.</h2>
+      </div>
+      <a class="text-link" href={url("apps/")}>
+        All apps & games{" "}
+        <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M4 16 16 4M4 4h12v12"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+        </svg>
+      </a>
+    </div>
+    <nav class="category-nav" aria-label="Explore app categories">
+      {categories.map((category) => (
+        <a href={url(`apps/#${category.id}`)}>{category.name}</a>
+      ))}
+    </nav>
+    <div class="app-grid">
+      {apps.slice(0, 2).map((app, i) => (
+        <AppCard app={app} index={i + 1} />
+      ))}
+    </div>
+  </section>
+  <section class="wrap studio-note">
+    <p class="eyebrow">Small studio. Distinct point of view.</p>
+    <h2>
+      Useful by design.
+      <br />
+      <em>Unusual by nature.</em>
+    </h2>
+    <p>
+      Creative tools for the things you make. Games for the worlds you escape
+      into. Welcome to Velvet & Pixel.
+    </p>
+    <a class="text-link" href={url("support/")}>
+      Need a hand? Visit support{" "}
+      <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20" fill="none">
+        <path
+          d="M4 16 16 4M4 4h12v12"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+      </svg>
+    </a>
+  </section>
+</Layout>

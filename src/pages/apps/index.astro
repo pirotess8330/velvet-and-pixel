@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AppCard from "../../components/AppCard.astro";
+import { apps, categories } from "../../data/apps";
+---
+
+<Layout
+  title="Apps & Games"
+  description="Explore Android creative tools and games from Velvet & Pixel, including Before & After Studio, Cursed Gem Mosaics, Tattoo Stencil Generator and Photo Roulette Video Maker."
+>
+  <section class="wrap page-head">
+    <p class="eyebrow">The studio collection</p>
+    <h1>
+      Apps & <em>games.</em>
+    </h1>
+    <p class="intro">
+      Creative tools. Curious worlds. A character of their own.
+    </p>
+  </section>
+  <nav class="wrap category-nav" aria-label="App categories">
+    {categories.map((category) => (
+      <a href={`#${category.id}`}>{category.name}</a>
+    ))}
+  </nav>
+  <div class="wrap catalog-groups">
+    {categories.map((category) => {
+      const entries = apps.filter((app) => app.categoryId === category.id);
+      return (
+        <section
+          id={category.id}
+          class="category-section"
+          aria-labelledby={`${category.id}-title`}
+        >
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">
+                The collection /{" "}
+                {String(categories.indexOf(category) + 1).padStart(2, "0")}
+              </p>
+              <h2 id={`${category.id}-title`}>{category.name}</h2>
+            </div>
+          </div>
+          <p class="category-description">{category.description}</p>
+          {entries.length ? (
+            <div class="app-grid">
+              {entries.map((app) => (
+                <AppCard app={app} index={apps.indexOf(app) + 1} />
+              ))}
+            </div>
+          ) : (
+            <div class="category-empty">
+              <p>No apps announced in this category yet.</p>
+              <span class="quiet">
+                Explore the rest of the collection above.
+              </span>
+            </div>
+          )}
+        </section>
+      );
+    })}
+  </div>
+</Layout>

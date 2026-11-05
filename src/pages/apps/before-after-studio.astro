@@ -1,0 +1,133 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { url } from "../../data/apps";
+const features = [
+  [
+    "Make the comparison",
+    "Align your photos and choose comparison layouts to show the change clearly.",
+  ],
+  [
+    "Make it yours",
+    "Add branding, labels and watermarks. Keep your style close with saved presets.",
+  ],
+  [
+    "Pick up where you left off",
+    "Save projects locally and return to your edits.",
+  ],
+  ["Ready to go", "Export finished comparisons as JPEG or PNG."],
+  ["Create offline", "Edit photos on your device, without an account."],
+  ["Keep it simple", "No ads. No subscriptions."],
+];
+---
+
+<Layout
+  title="Before & After Studio"
+  description="Create polished before-and-after photo comparisons on Android. Offline editing, branding, saved projects, and JPEG or PNG exports."
+>
+  <section class="wrap page-head product-head">
+    <p class="eyebrow">Photo & Creative Tools / Android</p>
+    <span class="status">Coming Soon</span>
+    <h1>
+      Before &<br />
+      <em>After Studio.</em>
+    </h1>
+    <p class="intro">
+      Show the change.
+      <br />
+      Make the comparison your own.
+    </p>
+    <p>
+      Create polished before-and-after comparisons from your existing photos.
+      The app does not generate an “after” image.
+    </p>
+    <p class="availability">Coming soon to Google Play</p>
+  </section>
+  <section class="wrap section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Your photos. Your perspective.</p>
+        <h2>A polished finish.</h2>
+      </div>
+    </div>
+    <div class="feature-grid">
+      {features.map(([title, description], i) => (
+        <article>
+          <span class="eyebrow">0{i + 1}</span>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="wrap section">
+    <p class="eyebrow">A closer look</p>
+    <h2>Inside the studio.</h2>
+    <div class="screenshots" aria-label="Screenshots coming soon">
+      {["Compare & align", "Brand & personalize", "Save & export"].map(
+        (label, i) => (
+          <div class="screenshot-placeholder">
+            <span aria-hidden="true">0{i + 1} /</span>
+            <h3>{label}</h3>
+            <p>App screenshot coming soon</p>
+          </div>
+        ),
+      )}
+    </div>
+  </section>
+  <section class="wrap section pricing">
+    <div>
+      <p class="eyebrow">One purchase. More possibilities.</p>
+      <h2>
+        Start free.
+        <br />
+        <em>Go unlimited.</em>
+      </h2>
+      <p>
+        Free download, with one free finished comparison successfully saved or
+        shared.
+      </p>
+      <p class="fine">
+        For sharing, the allowance is used when you select a destination in
+        Android’s share menu, including system Copy/Edit actions. Cancelling the
+        menu does not count; completion inside another app cannot be confirmed.
+      </p>
+    </div>
+    <div class="price-card">
+      <span class="eyebrow">Pro / one-time unlock</span>
+      <p class="price">
+        $7.99 <span>USD</span>
+      </p>
+      <h3>Unlimited exports</h3>
+      <p>
+        No ads or subscriptions. The localized checkout price is determined by
+        Google Play.
+      </p>
+      <p class="quiet">Available when the app launches.</p>
+    </div>
+  </section>
+  <section class="wrap callout">
+    <h2>Questions before you create?</h2>
+    <div>
+      <a class="text-link" href={url("support/")}>
+        Read the FAQ{" "}
+        <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M4 16 16 4M4 4h12v12"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+        </svg>
+      </a>
+      <a class="text-link" href={url("privacy/before-after-studio/")}>
+        Privacy policy{" "}
+        <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M4 16 16 4M4 4h12v12"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

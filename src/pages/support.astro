@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { url } from "../data/apps";
+const faqs = [
+  [
+    "Can I use Before & After Studio offline?",
+    "Yes. Photo editing, saved projects and exports work on your device. Purchases, restoration and current Google Play prices require an internet connection. Previously verified Pro access is cached for offline use.",
+  ],
+  [
+    "How do I restore Pro?",
+    "Connect to the internet and make sure Google Play is using the account that bought Pro. Open Before & After Studio and choose “Restore purchases” in the Pro panel. If access is not restored, check the purchase in Google Play and contact us with your app version and a description of the issue. Do not send payment card details.",
+  ],
+  [
+    "How do I delete locally stored projects?",
+    "Open the project library and use the project’s delete action. Assets are removed when no remaining project references them. To remove all local app data, use Android Settings → Apps → Before & After Studio → Storage → Clear storage, or uninstall the app. Android menu labels vary by device. Save finished images you want to keep first.",
+  ],
+  [
+    "Does deleting a project delete my exported images?",
+    "No. Saved gallery images, files exported elsewhere and copies shared to other apps must be deleted separately from those locations.",
+  ],
+  [
+    "What is included for free?",
+    "The app is a free download with one free successfully saved or shared finished comparison. Editing, previews, projects, branding and presets remain available. Pro unlocks unlimited exports for a one-time $7.99 USD; Google Play determines the localized checkout price. There are no ads or subscriptions.",
+  ],
+  [
+    "When does sharing use my free comparison?",
+    "Selecting a destination in Android’s share menu counts, including system Copy/Edit actions. Cancelling the menu does not count. The app cannot confirm delivery inside the receiving app; cancelling there does not restore the allowance. You can save or share the same completed file again.",
+  ],
+  [
+    "Do I need an account?",
+    "No app account is required. Google Play uses your Google account for optional purchases and restoration.",
+  ],
+  [
+    "Does the app create an “after” photo?",
+    "No. It helps you align, label and present comparisons using photos you select.",
+  ],
+  [
+    "Where can I download the app?",
+    "Before & After Studio is coming soon to Google Play. A store link will appear on its product page when available.",
+  ],
+];
+---
+
+<Layout
+  title="Support"
+  description="Get help with Before & After Studio: restore Pro purchases, delete local projects, understand exports, and use the app offline."
+>
+  <section class="wrap page-head">
+    <p class="eyebrow">A little help from the studio</p>
+    <h1>
+      Let’s untangle <em>it.</em>
+    </h1>
+    <p class="intro">Questions, feedback or something unexpected?</p>
+    <a class="text-link contact-email" href="mailto:velvetandpixel@gmail.com">
+      velvetandpixel@gmail.com{" "}
+      <svg class="arrow" aria-hidden="true" viewBox="0 0 20 20" fill="none">
+        <path
+          d="M4 16 16 4M4 4h12v12"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+      </svg>
+    </a>
+    <p>
+      Include the app name, app version, Android version and what happened.
+      Please avoid sending sensitive photos or payment details.
+    </p>
+  </section>
+  <section class="wrap faq section">
+    <p class="eyebrow">Before & After Studio</p>
+    <h2>Frequently asked.</h2>
+    {faqs.map(([question, answer]) => (
+      <details>
+        <summary>{question}</summary>
+        <p>{answer}</p>
+      </details>
+    ))}
+    <p class="policy-link">
+      Read more about local storage and Google services in our{" "}
+      <a href={url("privacy/before-after-studio/")}>privacy policy</a>.
+    </p>
+  </section>
+</Layout>
