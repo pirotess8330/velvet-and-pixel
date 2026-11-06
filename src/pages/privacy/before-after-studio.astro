@@ -161,6 +161,16 @@ import Layout from "../../layouts/Layout.astro";
       Google-held payment and technical records are governed by Google&#x27;s
       policies and controls, rather than the app&#x27;s project-delete action.
     </p>
+    <p>
+      To recover interrupted photo imports, saves or shares, the app may keep a
+      temporary operation record in private, backup-excluded storage. This can
+      include a request ID, project or photo-slot reference, selected provider
+      URI, export filename and completion or error information. The record is
+      removed after the operation result is acknowledged, or when app storage is
+      cleared. Any persistable provider access retained for recovery is released
+      when that operation is acknowledged. Recovery records are not passed to
+      the billing SDK.
+    </p>
     <h2>Children&#x27;s privacy</h2>
     <p>
       Before &amp; After Studio is a general-purpose creative tool and is not
