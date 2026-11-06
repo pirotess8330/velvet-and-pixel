@@ -53,7 +53,7 @@ Fonts are locally bundled DM Sans and Cormorant Garamond under the SIL Open Font
 
 ## Privacy and release review
 
-Policy effective date: November 5, 2026. Developer/contact are the owner's supplied Velvet & Pixel / velvetandpixel@gmail.com.
+Policy effective date: November 6, 2026. The published policy uses the owner-supplied November 6 draft. Developer/contact are the owner's supplied Velvet & Pixel / velvetandpixel@gmail.com.
 
 The site copy was checked against the private Before & After Studio repository's `docs/privacy-policy.md`, `docs/release.md`, `docs/pro-billing.md`, `docs/pro-release-handoff.md`, and Pro panel UI on November 5, 2026 (main tree `7e3182057d163852aef239f13b43434722b08c3d`). No app source was modified and no private artifacts or credentials are included here.
 

@@ -85,9 +85,9 @@ const policy = await readFile(
   "utf8",
 );
 for (const text of [
-  "November 5, 2026",
+  "November 6, 2026",
   "velvetandpixel@gmail.com",
-  "diagnostic",
+  "crash-reporting",
   "Google Play",
   "Velvet & Pixel",
 ])
