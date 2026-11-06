@@ -15,7 +15,7 @@ async function walk(dir) {
   ).flat();
 }
 const files = await walk(root);
-const htmlFiles = files.filter((f) => f.endsWith(".html"));
+const htmlFiles = files.filter((f) => f.endsWith(".html") && !/^google[a-zA-Z0-9]+\.html$/.test(path.basename(f)));
 let checked = 0;
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
