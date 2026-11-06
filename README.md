@@ -49,7 +49,7 @@ The supplied logo lives in `src/assets/velvet-and-pixel.jpg`. Astro generates re
 
 Screenshot spaces deliberately contain text, not mock app interfaces. When actual screenshots are ready, import them through Astro's image tools, add meaningful alternative text, and replace the labeled spaces. Keep images reasonably sized. Store URLs remain absent until the real listing exists; replace the coming-soon text with a real link only then. Do not render an empty or fake download button.
 
-Fonts are locally bundled DM Sans and Cormorant Garamond under the SIL Open Font License. Copies of both licenses are in `public/licenses/`. The favicon and abstract app-card graphics are original CSS/SVG elements; app-card graphics are not app screenshots.
+Fonts are locally bundled DM Sans and Cormorant Garamond under the SIL Open Font License. Copies of both licenses are in `public/licenses/`. Browser tab and Apple touch icons are resized PNG versions of the supplied neon logo. Abstract app-card graphics are original CSS elements, not app screenshots.
 
 ## Privacy and release review
 
