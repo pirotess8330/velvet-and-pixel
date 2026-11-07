@@ -1,6 +1,35 @@
 ---
+import { Image } from "astro:assets";
+import photos from "../../assets/before-after-studio/photos.jpg";
+import alignment from "../../assets/before-after-studio/alignment.jpg";
+import layouts from "../../assets/before-after-studio/layouts.jpg";
+import branding from "../../assets/before-after-studio/branding.jpg";
+import demoArtwork from "../../assets/before-after-studio/demo-artwork.png";
 import Layout from "../../layouts/Layout.astro";
+import AppVideo from "../../components/AppVideo.astro";
 import { url } from "../../data/apps";
+const screenshots = [
+  {
+    image: photos,
+    title: "Start with your photos",
+    alt: "Photo selection screen with before and after image controls and a project name field.",
+  },
+  {
+    image: alignment,
+    title: "Fine-tune the fit",
+    alt: "Alignment screen showing an overlapping photo preview, rotation control, and reset option.",
+  },
+  {
+    image: layouts,
+    title: "Choose your layout",
+    alt: "Layout screen with side-by-side, top-and-bottom, and vertical-split options and export size selection.",
+  },
+  {
+    image: branding,
+    title: "Make it your own",
+    alt: "Branding screen with a comparison preview, accent colors, label styles, and brand presets.",
+  },
+];
 const features = [
   [
     "Make the comparison",
@@ -40,7 +69,10 @@ const features = [
       Create polished before-and-after comparisons from your existing photos.
       The app does not generate an “after” image.
     </p>
-    <p class="availability">Coming soon to Google Play</p>
+    <p class="availability">
+      In review on Google Play. The download link will appear when the listing
+      is public.
+    </p>
   </section>
   <section class="wrap section">
     <div class="section-heading">
@@ -62,17 +94,38 @@ const features = [
   <section class="wrap section">
     <p class="eyebrow">A closer look</p>
     <h2>Inside the studio.</h2>
-    <div class="screenshots" aria-label="Screenshots coming soon">
-      {["Compare & align", "Brand & personalize", "Save & export"].map(
-        (label, i) => (
-          <div class="screenshot-placeholder">
-            <span aria-hidden="true">0{i + 1} /</span>
-            <h3>{label}</h3>
-            <p>App screenshot coming soon</p>
-          </div>
-        ),
-      )}
+    <p>Explore photo selection, alignment, layouts, and branding in the app.</p>
+    <div class="screenshots">
+      {screenshots.map(({ image, title, alt }) => (
+        <figure class="app-screenshot">
+          <a
+            href={image.src}
+            aria-label={`View full-size screenshot: ${title}`}
+          >
+            <Image
+              src={image}
+              alt={alt}
+              widths={[280, 420, 600]}
+              sizes="(max-width: 760px) 75vw, 260px"
+              format="webp"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>{title}</figcaption>
+        </figure>
+      ))}
     </div>
+    <p class="fine">Select a screenshot to view it full size.</p>
+  </section>
+  <section class="wrap section demo-section" aria-labelledby="demo-title">
+    <p class="eyebrow">From photos to a finished comparison</p>
+    <h2 id="demo-title">Watch the workflow.</h2>
+    <p>Take a look at Before &amp; After Studio in action.</p>
+    <AppVideo
+      href="https://www.youtube.com/shorts/ou8AF8JMvaw"
+      appName="Before & After Studio"
+      poster={demoArtwork}
+    />
   </section>
   <section class="wrap section pricing">
     <div>

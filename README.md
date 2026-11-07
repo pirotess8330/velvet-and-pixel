@@ -47,7 +47,7 @@ Expected public URLs:
 
 The supplied logo lives in `src/assets/velvet-and-pixel.jpg`. Astro generates responsive WebP images. Replace this source to update the hero; update `public/social.jpg` for the social preview. The compact navigation wordmark uses text. The attached artwork was supplied by the owner for this website; no artwork was taken from another repository.
 
-Screenshot spaces deliberately contain text, not mock app interfaces. When actual screenshots are ready, import them through Astro's image tools, add meaningful alternative text, and replace the labeled spaces. Keep images reasonably sized. Store URLs remain absent until the real listing exists; replace the coming-soon text with a real link only then. Do not render an empty or fake download button.
+Before & After Studio's owner-supplied screenshots and demo artwork live in `src/assets/before-after-studio/`. The product page imports these through Astro's image tools for responsive WebP delivery, with full-size screenshot links and descriptive alternative text. Update the screenshot list in `src/pages/apps/before-after-studio.astro` as the app changes. `AppVideo.astro` provides a reusable local-poster link to YouTube; it loads no embedded player or third-party scripts. The supplied Pro product icon is not used as an app icon. Store URLs remain absent while the listing is in review; add a verified public listing link when available. Do not render an empty or fake download button.
 
 Fonts are locally bundled DM Sans and Cormorant Garamond under the SIL Open Font License. Copies of both licenses are in `public/licenses/`. Browser tab and Apple touch icons are resized PNG versions of the supplied neon logo. Abstract app-card graphics are original CSS elements, not app screenshots.
 
