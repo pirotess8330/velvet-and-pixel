@@ -995,3 +995,58 @@ p {
     bottom: calc(100% + 15px);
   }
 }
+
+/* Keep the product identity compact and bring real app media forward. */
+.product-title {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.product-title h1 {
+  margin: 0;
+}
+.product-icon {
+  flex: 0 0 auto;
+  width: 144px;
+  height: 144px;
+  border-radius: 24px;
+}
+.product-head {
+  padding-bottom: 24px;
+}
+.product-head + .section {
+  padding-top: 24px;
+}
+.feature-summary {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 32px;
+}
+.feature-summary li {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+.feature-summary li::before {
+  content: "✦";
+  color: var(--pink);
+  margin-right: 12px;
+}
+@media (max-width: 760px) {
+  .product-title {
+    gap: 16px;
+  }
+  .product-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+  }
+  .product-title h1 {
+    font-size: clamp(2rem, 7.4vw, 3.5rem);
+  }
+  .feature-summary {
+    grid-template-columns: 1fr;
+  }
+}

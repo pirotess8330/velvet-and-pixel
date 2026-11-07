@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import appIcon from "../../assets/before-after-studio/app-icon.png";
 import photos from "../../assets/before-after-studio/photos.jpg";
 import alignment from "../../assets/before-after-studio/alignment.jpg";
 import layouts from "../../assets/before-after-studio/layouts.jpg";
@@ -31,21 +32,12 @@ const screenshots = [
   },
 ];
 const features = [
-  [
-    "Make the comparison",
-    "Align your photos and choose comparison layouts to show the change clearly.",
-  ],
-  [
-    "Make it yours",
-    "Add branding, labels and watermarks. Keep your style close with saved presets.",
-  ],
-  [
-    "Pick up where you left off",
-    "Save projects locally and return to your edits.",
-  ],
-  ["Ready to go", "Export finished comparisons as JPEG or PNG."],
-  ["Create offline", "Edit photos on your device, without an account."],
-  ["Keep it simple", "No ads. No subscriptions."],
+  "Photo alignment & comparison layouts",
+  "Branding, labels & watermarks",
+  "Saved projects & presets",
+  "JPEG & PNG exports",
+  "Offline editing · no account",
+  "No ads or subscriptions",
 ];
 ---
 
@@ -56,40 +48,32 @@ const features = [
   <section class="wrap page-head product-head">
     <p class="eyebrow">Photo & Creative Tools / Android</p>
     <span class="status">Coming Soon</span>
-    <h1>
-      Before &<br />
-      <em>After Studio.</em>
-    </h1>
-    <p class="intro">
-      Show the change.
-      <br />
-      Make the comparison your own.
-    </p>
+    <div class="product-title">
+      <Image
+        class="product-icon"
+        src={appIcon}
+        alt=""
+        width={144}
+        height={144}
+        widths={[96, 144, 288]}
+        sizes="(max-width: 760px) 80px, 144px"
+        loading="eager"
+      />
+      <h1>
+        Before &amp;
+        <br />
+        <em>After Studio.</em>
+      </h1>
+    </div>
+    <p class="intro">Polished comparisons. Your photos. Your style.</p>
     <p>
-      Create polished before-and-after comparisons from your existing photos.
-      The app does not generate an “after” image.
+      Compare your existing photos with layouts, alignment, and branding. The
+      app does not generate an “after” image.
     </p>
     <p class="availability">
       In review on Google Play. The download link will appear when the listing
       is public.
     </p>
-  </section>
-  <section class="wrap section">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Your photos. Your perspective.</p>
-        <h2>A polished finish.</h2>
-      </div>
-    </div>
-    <div class="feature-grid">
-      {features.map(([title, description], i) => (
-        <article>
-          <span class="eyebrow">0{i + 1}</span>
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </article>
-      ))}
-    </div>
   </section>
   <section class="wrap section">
     <p class="eyebrow">A closer look</p>
@@ -126,6 +110,18 @@ const features = [
       appName="Before & After Studio"
       poster={demoArtwork}
     />
+  </section>
+  <section
+    class="wrap section product-features"
+    aria-labelledby="features-title"
+  >
+    <p class="eyebrow">Made for your workflow</p>
+    <h2 id="features-title">The essentials, included.</h2>
+    <ul class="feature-summary">
+      {features.map((feature) => (
+        <li>{feature}</li>
+      ))}
+    </ul>
   </section>
   <section class="wrap section pricing">
     <div>
