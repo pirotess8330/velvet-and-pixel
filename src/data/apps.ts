@@ -1,3 +1,7 @@
+import type { ImageMetadata } from "astro";
+import beforeAfterArtwork from "../assets/before-after-studio/demo-artwork.png";
+import beforeAfterIcon from "../assets/before-after-studio/app-icon.png";
+
 export const categories = [
   {
     id: "games",
@@ -28,6 +32,8 @@ export interface App {
   description: string;
   href?: string;
   storeUrl?: string;
+  artwork?: ImageMetadata;
+  icon?: ImageMetadata;
   screenshots?: { src: string; alt: string }[];
 }
 export const apps: App[] = [
@@ -40,6 +46,8 @@ export const apps: App[] = [
     platform: "Android",
     description: "Create polished before-and-after photo comparisons.",
     href: "apps/before-after-studio/",
+    artwork: beforeAfterArtwork,
+    icon: beforeAfterIcon,
   },
   {
     slug: "cursed-gem-mosaics",

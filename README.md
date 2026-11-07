@@ -49,7 +49,7 @@ The supplied logo lives in `src/assets/velvet-and-pixel.jpg`. Astro generates re
 
 Before & After Studio's owner-supplied screenshots and demo artwork live in `src/assets/before-after-studio/`. The product page imports these through Astro's image tools for responsive WebP delivery, with full-size screenshot links and descriptive alternative text. Update the screenshot list in `src/pages/apps/before-after-studio.astro` as the app changes. `AppVideo.astro` provides a reusable local-poster link to YouTube; it loads no embedded player or third-party scripts. The app title uses the approved store icon from the owner’s app artwork. Screenshots and the demo precede a compact feature list. Store URLs remain absent while the listing is in review; add a verified public listing link when available. Do not render an empty or fake download button.
 
-Fonts are locally bundled DM Sans and Cormorant Garamond under the SIL Open Font License. Copies of both licenses are in `public/licenses/`. Browser tab and Apple touch icons are resized PNG versions of the supplied neon logo. Abstract app-card graphics are original CSS elements, not app screenshots.
+Fonts are locally bundled DM Sans and Cormorant Garamond under the SIL Open Font License. Copies of both licenses are in `public/licenses/`. Browser tab and Apple touch icons are resized PNG versions of the supplied neon logo. Before & After Studio cards use the supplied artwork and approved app icon; other upcoming app graphics remain original CSS elements. Add optional `artwork` and `icon` imports in the catalog data as real assets become available.
 
 ## Privacy and release review
 

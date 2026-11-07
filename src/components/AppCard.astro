@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import type { App } from "../data/apps";
 import { url } from "../data/apps";
 interface Props {
@@ -9,13 +10,19 @@ const { app, index = 1 } = Astro.props;
 ---
 
 <article class="app-card">
-  <div class:list={["app-art", app.slug]} aria-hidden="true">
-    {app.slug === "before-after-studio" ? (
-      <div class="comparison">
-        <span>BEFORE</span>
-        <b>&</b>
-        <span>AFTER</span>
-      </div>
+  <div
+    class:list={["app-art", app.slug, { "app-art-image": app.artwork }]}
+    aria-hidden="true"
+  >
+    {app.artwork ? (
+      <Image
+        src={app.artwork}
+        alt=""
+        widths={[400, 640, 1000]}
+        sizes="(max-width: 760px) calc(100vw - 40px), 550px"
+        format="webp"
+        loading="lazy"
+      />
     ) : app.slug === "cursed-gem-mosaics" ? (
       <div class="gem">◇</div>
     ) : (
@@ -24,7 +31,7 @@ const { app, index = 1 } = Astro.props;
         <span>VELVET & PIXEL / UPCOMING</span>
       </div>
     )}
-    <span class="art-caption">{app.category}</span>
+    {!app.artwork && <span class="art-caption">{app.category}</span>}
   </div>
   <div class="card-content">
     <div class="meta">
@@ -33,7 +40,21 @@ const { app, index = 1 } = Astro.props;
       </span>
       <span class="status">{app.status}</span>
     </div>
-    <h3>{app.name}</h3>
+    <div class="card-app-title">
+      {app.icon && (
+        <Image
+          src={app.icon}
+          alt=""
+          width={64}
+          height={64}
+          widths={[64, 128]}
+          sizes="64px"
+          format="webp"
+          loading="lazy"
+        />
+      )}
+      <h3>{app.name}</h3>
+    </div>
     <p>{app.description}</p>
     {app.href ? (
       <a class="text-link" href={url(app.href)}>

@@ -261,30 +261,6 @@ p {
   border-bottom: 1px solid var(--line);
   background: #151117;
 }
-.before-after-studio {
-  background: linear-gradient(110deg, #211920 49.8%, #35202e 50%);
-}
-.comparison {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  transform: rotate(-8deg);
-  border: 1px solid #725064;
-  padding: 25px;
-  box-shadow: 12px 12px 0 #09090b66;
-}
-.comparison span {
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-}
-.comparison b {
-  font-family: var(--serif);
-  font-size: 4rem;
-  font-style: italic;
-  color: var(--pink);
-  font-weight: 500;
-  line-height: 1;
-}
 .art-caption {
   position: absolute;
   bottom: 16px;
@@ -1049,4 +1025,31 @@ p {
   .feature-summary {
     grid-template-columns: 1fr;
   }
+}
+
+.app-art.app-art-image {
+  height: auto;
+  aspect-ratio: 2 / 1;
+  background: #100b11;
+}
+.app-art-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-app-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.card-app-title img {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  flex: 0 0 auto;
+}
+.card-app-title h3 {
+  margin-bottom: 0;
 }
