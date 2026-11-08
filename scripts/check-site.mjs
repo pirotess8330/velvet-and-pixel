@@ -15,7 +15,10 @@ async function walk(dir) {
   ).flat();
 }
 const files = await walk(root);
-const htmlFiles = files.filter((f) => f.endsWith(".html") && !/^google[a-zA-Z0-9]+\.html$/.test(path.basename(f)));
+const htmlFiles = files.filter(
+  (f) =>
+    f.endsWith(".html") && !/^google[a-zA-Z0-9]+\.html$/.test(path.basename(f)),
+);
 let checked = 0;
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
@@ -94,4 +97,61 @@ for (const text of [
   assert.ok(policy.includes(text));
 console.log(
   `Passed: ${htmlFiles.length} pages, ${checked} local links/assets, required routes, metadata and policy checks.`,
+);
+
+// Verify discoverable static content and the generated SEO contract.
+const titles = new Set();
+const descriptions = new Set();
+for (const file of htmlFiles) {
+  const html = await readFile(file, "utf8");
+  const title = html.match(/<title>([^<]+)<\/title>/)[1];
+  const description = html.match(
+    /<meta name="description" content="([^"]+)"/,
+  )[1];
+  assert.ok(!titles.has(title), `Duplicate title: ${file}`);
+  assert.ok(!descriptions.has(description), `Duplicate description: ${file}`);
+  titles.add(title);
+  descriptions.add(description);
+  assert.match(
+    html,
+    /rel="canonical" href="https:\/\/pirotess8330.github.io\/velvet-and-pixel\//,
+  );
+  for (const property of ["og:title", "og:description", "og:url", "og:image"])
+    assert.ok(
+      html.includes(`property="${property}"`),
+      `${file}: missing ${property}`,
+    );
+}
+const product = await readFile(
+  path.join(root, "apps/before-after-studio/index.html"),
+  "utf8",
+);
+const data = JSON.parse(
+  product.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1],
+);
+assert.equal(data["@type"], "SoftwareApplication");
+assert.equal(data.operatingSystem, "Android");
+assert.ok(!data.offers && !data.aggregateRating && !data.downloadUrl);
+const staticProduct = product.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
+for (const text of [
+  "Before &amp; After Studio",
+  "Inside the studio.",
+  "Unlimited exports",
+  "Privacy policy",
+])
+  assert.ok(
+    staticProduct.includes(text),
+    `Missing static product content: ${text}`,
+  );
+const sitemap = await readFile(path.join(root, "sitemap-0.xml"), "utf8");
+for (const route of ["", "apps/before-after-studio/"])
+  assert.ok(sitemap.includes(`<loc>${origin}${base}${route}</loc>`));
+assert.ok(!sitemap.includes("404"));
+const robots = await readFile(path.join(root, "robots.txt"), "utf8");
+assert.ok(
+  robots.includes("Allow: /") &&
+    robots.includes(`${origin}${base}sitemap-index.xml`),
+);
+console.log(
+  "Passed: unique metadata, canonical/OG tags, software schema, sitemap, robots and static content.",
 );

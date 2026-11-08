@@ -9,6 +9,25 @@ import demoArtwork from "../../assets/before-after-studio/demo-artwork.png";
 import Layout from "../../layouts/Layout.astro";
 import AppVideo from "../../components/AppVideo.astro";
 import { url } from "../../data/apps";
+const appUrl = new URL(url("apps/before-after-studio/"), Astro.site).href;
+const software = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": `${appUrl}#app`,
+  name: "Before & After Studio",
+  url: appUrl,
+  description:
+    "Create polished before-and-after photo comparisons on Android. Offline editing, branding, saved projects, and JPEG or PNG exports.",
+  operatingSystem: "Android",
+  applicationCategory: "PhotoApplication",
+  image: new URL(appIcon.src, Astro.site).href,
+  author: {
+    "@type": "Organization",
+    name: "Velvet & Pixel",
+    url: new URL(url(), Astro.site).href,
+  },
+  // The listing is in review: omit download URLs, offers, ratings and release dates.
+};
 const screenshots = [
   {
     image: photos,
@@ -42,7 +61,10 @@ const features = [
 ---
 
 <Layout
-  title="Before & After Studio"
+  title="Before & After Studio — Android Photo Comparison App"
+  socialImage={demoArtwork.src}
+  socialImageAlt="Before & After Studio photo comparison app and editing interface"
+  structuredData={software}
   description="Create polished before-and-after photo comparisons on Android. Offline editing, branding, saved projects, and JPEG or PNG exports."
 >
   <section class="wrap page-head product-head">

@@ -7,8 +7,17 @@ import { url } from "../data/apps";
 interface Props {
   title: string;
   description: string;
+  socialImage?: string;
+  socialImageAlt?: string;
+  structuredData?: Record<string, unknown>;
 }
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  socialImage = url("social.jpg"),
+  socialImageAlt = "Velvet & Pixel in hot-pink neon script",
+  structuredData,
+} = Astro.props;
 const is404 = Astro.url.pathname.replace(/\/$/, "").endsWith("/404");
 const canonical = new URL(
   is404 ? url("404.html") : Astro.url.pathname,
@@ -30,22 +39,36 @@ const nav = [
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {is404 && <meta name="robots" content="noindex" />}
-    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href={url("neon-logo-v2.ico")} />
-    <link rel="icon" type="image/png" sizes="192x192" href={url("neon-logo-v2-192.png")} />
-    <link rel="apple-touch-icon" sizes="180x180" href={url("logo-icon-180.png")} />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="16x16 32x32 48x48"
+      href={url("neon-logo-v2.ico")}
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href={url("neon-logo-v2-192.png")}
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href={url("logo-icon-180.png")}
+    />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Velvet & Pixel" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta
-      property="og:image"
-      content={new URL(url("social.jpg"), Astro.site)}
-    />
-    <meta
-      property="og:image:alt"
-      content="Velvet & Pixel in hot-pink neon script"
-    />
+    <meta property="og:image" content={new URL(socialImage, Astro.site)} />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    {structuredData && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(structuredData).replace(/</g, "\\u003c")}
+      />
+    )}
     <meta name="theme-color" content="#09090b" />
   </head>
   <body>

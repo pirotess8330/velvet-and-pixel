@@ -84,3 +84,12 @@ Validated November 5, 2026 with Astro 7.4.5 and Node.js 24:
 This site now uses the Velvet & Pixel name, owner-supplied replacement logo, and velvetandpixel@gmail.com for support and commissions. The repository and Pages base path are `pirotess8330/velvet-and-pixel` and `/velvet-and-pixel/`.
 
 After the new deployment is verified, update any Google Play Console privacy, website and support links to the URLs above, including the new contact email. Deleting the previous repository removes its Pages URLs; this repository cannot redirect requests to a deleted repository. The previous repository is intentionally left intact for the owner to retire.
+
+
+## Search indexing
+
+Each page has a unique title/description, canonical URL and Open Graph metadata. The app product page includes factual `SoftwareApplication` JSON-LD and its own sharing image; no invented ratings, release date or download URL. Important content is generated in HTML and works without JavaScript. Upcoming catalog-only projects do not have standalone product pages yet.
+
+In Google Search Console, select or add the URL-prefix property `https://pirotess8330.github.io/velvet-and-pixel/`. An owner-provided verification HTML file is already in `public/`; confirm verification in your account. Submit `https://pirotess8330.github.io/velvet-and-pixel/sitemap-index.xml` under Sitemaps, then use URL Inspection to request indexing for the homepage and `apps/before-after-studio/`. Indexing and search appearance are determined by Google.
+
+The project-level robots.txt allows crawling and references the sitemap. Crawlers only apply robots rules at the origin root (`https://pirotess8330.github.io/robots.txt`), so this project file cannot control other repositories or override root rules. The sitemap can be submitted directly in Search Console.
