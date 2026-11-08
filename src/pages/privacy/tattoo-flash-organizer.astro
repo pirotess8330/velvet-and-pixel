@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Tattoo Flash Organizer Privacy Policy" description="How Tattoo Flash Organizer handles local artwork, sheets, backups, Google Play purchases and SDK technical data.">
+  <article class="wrap prose">
+    <p class="eyebrow">Privacy / Tattoo Flash Organizer</p>
+    <h1>Privacy Policy — <em>Tattoo Flash Organizer</em></h1>
+    <p><strong>Effective date:</strong> November 8, 2026<br />
+      <strong>Developer:</strong> Velvet &amp; Pixel<br />
+      <strong>Contact:</strong> <a href="mailto:velvetandpixel@gmail.com">velvetandpixel@gmail.com</a></p>
+    <h2>Overview</h2>
+    <p>Tattoo Flash Organizer helps tattoo artists organize prepared artwork and compose flash sheets. Artwork editing and rendering take place on your Android device. No Velvet &amp; Pixel account is required, and we do not operate an artwork-upload, project-sync or purchase-verification server. The app has no ads or subscriptions.</p>
+    <h2>Artwork, sheets and activity</h2>
+    <p>Images you select are copied into the app’s private local storage. Artwork titles, prices and currency, collections, availability, reservation notes, sales and corrections, sheet placements, labels and editing preferences are stored on your device. Notes can contain information you choose to enter; avoid entering sensitive information you do not need.</p>
+    <p>Imported originals are preserved. Processing produces separate artwork versions instead of overwriting the imported source. Originals may retain metadata such as location information. Generated PNG, JPEG and PDF exports do not intentionally copy original location metadata, but visible information already present in artwork remains visible.</p>
+    <p>The app uses Android system pickers rather than requesting unrestricted access to your photo library. A photo or document provider you choose may offer cloud access under its own policy. We do not receive your picker selections or artwork on a Velvet &amp; Pixel server.</p>
+    <h2>Library backup and restore</h2>
+    <p>The app’s local files and purchase records are excluded from automatic Android cloud backup and device transfer. You can choose to save a library archive through the system document picker. The archive contains original artwork, artwork details, collections, activity and sheets, including retained Trash. It does not transfer or unlock a Pro purchase.</p>
+    <p>Library archives are not encrypted by the app. They may include original image metadata and private activity notes. Choose a trusted storage destination and share archives carefully. Cloud storage providers process files you choose to save to them under their own policies.</p>
+    <p>Restoring a backup replaces this app’s library rather than merging two libraries. The app validates supported archive structure, artwork checksums and database references before committing a replacement. Invalid archives do not replace the current library. Interrupted external file saves may leave an incomplete destination file; only treat a backup as complete after the app reports success.</p>
+    <h2>Google Play purchases</h2>
+    <p>An optional one-time Pro purchase unlocks unlimited designs and saved sheets, plus PDF export. Google Play processes payment using your Google account. Velvet &amp; Pixel does not receive or store your payment card details.</p>
+    <p>The app receives signed purchase information and purchase tokens to verify ownership locally and acknowledge purchases through Google Play. Verified purchase proof is stored privately on your device, separately from your library and excluded from library archives and automatic backup. A library restore does not restore or reset a purchase.</p>
+    <p>Previously verified Pro access is available offline. Purchases, product prices, restoration and online ownership checks use Google Play. Successful ownership refreshes can remove refunded or revoked access. Clearing app storage or uninstalling removes local purchase records but does not erase a completed Google Play purchase. Eligible purchases can be restored with the purchasing account for this app.</p>
+    <h2>Google SDK technical data</h2>
+    <p>The app includes Google Play Billing and related Google SDKs. These services process operational and diagnostic data as well as purchase information. This may include app package/version, SDK and Android versions, device manufacturer/model/build, language and country, network or carrier information, event timing, billing results, error codes and temporary session identifiers.</p>
+    <p>Google services can process technical data when the app starts, checks service connectivity or prices, or refreshes ownership, including before a user chooses to purchase. Artwork, sheet contents, library archives and activity notes are not passed to the billing SDK.</p>
+    <p>SDK diagnostics may be queued locally for later transmission. Google determines how information is handled and retained on its services. Clearing local projects or uninstalling does not delete information already held by Google. We do not promise a fixed deletion period for Google-held information.</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy">Google’s Privacy Policy</a></li>
+      <li><a href="https://play.google.com/about/play-terms/">Google Play Terms of Service</a></li>
+      <li><a href="https://policies.google.com/technologies/retention">Google data retention information</a></li>
+      <li><a href="https://myaccount.google.com/data-and-privacy">Google account privacy controls</a></li>
+    </ul>
+    <h2>Exports and sharing</h2>
+    <p>You choose when and where to save or share exports and backups. The app grants the chosen sharing application temporary access to the selected output. A recipient or storage provider may process and retain it under its own policy. Source images and exported files outside the app are not removed when the app is uninstalled; delete those copies separately.</p>
+    <h2>Retention and deletion</h2>
+    <p>Artwork moved to Trash remains in private app storage and can be restored. Moving artwork to Trash is not permanent deletion. A separate, confirmed permanent-delete action removes the design’s local activity, collection membership and retained processing versions. Original or processed image files still used by another design are retained. Artwork used by saved or trashed sheets must first be removed from those sheets before it can be moved to artwork Trash. Availability history and notes remain with the retained design.</p>
+    <p>Originals and artwork versions remain while referenced by library records. Unreferenced files left by interrupted imports or restore operations may be retained conservatively and removed through unused-file cleanup. Clearing the app’s storage in Android Settings or uninstalling removes its private library and local purchase proof. Save a library archive and any finished exports you want to keep first.</p>
+    <h2>Advertising and analytics</h2>
+    <p>We do not include developer-operated advertising, analytics or crash-reporting services. Google SDK operational and purchase processing is described above; local artwork processing does not mean that Google services process no technical data.</p>
+    <h2>Children’s privacy</h2>
+    <p>This is a creative and organizational tool for tattoo artwork, not a service specifically designed for children. We do not knowingly operate a service that collects children’s personal information.</p>
+    <h2>Security</h2>
+    <p>The app uses Android application-private storage and system photo/document/sharing mechanisms. Private storage provides access control; the app does not add a separate encryption layer to library files or archives. Purchase signatures verify authenticity rather than encrypting purchase information. Google and selected storage/share services have their own security practices. No software can guarantee absolute security.</p>
+    <h2>Changes and contact</h2>
+    <p>We may update this policy as features and integrations change. The effective date appears above. For privacy questions, contact <a href="mailto:velvetandpixel@gmail.com">velvetandpixel@gmail.com</a>.</p>
+  </article>
+</Layout>

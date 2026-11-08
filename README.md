@@ -84,3 +84,7 @@ Validated November 5, 2026 with Astro 7.4.5 and Node.js 24:
 This site now uses the Velvet & Pixel name, owner-supplied replacement logo, and velvetandpixel@gmail.com for support and commissions. The repository and Pages base path are `pirotess8330/velvet-and-pixel` and `/velvet-and-pixel/`.
 
 After the new deployment is verified, update any Google Play Console privacy, website and support links to the URLs above, including the new contact email. Deleting the previous repository removes its Pages URLs; this repository cannot redirect requests to a deleted repository. The previous repository is intentionally left intact for the owner to retire.
+
+## Tattoo Flash Organizer privacy page (draft release work)
+
+Adds `/privacy/tattoo-flash-organizer/` and a footer link, using the existing layout. App reference: pirotess8330/tattoo-flash-organizer release implementation branch. Describes local artwork/activity, free user archives, one-time Pro/PDF, private purchase proof and Google SDK technical data. Reconcile background-removal engine details and final app SDK inventory before merging/publishing. Local check/build/site tests passed; Chromium at 360/1440 px showed no horizontal overflow or page errors. Publishing requires merging this reviewed change; no deployment is claimed for the draft.
