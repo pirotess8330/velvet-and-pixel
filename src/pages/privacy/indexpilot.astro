@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="IndexPilot Privacy Policy"
+  description="How IndexPilot handles website audits, optional Google Search Console access, local results, appearance preferences and deletion."
+>
+  <article class="wrap prose">
+    <p class="eyebrow">Privacy / IndexPilot</p>
+    <h1>Privacy Policy — <em>IndexPilot</em></h1>
+    <p><strong>Effective date:</strong> November 9, 2026<br /><strong>Developer:</strong> Velvet &amp; Pixel<br /><strong>Contact:</strong> <a href="mailto:velvetandpixel@gmail.com">velvetandpixel@gmail.com</a></p>
+
+    <h2>Overview</h2>
+    <p>IndexPilot is an Android utility for checking public website pages and understanding Google's recorded indexing information. Public page checks do not require a Velvet &amp; Pixel account or Google sign-in. Optional Search Console features require authorization through Google. Velvet &amp; Pixel does not operate an audit-processing server or receive your audit URLs, page contents or Search Console results through an app backend.</p>
+    <p>This policy describes the current version, including testing builds. Future paid features, scheduled monitoring or website-editing integrations are not part of this version and would require updated disclosures where applicable.</p>
+
+    <h2>Public website checks</h2>
+    <p>When you enter a URL and start an audit, the app sends requests directly from your device to that website and supporting public resources, such as robots.txt and sitemap files. Following redirects or sitemap references can contact other public hosts. The app temporarily reads response headers, page HTML, robots rules and sitemap XML to generate findings. Raw response bodies are not saved in the workflow database.</p>
+    <p>Website operators and their hosting providers can receive normal request information, including the requested path and query string, your device's network IP address, request timing and the app's user-agent string. Those providers handle their own logs under their policies. The app does not include your Google access token in public website requests or use your browser's signed-in cookies.</p>
+    <p>The app accepts public HTTP and HTTPS websites. Requests to HTTP URLs are not encrypted and can be visible to network intermediaries; HTTPS requests use encrypted transport with certificate validation. Do not enter URLs containing private access keys, personal information or other secrets. Audits are for publicly accessible pages and do not require website ownership.</p>
+
+    <h2>Optional Google Search Console access</h2>
+    <p>Google authorization is handled by Google Play services and Google's consent interface. IndexPilot requests the read-only Search Console permission, <code>https://www.googleapis.com/auth/webmasters.readonly</code>, to discover properties available to the authorized account and inspect a URL within a selected property. The app does not ask for or receive your Google password and does not request access to Gmail, Drive files, contacts or payment details.</p>
+    <p>Information received from Google can include property URLs and permission levels, recorded indexing and coverage states, last-crawl information, robots and fetch states, canonical URLs, and reported sitemap or referring-page URLs. The app uses this information to display diagnostics, explain next steps and resume the active workflow. An inspection sends the entered URL and selected property identifier to Google's Search Console API over HTTPS.</p>
+    <p>IndexPilot does not save access tokens or refresh tokens in its database or preferences and does not request offline server access. Short-lived authorization results are used in memory. Google Play services manages its own account authorization and token cache and may retain a grant so it can supply access again. Closing or deleting the local workflow does not itself revoke that grant.</p>
+    <p>IndexPilot's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. We do not sell Google user data, use it for advertising or transfer it to a developer-operated analytics service. Google processes authorization, API requests and service-related technical information under its own policies.</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+      <li><a href="https://policies.google.com/technologies/retention">Google data retention information</a></li>
+      <li><a href="https://myaccount.google.com/connections">Manage Google Account connections</a></li>
+    </ul>
+
+    <h2>Local storage, retention and deletion</h2>
+    <p>The app stores one active workflow in Android application-private storage. This includes the entered URL, operation states, timestamps, public audit findings and evidence, discovered sitemap URLs, matching property information and the most recent Google inspection result. Appearance choices, including accent and theme, are stored separately as local preferences. URLs and diagnostic evidence may themselves contain information you consider sensitive.</p>
+    <p>The active workflow remains until you replace it by checking another page, select <strong>Delete local workflow</strong>, clear the app's storage or uninstall. Deleting the workflow removes its saved audit and Google results while keeping appearance preferences. Rechecking a page or refreshing an inspection replaces the corresponding active results; the current version does not provide a separate audit-history archive or cloud synchronization.</p>
+    <p><strong>Disconnect and clear Google results</strong> removes the app's saved Google properties and inspection and attempts to revoke its Google authorization. Public audit results remain. If Google cannot confirm revocation, the app tells you to remove access through Google Account connections settings. You can also revoke access there independently. Local deletion does not delete your website, Search Console property, Google's records or logs already held by website providers.</p>
+    <p>Clearing app storage in Android Settings or uninstalling removes the app's private workflow and preferences. The app configures its ordinary local storage to be excluded from Android cloud backup and device transfer. It does not add its own encryption layer to the database or preferences; protection relies on Android's app sandbox and device security. Google Play services retains its own data under Google's controls.</p>
+
+    <h2>Advertising, purchases and technical information</h2>
+    <p>The current app has no billing integration, advertising SDK, developer-operated analytics or crash-reporting service. A promotions icon lets you choose to browse Velvet &amp; Pixel's apps on the studio website; it does not automatically load that website or send audit results to it. Google Play services may process technical and diagnostic information needed to provide authorization and related services, such as app, device, network and operation information. Google determines its handling and retention of that information.</p>
+    <p>Internet access supports public website audits, optional Google APIs and user-selected external links. The app does not request access to your photos, contacts, microphone or precise location. It does not modify your website or deploy files.</p>
+
+    <h2>Support and external links</h2>
+    <p>If you contact us by email, we receive your email address and the information you choose to include. We use it to answer your request and retain correspondence while needed to handle the request or meet applicable obligations. Avoid sending passwords, access tokens or confidential Search Console information. Contact us to ask about deletion of support correspondence we hold.</p>
+    <p>Opening Search Console, this policy or studio promotional links uses your browser and is subject to the destination's privacy practices. This policy and the studio website are hosted on GitHub Pages, which receives normal website requests when you visit. Following an external link does not automatically attach your saved audit report.</p>
+
+    <h2>Children's privacy and security</h2>
+    <p>IndexPilot is a general-purpose website utility and is not specifically designed for children. We do not knowingly solicit children's personal information through the app. If you believe a child has supplied personal information directly to Velvet &amp; Pixel, contact us so we can address it. Google account services operate under Google's policies.</p>
+    <p>The app uses Android private storage, Google-provided authorization and HTTPS for Google API calls. Public fetching is bounded and rejects local or private network destinations. These safeguards do not guarantee absolute security, and they do not change the privacy practices of websites you audit or services you open.</p>
+
+    <h2>Changes and contact</h2>
+    <p>We may update this policy when functionality, integrations or legal requirements change. The effective date appears above. For privacy questions or requests, contact <a href="mailto:velvetandpixel@gmail.com">velvetandpixel@gmail.com</a>.</p>
+  </article>
+</Layout>
