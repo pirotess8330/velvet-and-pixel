@@ -102,3 +102,8 @@ The project-level robots.txt allows crawling and references the sitemap. Crawler
 `CaseStudies.astro` presents Before & After Studio as an independent app in Google Play review and this website as a live own-business project. The website screenshot is in `src/assets/portfolio/`. No client outcomes, testimonials, or DreamWorks materials are included. Publishing Suite remains off the portfolio until suitable media is approved.
 
 November 10, 2026 verification: current Before & After Studio README and privacy documentation support its name, contact address and published feature list; the owner confirms its Play review status. The snap-spin-reel-app README identifies the current project as SpinReveal, replacing the earlier catalog title Photo Roulette Video Maker. Cursed Gem Mosaics remains In Development; Tattoo Stencil Generator remains Planned and is distinct from Tattoo Flash Organizer. Prices were not changed. No store or download link is rendered while listings are unavailable.
+
+
+## Privacy directory
+
+The footer links to `/privacy/`, an alphabetical directory of all published app policies. Add each new app’s name and stable route to `src/data/privacy-policies.ts` when its policy is published. Preserve existing policy URLs, including the legacy `/spinreel/privacy/` route. Directory labels match the policy page titles independently of catalog or project naming. No app availability is implied by inclusion in this directory.

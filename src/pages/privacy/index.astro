@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { url } from "../../data/apps";
+import { privacyPolicies } from "../../data/privacy-policies";
+---
+
+<Layout
+  title="App Privacy Policies"
+  description="Find the privacy policy for each Velvet & Pixel app, including Before & After Studio, Cursed Gem Mosaics, IndexPilot and SpinReel."
+>
+  <section class="wrap page-head">
+    <p class="eyebrow">Velvet &amp; Pixel / App information</p>
+    <h1>
+      Privacy <em>policies.</em>
+    </h1>
+    <p class="intro">Find your app. Read its privacy policy.</p>
+    <p>
+      Policies are listed alphabetically by app name. A policy’s presence here
+      does not mean the app is available to download.
+    </p>
+  </section>
+  <section class="wrap policy-directory" aria-labelledby="policy-list-title">
+    <h2 id="policy-list-title" class="eyebrow">
+      All app policies
+    </h2>
+    <ul>
+      {privacyPolicies.map(({ name, path }) => (
+        <li>
+          <a href={url(path)}>
+            <span>{name}</span>
+            <svg
+              class="arrow"
+              aria-hidden="true"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                d="M4 16 16 4M4 4h12v12"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="fine">
+      Privacy questions?{" "}
+      <a href="mailto:velvetandpixel@gmail.com">velvetandpixel@gmail.com</a>
+    </p>
+  </section>
+</Layout>

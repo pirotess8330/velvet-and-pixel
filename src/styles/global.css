@@ -1147,3 +1147,38 @@ p {
     flex-wrap: wrap;
   }
 }
+
+.policy-directory {
+  padding-bottom: 80px;
+  max-width: 900px;
+}
+.policy-directory ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 32px;
+}
+.policy-directory li {
+  border-bottom: 1px solid var(--line);
+}
+.policy-directory li:first-child {
+  border-top: 1px solid var(--line);
+}
+.policy-directory li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 4px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+}
+.policy-directory li a:hover {
+  color: var(--pink);
+}
+.policy-directory li span {
+  overflow-wrap: anywhere;
+}
+.policy-directory .arrow {
+  flex-shrink: 0;
+}

@@ -155,3 +155,29 @@ assert.ok(
 console.log(
   "Passed: unique metadata, canonical/OG tags, software schema, sitemap, robots and static content.",
 );
+
+const directory = await readFile(path.join(root, "privacy/index.html"), "utf8");
+for (const file of htmlFiles) {
+  const relative = path.relative(root, file).replaceAll(path.sep, "/");
+  if (
+    (relative.startsWith("privacy/") || relative.includes("/privacy/")) &&
+    relative !== "privacy/index.html"
+  ) {
+    const route = relative.replace(/index\.html$/, "");
+    assert.ok(
+      directory.includes(`href="${base}${route}"`),
+      `Policy missing from directory: ${route}`,
+    );
+  }
+  const html = await readFile(file, "utf8");
+  const footer = html.match(/<footer[\s\S]*?<\/footer>/)[0];
+  assert.ok(footer.includes(`href="${base}privacy/"`));
+  assert.equal(
+    (footer.match(/privacy\//g) || []).length,
+    1,
+    "Footer must use one privacy directory link",
+  );
+}
+console.log(
+  "Passed: policy directory covers every policy and all footers use one directory link.",
+);
