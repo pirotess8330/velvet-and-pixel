@@ -25,7 +25,8 @@ export type CategoryId = (typeof categories)[number]["id"];
 export interface App {
   slug: string;
   name: string;
-  status: "Coming Soon" | "In Development" | "Planned";
+  status:
+    "In Google Play review" | "Coming Soon" | "In Development" | "Planned";
   category: string;
   categoryId: CategoryId;
   platform: "Android";
@@ -40,7 +41,7 @@ export const apps: App[] = [
   {
     slug: "before-after-studio",
     name: "Before & After Studio",
-    status: "Coming Soon",
+    status: "In Google Play review",
     category: "Photo & Creative Tools",
     categoryId: "photo-apps",
     platform: "Android",
@@ -71,7 +72,7 @@ export const apps: App[] = [
   },
   {
     slug: "photo-roulette-video-maker",
-    name: "Photo Roulette Video Maker",
+    name: "SpinReveal",
     status: "In Development",
     category: "Video & Creative Tools",
     categoryId: "photo-apps",

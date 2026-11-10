@@ -1053,3 +1053,97 @@ p {
 .card-app-title h3 {
   margin-bottom: 0;
 }
+
+.service-list {
+  padding-left: 1.2em;
+  margin: 26px 0;
+  color: var(--muted);
+}
+.service-list li {
+  margin: 12px 0;
+}
+.service-list li::marker {
+  color: var(--pink);
+}
+.hire-quick-contact {
+  display: none;
+}
+.developer-background {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+.developer-background p {
+  max-width: 850px;
+}
+.case-study {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+.case-copy h3 {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+}
+.case-copy strong {
+  color: var(--text);
+}
+.case-copy .text-link {
+  margin: 12px 20px 0 0;
+}
+.case-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.case-app-media {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: center;
+}
+.case-app-media img {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.case-web-media {
+  border: 1px solid var(--line);
+}
+.portfolio-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 32px;
+}
+@media (max-width: 760px) {
+  .hire-quick-contact {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-inline: 16px;
+    font-size: 0.8rem;
+  }
+  .case-study {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .case-app-media {
+    gap: 8px;
+  }
+  .portfolio-contact {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .portfolio-contact .button {
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding-inline: 16px;
+  }
+  .meta {
+    flex-wrap: wrap;
+  }
+}

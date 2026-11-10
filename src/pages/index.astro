@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import AppCard from "../components/AppCard.astro";
+import CaseStudies from "../components/CaseStudies.astro";
 import HireStudio from "../components/HireStudio.astro";
 import { apps, categories, url } from "../data/apps";
 import { Image } from "astro:assets";
@@ -9,7 +10,7 @@ import logo from "../assets/velvet-and-pixel.jpg";
 
 <Layout
   title="Beautifully Strange Software"
-  description="Velvet & Pixel is an independent Android app and game studio. Discover creative tools and games built with personality."
+  description="Independent apps, games and custom development from Velvet & Pixel. Explore the studio’s work or discuss an app, internal tool, integration or workflow problem."
 >
   <section class="hero wrap">
     <div class="hero-copy">
@@ -39,7 +40,7 @@ import logo from "../assets/velvet-and-pixel.jpg";
         </span>
       </a>
       <a class="hero-hire-link" href="#hire">
-        Have an app in mind? Hire the studio →
+        Have a problem to solve? Work with me →
       </a>
     </div>
     <div class="hero-brand">
@@ -90,6 +91,7 @@ import logo from "../assets/velvet-and-pixel.jpg";
       ))}
     </div>
   </section>
+  <CaseStudies />
   <section class="wrap studio-note">
     <p class="eyebrow">Small studio. Distinct point of view.</p>
     <h2>

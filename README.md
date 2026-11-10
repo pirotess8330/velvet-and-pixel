@@ -63,7 +63,7 @@ The app documentation reports code/automated validation complete, while actual P
 2. Configure the real one-time product and verification public key, build the configured release, and complete Play-track purchase/restore/refund testing per the app's release documentation. These are app release tasks, not website code changes.
 3. Confirm pricing, support instructions and published policy against that release, then add the verified store URL and real screenshots.
 
-The public policy describes SDK transaction, technical and diagnostic processing rather than falsely claiming that no data is processed. Website publication does not certify Play Console declarations or production billing readiness. The app remains marked Coming Soon.
+The public policy describes SDK transaction, technical and diagnostic processing rather than falsely claiming that no data is processed. Website publication does not certify Play Console declarations or production billing readiness. The app is marked In Google Play review, based on the owner’s current release status.
 
 ## Manual acceptance
 
@@ -93,3 +93,12 @@ Each page has a unique title/description, canonical URL and Open Graph metadata.
 In Google Search Console, select or add the URL-prefix property `https://pirotess8330.github.io/velvet-and-pixel/`. An owner-provided verification HTML file is already in `public/`; confirm verification in your account. Submit `https://pirotess8330.github.io/velvet-and-pixel/sitemap-index.xml` under Sitemaps, then use URL Inspection to request indexing for the homepage and `apps/before-after-studio/`. Indexing and search appearance are determined by Google.
 
 The project-level robots.txt allows crawling and references the sitemap. Crawlers only apply robots rules at the origin root (`https://pirotess8330.github.io/robots.txt`), so this project file cannot control other repositories or override root rules. The sitemap can be submitted directly in Search Console.
+
+
+## Client enquiries and portfolio
+
+`HireStudio.astro` contains the focused-project invitation and owner-provided biography. The enquiry buttons use `mailto:velvetandpixel@gmail.com?subject=Project%20enquiry`; no form service or tracking is involved. Mobile browsers hand the link to a configured email app.
+
+`CaseStudies.astro` presents Before & After Studio as an independent app in Google Play review and this website as a live own-business project. The website screenshot is in `src/assets/portfolio/`. No client outcomes, testimonials, or DreamWorks materials are included. Publishing Suite remains off the portfolio until suitable media is approved.
+
+November 10, 2026 verification: current Before & After Studio README and privacy documentation support its name, contact address and published feature list; the owner confirms its Play review status. The snap-spin-reel-app README identifies the current project as SpinReveal, replacing the earlier catalog title Photo Roulette Video Maker. Cursed Gem Mosaics remains In Development; Tattoo Stencil Generator remains Planned and is distinct from Tattoo Flash Organizer. Prices were not changed. No store or download link is rendered while listings are unavailable.
