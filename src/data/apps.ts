@@ -2,6 +2,7 @@ import type { ImageMetadata } from "astro";
 import beforeAfterArtwork from "../assets/before-after-studio/demo-artwork.png";
 import beforeAfterIcon from "../assets/before-after-studio/app-icon.png";
 
+import stuffBanner from "../assets/wheres-my-stuff/banner.png";
 import stuffIcon from "../assets/wheres-my-stuff/icon.png";
 
 export const categories = [
@@ -57,6 +58,7 @@ export const apps: App[] = [
       "Remember what you own and where you put it. Organize items with photos, tags and nested places, then find them with search.",
     href: "apps/wheres-my-stuff/",
     icon: stuffIcon,
+    artwork: stuffBanner,
   },
   {
     slug: "before-after-studio",

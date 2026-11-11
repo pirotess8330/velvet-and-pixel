@@ -1192,3 +1192,7 @@ p {
 .wheres-my-stuff {
   background: #120f16;
 }
+
+/* The supplied banner is portrait artwork: preserve all lettering. */
+.app-art.app-art-image.wheres-my-stuff { aspect-ratio: 4 / 3; background: #000; }
+.app-art-image.wheres-my-stuff > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
