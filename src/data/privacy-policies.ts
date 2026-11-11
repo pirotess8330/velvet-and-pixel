@@ -2,6 +2,7 @@
 export const privacyPolicies = [
   { name: "Before & After Studio", path: "privacy/before-after-studio/" },
   { name: "Cursed Gem Mosaics", path: "privacy/cursed-gem-mosaics/" },
+  { name: "Cursed Gem Windows", path: "privacy/cursed-gem-windows/" },
   { name: "IndexPilot", path: "privacy/indexpilot/" },
   { name: "SpinReel", path: "spinreel/privacy/" },
 ].sort((a, b) => a.name.localeCompare(b.name, "en"));
