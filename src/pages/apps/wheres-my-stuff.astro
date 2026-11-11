@@ -1,0 +1,150 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import AppVideo from "../../components/AppVideo.astro";
+import { url } from "../../data/apps";
+import icon from "../../assets/wheres-my-stuff/icon.png";
+import add from "../../assets/wheres-my-stuff/add-item.jpg";
+import places from "../../assets/wheres-my-stuff/places.jpg";
+import find from "../../assets/wheres-my-stuff/find.jpg";
+import light from "../../assets/wheres-my-stuff/light-appearance.jpg";
+const screenshots = [
+  {
+    image: add,
+    title: "Add what you want to find",
+    alt: "Where’s My Stuff? Add item screen with a name, optional photo and save controls.",
+  },
+  {
+    image: places,
+    title: "Give everything a place",
+    alt: "Nested place picker showing garage, left side shelves and storage box 3.",
+  },
+  {
+    image: find,
+    title: "Find the full path",
+    alt: "Saved Christmas lights with tags and the storage path garage, left side shelves, storage box 3.",
+  },
+  {
+    image: light,
+    title: "Choose your appearance",
+    alt: "The same inventory in the app’s light appearance with turquoise accents.",
+  },
+];
+const appUrl = new URL(url("apps/wheres-my-stuff/"), Astro.site).href;
+const software = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Where’s My Stuff?",
+  url: appUrl,
+  operatingSystem: "Android",
+  applicationCategory: "LifestyleApplication",
+  description:
+    "Remember what you own and where you put it. Organize items with photos, tags and nested places, then search your inventory on Android.",
+  image: new URL(icon.src, Astro.site).href,
+  author: { "@type": "Organization", name: "Velvet & Pixel" },
+};
+---
+
+<Layout
+  title="Where’s My Stuff? — Android Inventory Organizer"
+  description="Remember what you own and where you put it. Organize items with photos, tags and nested places, then search your inventory on Android. In development."
+  socialImage={icon.src}
+  socialImageAlt="Where’s My Stuff? neon cube app icon"
+  structuredData={software}
+>
+  <section class="wrap page-head product-head">
+    <p class="eyebrow">Organization &amp; Everyday Tools / Android</p>
+    <span class="status">In Development</span>
+    <div class="product-title">
+      <Image
+        class="product-icon"
+        src={icon}
+        alt=""
+        widths={[96, 144, 288]}
+        sizes="(max-width: 760px) 80px, 144px"
+        width={144}
+        height={144}
+        loading="eager"
+      />
+      <h1>
+        Where’s
+        <br />
+        <em>My Stuff?</em>
+      </h1>
+    </div>
+    <p class="intro">Less hunting. More finding.</p>
+    <p>
+      Remember what you own—and where you put it. Add an item, give it a place,
+      and find it again with photos, tags, and search.
+    </p>
+    <p class="availability">
+      An independent Velvet &amp; Pixel app in development. A Google Play
+      download link will be added when a public listing is available.
+    </p>
+  </section>
+  <section class="wrap section">
+    <p class="eyebrow">From “somewhere” to right here</p>
+    <h2>See where it goes.</h2>
+    <p>
+      Real screens from the development preview. Select a screenshot to view it
+      full size.
+    </p>
+    <div class="screenshots">
+      {screenshots.map(({ image, title, alt }) => (
+        <figure class="app-screenshot">
+          <a
+            href={image.src}
+            aria-label={`View full-size screenshot: ${title}`}
+          >
+            <Image
+              src={image}
+              alt={alt}
+              widths={[280, 420, 600]}
+              sizes="(max-width: 760px) 75vw, 260px"
+              format="webp"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>{title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="demo-title">
+    <p class="eyebrow">Watch the development preview</p>
+    <h2 id="demo-title">A place for your stuff.</h2>
+    <AppVideo
+      href="https://www.youtube.com/shorts/X7BZbpoqhRs"
+      appName="Where’s My Stuff?"
+    />
+  </section>
+  <section class="wrap section" aria-labelledby="features-title">
+    <p class="eyebrow">Built around everyday organization</p>
+    <h2 id="features-title">Remember the details.</h2>
+    <ul class="feature-summary">
+      {[
+        "Items with names, notes, tags, quantities and an optional photo",
+        "Nested places with readable paths, from room to shelf to box",
+        "Search by item name, tags or notes",
+        "Move items as your storage changes",
+        "Local inventory that works offline",
+        "Light and dark appearances with accent choices",
+      ].map((feature) => (
+        <li>{feature}</li>
+      ))}
+    </ul>
+    <p class="fine">
+      Screens and features may change during development. Inventory is stored on
+      your device; export a backup before uninstalling or changing phones.
+    </p>
+  </section>
+  <section class="wrap callout">
+    <h2>Questions about the app?</h2>
+    <a
+      class="text-link"
+      href="mailto:velvetandpixel@gmail.com?subject=Where%27s%20My%20Stuff%20enquiry"
+    >
+      Email Velvet &amp; Pixel →
+    </a>
+  </section>
+</Layout>

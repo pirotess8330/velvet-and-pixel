@@ -23,6 +23,16 @@ const { app, index = 1 } = Astro.props;
         format="webp"
         loading="lazy"
       />
+    ) : app.icon ? (
+      <Image
+        class="app-art-icon"
+        src={app.icon}
+        alt=""
+        width={200}
+        height={200}
+        format="webp"
+        loading="lazy"
+      />
     ) : app.slug === "cursed-gem-mosaics" ? (
       <div class="gem">◇</div>
     ) : (

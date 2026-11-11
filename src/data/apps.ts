@@ -2,6 +2,8 @@ import type { ImageMetadata } from "astro";
 import beforeAfterArtwork from "../assets/before-after-studio/demo-artwork.png";
 import beforeAfterIcon from "../assets/before-after-studio/app-icon.png";
 
+import stuffIcon from "../assets/wheres-my-stuff/icon.png";
+
 export const categories = [
   {
     id: "games",
@@ -18,6 +20,12 @@ export const categories = [
     name: "Tattoo Apps",
     description:
       "A dedicated space for tattoo-focused apps as the collection grows.",
+  },
+  {
+    id: "everyday-tools",
+    name: "Everyday Tools",
+    description:
+      "Useful tools for organizing the things you live and work with.",
   },
 ] as const;
 export type CategoryId = (typeof categories)[number]["id"];
@@ -38,6 +46,18 @@ export interface App {
   screenshots?: { src: string; alt: string }[];
 }
 export const apps: App[] = [
+  {
+    slug: "wheres-my-stuff",
+    name: "Where’s My Stuff?",
+    status: "In Development",
+    category: "Organization & Everyday Tools",
+    categoryId: "everyday-tools",
+    platform: "Android",
+    description:
+      "Remember what you own and where you put it. Organize items with photos, tags and nested places, then find them with search.",
+    href: "apps/wheres-my-stuff/",
+    icon: stuffIcon,
+  },
   {
     slug: "before-after-studio",
     name: "Before & After Studio",

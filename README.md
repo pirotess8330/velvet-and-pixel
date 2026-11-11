@@ -107,3 +107,8 @@ November 10, 2026 verification: current Before & After Studio README and privacy
 ## Privacy directory
 
 The footer links to `/privacy/`, an alphabetical directory of all published app policies. Add each new app’s name and stable route to `src/data/privacy-policies.ts` when its policy is published. Preserve existing policy URLs, including the legacy `/spinreel/privacy/` route. Directory labels match the policy page titles independently of catalog or project naming. No app availability is implied by inclusion in this directory.
+
+
+## Where’s My Stuff?
+
+The product page is `/apps/wheres-my-stuff/`. Owner-confirmed name: Where’s My Stuff? (the older supplied “Where Is It?” headers are not used). Added November 11, 2026 from the VP Drive project’s Demo pics folder and current `where-is-it` README/HANDOFF. Real preview screenshots and approved icon live in `src/assets/wheres-my-stuff/`. The YouTube demo is linked without an embedded player. The app is In Development; no store URL, release date or final price is asserted. It appears under Everyday Tools and in the homepage’s recent-project cards. A privacy policy should be added once finalized; none is invented for this page.
