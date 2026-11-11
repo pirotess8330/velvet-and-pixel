@@ -35,8 +35,7 @@ import { apps, categories } from "../../data/apps";
           <div class="section-heading">
             <div>
               <p class="eyebrow">
-                The collection /{" "}
-                {String(categories.indexOf(category) + 1).padStart(2, "0")}
+                The collection
               </p>
               <h2 id={`${category.id}-title`}>{category.name}</h2>
             </div>
@@ -45,7 +44,7 @@ import { apps, categories } from "../../data/apps";
           {entries.length ? (
             <div class="app-grid">
               {entries.map((app) => (
-                <AppCard app={app} index={apps.indexOf(app) + 1} />
+                <AppCard app={app} />
               ))}
             </div>
           ) : (

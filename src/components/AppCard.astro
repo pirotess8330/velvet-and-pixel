@@ -4,9 +4,8 @@ import type { App } from "../data/apps";
 import { url } from "../data/apps";
 interface Props {
   app: App;
-  index?: number;
 }
-const { app, index = 1 } = Astro.props;
+const { app } = Astro.props;
 ---
 
 <article class="app-card">
@@ -46,7 +45,7 @@ const { app, index = 1 } = Astro.props;
   <div class="card-content">
     <div class="meta">
       <span>
-        0{index} / {app.platform}
+        {app.platform}
       </span>
       <span class="status">{app.status}</span>
     </div>
