@@ -44,9 +44,7 @@ const { app } = Astro.props;
   </div>
   <div class="card-content">
     <div class="meta">
-      <span>
-        {app.platform}
-      </span>
+      <span>{app.platform}</span>
       <span class="status">{app.status}</span>
     </div>
     <div class="card-app-title">
@@ -65,6 +63,11 @@ const { app } = Astro.props;
       <h3>{app.name}</h3>
     </div>
     <p>{app.description}</p>
+    {app.storeUrl && (
+      <a class="button app-store-link" href={app.storeUrl}>
+        Get it on Google Play <span aria-hidden="true">→</span>
+      </a>
+    )}
     {app.href ? (
       <a class="text-link" href={url(app.href)}>
         Explore the app{" "}

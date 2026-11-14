@@ -35,7 +35,11 @@ export interface App {
   slug: string;
   name: string;
   status:
-    "In Google Play review" | "Coming Soon" | "In Development" | "Planned";
+    | "Available on Google Play"
+    | "In Google Play review"
+    | "Coming Soon"
+    | "In Development"
+    | "Planned";
   category: string;
   categoryId: CategoryId;
   platform: "Android";
@@ -63,7 +67,9 @@ export const apps: App[] = [
   {
     slug: "before-after-studio",
     name: "Before & After Studio",
-    status: "In Google Play review",
+    status: "Available on Google Play",
+    storeUrl:
+      "https://play.google.com/store/apps/details?id=com.velvetandpixel.beforeafterstudio",
     category: "Photo & Creative Tools",
     categoryId: "photo-apps",
     platform: "Android",

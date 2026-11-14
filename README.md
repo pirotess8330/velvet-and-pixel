@@ -112,3 +112,8 @@ The footer links to `/privacy/`, an alphabetical directory of all published app 
 ## Where’s My Stuff?
 
 The product page is `/apps/wheres-my-stuff/`. Owner-confirmed name: Where’s My Stuff? (the older supplied “Where Is It?” headers are not used). Added November 11, 2026 from the VP Drive project’s Demo pics folder and current `where-is-it` README/HANDOFF. Real preview screenshots and approved icon live in `src/assets/wheres-my-stuff/`. The YouTube demo is linked without an embedded player. The app is In Development; no store URL, release date or final price is asserted. It appears under Everyday Tools and in the homepage’s recent-project cards. A privacy policy should be added once finalized; none is invented for this page.
+
+
+## Before & After Studio release
+
+The owner confirmed the public Play release on November 14, 2026. The verified listing is `https://play.google.com/store/apps/details?id=com.velvetandpixel.beforeafterstudio`, configured in `src/data/apps.ts`. Its product page and reusable homepage/catalog cards link directly to Google Play. The case-study label and software structured data reflect availability. Other apps retain their existing development statuses and have no store links. No ratings or download counts are claimed.

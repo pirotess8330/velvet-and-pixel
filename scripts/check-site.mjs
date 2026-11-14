@@ -131,7 +131,16 @@ const data = JSON.parse(
 );
 assert.equal(data["@type"], "SoftwareApplication");
 assert.equal(data.operatingSystem, "Android");
-assert.ok(!data.offers && !data.aggregateRating && !data.downloadUrl);
+assert.ok(!data.offers && !data.aggregateRating);
+assert.equal(
+  data.downloadUrl,
+  "https://play.google.com/store/apps/details?id=com.velvetandpixel.beforeafterstudio",
+);
+assert.ok(product.includes(`href="${data.downloadUrl}"`));
+assert.ok(
+  !product.includes("In review on Google Play") &&
+    !product.includes("Available when the app launches"),
+);
 const staticProduct = product.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
 for (const text of [
   "Before &amp; After Studio",
