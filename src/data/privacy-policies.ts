@@ -5,4 +5,5 @@ export const privacyPolicies = [
   { name: "Cursed Gem Windows", path: "privacy/cursed-gem-windows/" },
   { name: "IndexPilot", path: "privacy/indexpilot/" },
   { name: "SpinReel", path: "spinreel/privacy/" },
+  { name: "Tattoo Flash Sheet Maker", path: "privacy/tattoo-flash-organizer/" },
 ].sort((a, b) => a.name.localeCompare(b.name, "en"));

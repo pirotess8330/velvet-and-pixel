@@ -85,6 +85,11 @@ This site now uses the Velvet & Pixel name, owner-supplied replacement logo, and
 
 After the new deployment is verified, update any Google Play Console privacy, website and support links to the URLs above, including the new contact email. Deleting the previous repository removes its Pages URLs; this repository cannot redirect requests to a deleted repository. The previous repository is intentionally left intact for the owner to retire.
 
+## Tattoo Flash Sheet Maker privacy page
+
+Adds `/privacy/tattoo-flash-organizer/` to the existing privacy directory. Reviewed against Flash Preview 0.7.8 and privately published Photo Utilities 0.6.1 on November 15, 2026: prepared-artwork processing is local, including solid-background removal; original/version retention and explicit existing-sheet update scope are preserved. Covers local library/activity, free user archives, one-time Pro/PDF, private purchase proof and Google SDK operational data. The owner requested completion of the main/signing release gates on November 15; publication uses the existing Pages deployment. No public app availability or Play listing is announced.
+
+Product name: Tattoo Flash Sheet Maker. The `/privacy/tattoo-flash-organizer/` route remains stable. Current website design and single privacy-directory footer link are retained.
 
 ## Search indexing
 
