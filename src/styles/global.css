@@ -1053,3 +1053,178 @@ p {
 .card-app-title h3 {
   margin-bottom: 0;
 }
+
+.service-list {
+  padding-left: 1.2em;
+  margin: 26px 0;
+  color: var(--muted);
+}
+.service-list li {
+  margin: 12px 0;
+}
+.service-list li::marker {
+  color: var(--pink);
+}
+.hire-quick-contact {
+  display: none;
+}
+.developer-background {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+}
+.developer-background p {
+  max-width: 850px;
+}
+.case-study {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+.case-copy h3 {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+}
+.case-copy strong {
+  color: var(--text);
+}
+.case-copy .text-link {
+  margin: 12px 20px 0 0;
+}
+.case-media img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.case-app-media {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: center;
+}
+.case-app-media img {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.case-web-media {
+  border: 1px solid var(--line);
+}
+.portfolio-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 32px;
+}
+@media (max-width: 760px) {
+  .hire-quick-contact {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-inline: 16px;
+    font-size: 0.8rem;
+  }
+  .case-study {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .case-app-media {
+    gap: 8px;
+  }
+  .portfolio-contact {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .portfolio-contact .button {
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding-inline: 16px;
+  }
+  .meta {
+    flex-wrap: wrap;
+  }
+}
+
+.policy-directory {
+  padding-bottom: 80px;
+  max-width: 900px;
+}
+.policy-directory ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 32px;
+}
+.policy-directory li {
+  border-bottom: 1px solid var(--line);
+}
+.policy-directory li:first-child {
+  border-top: 1px solid var(--line);
+}
+.policy-directory li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 4px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+}
+.policy-directory li a:hover {
+  color: var(--pink);
+}
+.policy-directory li span {
+  overflow-wrap: anywhere;
+}
+.policy-directory .arrow {
+  flex-shrink: 0;
+}
+
+.app-art .app-art-icon {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 24px;
+}
+.wheres-my-stuff {
+  background: #120f16;
+}
+
+/* Preserve the supplied landscape banner and all lettering. */
+.app-art.app-art-image.wheres-my-stuff {
+  aspect-ratio: 2 / 1;
+  background: #000;
+}
+.app-art-image.wheres-my-stuff > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.app-store-link {
+  margin: 4px 0 20px;
+  gap: 16px;
+  font-size: 0.85rem;
+  padding: 16px 20px;
+}
+.product-download {
+  margin-top: 28px;
+}
+.product-download .fine {
+  margin: 14px 0 0;
+}
+@media (max-width: 760px) {
+  .app-store-link,
+  .product-download .button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    padding-inline: 16px;
+  }
+}

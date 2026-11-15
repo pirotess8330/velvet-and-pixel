@@ -2,6 +2,9 @@ import type { ImageMetadata } from "astro";
 import beforeAfterArtwork from "../assets/before-after-studio/demo-artwork.png";
 import beforeAfterIcon from "../assets/before-after-studio/app-icon.png";
 
+import stuffBanner from "../assets/wheres-my-stuff/banner.png";
+import stuffIcon from "../assets/wheres-my-stuff/icon.png";
+
 export const categories = [
   {
     id: "games",
@@ -19,13 +22,24 @@ export const categories = [
     description:
       "A dedicated space for tattoo-focused apps as the collection grows.",
   },
+  {
+    id: "everyday-tools",
+    name: "Everyday Tools",
+    description:
+      "Useful tools for organizing the things you live and work with.",
+  },
 ] as const;
 export type CategoryId = (typeof categories)[number]["id"];
 
 export interface App {
   slug: string;
   name: string;
-  status: "Coming Soon" | "In Development" | "Planned";
+  status:
+    | "Available on Google Play"
+    | "In Google Play review"
+    | "Coming Soon"
+    | "In Development"
+    | "Planned";
   category: string;
   categoryId: CategoryId;
   platform: "Android";
@@ -38,9 +52,24 @@ export interface App {
 }
 export const apps: App[] = [
   {
+    slug: "wheres-my-stuff",
+    name: "Where’s My Stuff?",
+    status: "In Development",
+    category: "Organization & Everyday Tools",
+    categoryId: "everyday-tools",
+    platform: "Android",
+    description:
+      "Remember what you own and where you put it. Organize items with photos, tags and nested places, then find them with search.",
+    href: "apps/wheres-my-stuff/",
+    icon: stuffIcon,
+    artwork: stuffBanner,
+  },
+  {
     slug: "before-after-studio",
     name: "Before & After Studio",
-    status: "Coming Soon",
+    status: "Available on Google Play",
+    storeUrl:
+      "https://play.google.com/store/apps/details?id=com.velvetandpixel.beforeafterstudio",
     category: "Photo & Creative Tools",
     categoryId: "photo-apps",
     platform: "Android",
@@ -71,7 +100,7 @@ export const apps: App[] = [
   },
   {
     slug: "photo-roulette-video-maker",
-    name: "Photo Roulette Video Maker",
+    name: "SpinReveal",
     status: "In Development",
     category: "Video & Creative Tools",
     categoryId: "photo-apps",

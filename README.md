@@ -63,7 +63,7 @@ The app documentation reports code/automated validation complete, while actual P
 2. Configure the real one-time product and verification public key, build the configured release, and complete Play-track purchase/restore/refund testing per the app's release documentation. These are app release tasks, not website code changes.
 3. Confirm pricing, support instructions and published policy against that release, then add the verified store URL and real screenshots.
 
-The public policy describes SDK transaction, technical and diagnostic processing rather than falsely claiming that no data is processed. Website publication does not certify Play Console declarations or production billing readiness. The app remains marked Coming Soon.
+The public policy describes SDK transaction, technical and diagnostic processing rather than falsely claiming that no data is processed. Website publication does not certify Play Console declarations or production billing readiness. The app is marked In Google Play review, based on the owner’s current release status.
 
 ## Manual acceptance
 
@@ -85,8 +85,40 @@ This site now uses the Velvet & Pixel name, owner-supplied replacement logo, and
 
 After the new deployment is verified, update any Google Play Console privacy, website and support links to the URLs above, including the new contact email. Deleting the previous repository removes its Pages URLs; this repository cannot redirect requests to a deleted repository. The previous repository is intentionally left intact for the owner to retire.
 
-## Tattoo Flash Sheet Maker privacy page (draft release work)
+## Tattoo Flash Sheet Maker privacy page
 
-Adds `/privacy/tattoo-flash-organizer/` and a footer link, using the existing layout. App reference: pirotess8330/tattoo-flash-organizer release implementation branch. Describes local artwork/activity, free user archives, one-time Pro/PDF, private purchase proof and Google SDK technical data. Reconcile background-removal engine details and final app SDK inventory before merging/publishing. Local check/build/site tests passed; Chromium at 360/1440 px showed no horizontal overflow or page errors. Publishing requires merging this reviewed change; no deployment is claimed for the draft.
+Adds `/privacy/tattoo-flash-organizer/` to the existing privacy directory. Reviewed against Flash Preview 0.7.8 and privately published Photo Utilities 0.6.1 on November 15, 2026: prepared-artwork processing is local, including solid-background removal; original/version retention and explicit existing-sheet update scope are preserved. Covers local library/activity, free user archives, one-time Pro/PDF, private purchase proof and Google SDK operational data. The owner requested completion of the main/signing release gates on November 15; publication uses the existing Pages deployment. No public app availability or Play listing is announced.
 
-Product name updated on 9 November 2026 from Tattoo Flash Organizer to Tattoo Flash Sheet Maker. The existing `/privacy/tattoo-flash-organizer/` route remains stable. This rename is staged in the draft branch; it does not publish or merge the privacy page.
+Product name: Tattoo Flash Sheet Maker. The `/privacy/tattoo-flash-organizer/` route remains stable. Current website design and single privacy-directory footer link are retained.
+
+## Search indexing
+
+Each page has a unique title/description, canonical URL and Open Graph metadata. The app product page includes factual `SoftwareApplication` JSON-LD and its own sharing image; no invented ratings, release date or download URL. Important content is generated in HTML and works without JavaScript. Upcoming catalog-only projects do not have standalone product pages yet.
+
+In Google Search Console, select or add the URL-prefix property `https://pirotess8330.github.io/velvet-and-pixel/`. An owner-provided verification HTML file is already in `public/`; confirm verification in your account. Submit `https://pirotess8330.github.io/velvet-and-pixel/sitemap-index.xml` under Sitemaps, then use URL Inspection to request indexing for the homepage and `apps/before-after-studio/`. Indexing and search appearance are determined by Google.
+
+The project-level robots.txt allows crawling and references the sitemap. Crawlers only apply robots rules at the origin root (`https://pirotess8330.github.io/robots.txt`), so this project file cannot control other repositories or override root rules. The sitemap can be submitted directly in Search Console.
+
+
+## Client enquiries and portfolio
+
+`HireStudio.astro` contains the focused-project invitation and owner-provided biography. The enquiry buttons use `mailto:velvetandpixel@gmail.com?subject=Project%20enquiry`; no form service or tracking is involved. Mobile browsers hand the link to a configured email app.
+
+`CaseStudies.astro` presents Before & After Studio as an independent app in Google Play review and this website as a live own-business project. The website screenshot is in `src/assets/portfolio/`. No client outcomes, testimonials, or DreamWorks materials are included. Publishing Suite remains off the portfolio until suitable media is approved.
+
+November 10, 2026 verification: current Before & After Studio README and privacy documentation support its name, contact address and published feature list; the owner confirms its Play review status. The snap-spin-reel-app README identifies the current project as SpinReveal, replacing the earlier catalog title Photo Roulette Video Maker. Cursed Gem Mosaics remains In Development; Tattoo Stencil Generator remains Planned and is distinct from Tattoo Flash Organizer. Prices were not changed. No store or download link is rendered while listings are unavailable.
+
+
+## Privacy directory
+
+The footer links to `/privacy/`, an alphabetical directory of all published app policies. Add each new app’s name and stable route to `src/data/privacy-policies.ts` when its policy is published. Preserve existing policy URLs, including the legacy `/spinreel/privacy/` route. Directory labels match the policy page titles independently of catalog or project naming. No app availability is implied by inclusion in this directory.
+
+
+## Where’s My Stuff?
+
+The product page is `/apps/wheres-my-stuff/`. Owner-confirmed name: Where’s My Stuff? (the older supplied “Where Is It?” headers are not used). Added November 11, 2026 from the VP Drive project’s Demo pics folder and current `where-is-it` README/HANDOFF. Real preview screenshots and approved icon live in `src/assets/wheres-my-stuff/`. The YouTube demo is linked without an embedded player. The app is In Development; no store URL, release date or final price is asserted. It appears under Everyday Tools and in the homepage’s recent-project cards. A privacy policy should be added once finalized; none is invented for this page.
+
+
+## Before & After Studio release
+
+The owner confirmed the public Play release on November 14, 2026. The verified listing is `https://play.google.com/store/apps/details?id=com.velvetandpixel.beforeafterstudio`, configured in `src/data/apps.ts`. Its product page and reusable homepage/catalog cards link directly to Google Play. The case-study label and software structured data reflect availability. Other apps retain their existing development statuses and have no store links. No ratings or download counts are claimed.
