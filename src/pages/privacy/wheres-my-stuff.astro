@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Where’s My Stuff? Privacy Policy" description="How Where’s My Stuff? handles local inventory, photos, backups and Google Play purchases.">
+  <article class="wrap prose">
+    <p class="eyebrow">Privacy / Where’s My Stuff?</p>
+    <h1>Privacy Policy — <em>Where’s My Stuff?</em></h1>
+    <p><strong>Effective date:</strong> November 16, 2026<br />
+      <strong>Developer:</strong> Velvet &amp; Pixel<br />
+      <strong>Android application ID:</strong> com.velvetandpixel.wheresmystuff<br />
+      <strong>Contact:</strong> <a href="mailto:velvetandpixel@gmail.com">velvetandpixel@gmail.com</a></p>
+    <h2>Overview</h2>
+    <p>Where’s My Stuff? helps you remember where you store your belongings. Inventory entry, search and organization work on your Android device. No Velvet &amp; Pixel account is required. We do not operate an inventory-upload server, cloud synchronization service or purchase-verification backend. The app has no ads, subscriptions or developer-operated analytics or crash-reporting service. Optional purchases use Google Play, which processes purchase and technical information as described below.</p>
+    <h2>Inventory and preferences</h2>
+    <p>Item names, locations and their hierarchy, notes, tags, quantities, timestamps, item status and optional photos are kept in the app’s private local storage. Drafts, recent places and appearance preferences are also stored locally. Inventory and photos are not sent by the app to Velvet &amp; Pixel or supplied to the billing SDK. Information visible in your photos or entered in notes is part of your inventory; avoid recording sensitive information you do not need.</p>
+    <h2>Photos and camera</h2>
+    <p>You may choose an image using an Android photo or document picker, or take one using your camera application. The app does not request unrestricted access to your media library. A camera or document/photo provider you choose may process information under its own policy, including when it offers cloud files.</p>
+    <p>The app stores an optimized JPEG copy of a selected image, capped at 2,048 pixels on its longest side, and a small regenerable thumbnail. It corrects orientation and does not intentionally copy source location metadata into the canonical image. Information visible within the image remains visible. The original photo outside the app is not removed or changed by editing the app’s copy.</p>
+    <p>Choosing “No photo” hides the attached photo without deleting it, so you can show it again. The separate photo-delete action removes the attachment from the current item when saved. Unsaved drafts and retained recovery or exported copies may contain older media separately.</p>
+    <h2>Backups, restore and recovery</h2>
+    <p>Automatic Android cloud backup and device transfer of the app’s inventory are disabled to avoid partial restoration of database and photo files. Manual export is the supported transfer method. Phone loss, clearing app storage or uninstalling loses inventory that you have not exported.</p>
+    <p>You choose where to export an inventory ZIP through Android’s document picker. It contains readable JSON records, a convenience CSV with storage paths and canonical photos, including active, archived and trashed records. It excludes unfinished drafts, thumbnails and Pro entitlement. Backups are not encrypted by the app. Save them to trusted destinations and share them carefully; a cloud storage provider or recipient processes your files under its own policy.</p>
+    <p>Restore replaces the current inventory rather than merging inventories, after validation and your confirmation. The app creates a local recovery snapshot and retains prior inventory data to recover from interrupted replacement. Those copies can contain older records or photos, including data later removed from the current inventory. Recovery storage can be reviewed and removed using the app’s recovery controls. Local recovery copies do not protect against losing the phone. An interrupted external export can leave an incomplete file; treat it as complete only after the app reports success.</p>
+    <h2>Retention and deletion</h2>
+    <p>Archived items remain saved. Items in Trash remain until you explicitly restore or permanently delete them; Trash does not expire automatically. Hiding a photo, archiving an item or moving it to Trash is not permanent deletion.</p>
+    <p>Permanent deletion removes the item and associated data from the current inventory. Unreferenced media left by interrupted operations may be retained conservatively until cleanup. Older data may remain in retained recovery snapshots, prior inventory generations and exported backups; remove those copies separately if you no longer need them. Deleting app data does not delete your original camera/gallery images or files saved outside the app.</p>
+    <p>Clearing app storage in Android Settings or uninstalling removes private inventory, drafts, local recovery data, preferences and cached entitlement. Export and verify a backup first if you want to keep your inventory.</p>
+    <h2>Google Play purchases</h2>
+    <p>The optional one-time Pro purchase unlocks unlimited item records. Google Play processes payment through your Google account. Velvet &amp; Pixel does not receive or store your payment card details.</p>
+    <p>The app receives product details, localized prices, purchase state, product identifiers and purchase tokens from Google Play to recognize completed purchases and acknowledge them. Pending purchases do not unlock Pro. Established entitlement is cached privately on your device for offline use and is excluded from inventory backups. Google Play is contacted for purchase processing and ownership refreshes. A successful refresh can remove unlimited additions after a refund or revocation without deleting your inventory.</p>
+    <p>Clearing storage or uninstalling removes the local cache but does not cancel a completed Play purchase. Use “Already bought Pro?” with the purchasing Google Play account to check eligible ownership for this app. Restoring an inventory backup does not grant Pro.</p>
+    <h2>Google SDK technical data</h2>
+    <p>The app includes Google Play Billing 9.1.0 and related Google SDK dependencies, including data transport. Google services can process purchase information and operational or diagnostic data, such as app package/version, Android and SDK versions, device/build information, language or country, network information, event timing, billing results, errors and temporary session identifiers. The exact information depends on the SDK, device and operation.</p>
+    <p>Google SDK networking can occur when checking service availability, loading prices or refreshing ownership, including before you choose to purchase. Diagnostics may be queued locally for later transmission. Local inventory storage does not mean that Google services process no technical data. Google controls the handling and retention of information on its services; deleting local inventory or uninstalling does not delete Google-held purchase or diagnostic records.</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy">Google’s Privacy Policy</a></li>
+      <li><a href="https://play.google.com/about/play-terms/">Google Play Terms of Service</a></li>
+      <li><a href="https://policies.google.com/technologies/retention">Google data retention information</a></li>
+      <li><a href="https://myaccount.google.com/data-and-privacy">Google account privacy controls</a></li>
+    </ul>
+    <h2>Support and your choices</h2>
+    <p>If you contact us by email, we receive the address and information you choose to send and use it to respond to your request. Do not send private inventory or backups unless needed and intentionally shared. You can request deletion of support correspondence by contacting us; records may be retained where needed for legal obligations or resolving a dispute. We cannot recover inventory we do not hold or delete copies held by your chosen providers on your behalf.</p>
+    <h2>Security</h2>
+    <p>The app uses Android application-private storage and system camera, photo and document mechanisms. Private storage provides access control; the app does not add a separate encryption layer to inventory files or ZIP backups. Google and your selected providers have their own security practices. No software or storage method guarantees absolute security.</p>
+    <h2>Children’s privacy</h2>
+    <p>This is a general personal-organization tool, not a service specifically directed to children. We do not knowingly collect children’s personal information through an app account or inventory server. If you have a concern about information sent to us, contact us using the address above.</p>
+    <h2>Changes and contact</h2>
+    <p>We may update this policy as features or integrations change. The effective date appears above. For privacy questions or requests concerning information you have sent to us, email <a href="mailto:velvetandpixel@gmail.com">velvetandpixel@gmail.com</a>.</p>
+  </article>
+</Layout>

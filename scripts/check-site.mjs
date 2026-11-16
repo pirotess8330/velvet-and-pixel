@@ -78,6 +78,7 @@ for (const route of [
   "apps/before-after-studio/index.html",
   "privacy/before-after-studio/index.html",
   "privacy/tattoo-flash-organizer/index.html",
+  "privacy/wheres-my-stuff/index.html",
   "support/index.html",
   "404.html",
   "robots.txt",

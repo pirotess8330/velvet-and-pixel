@@ -6,4 +6,5 @@ export const privacyPolicies = [
   { name: "IndexPilot", path: "privacy/indexpilot/" },
   { name: "SpinReel", path: "spinreel/privacy/" },
   { name: "Tattoo Flash Sheet Maker", path: "privacy/tattoo-flash-organizer/" },
+  { name: "Where’s My Stuff?", path: "privacy/wheres-my-stuff/" },
 ].sort((a, b) => a.name.localeCompare(b.name, "en"));

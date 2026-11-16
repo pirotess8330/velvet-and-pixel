@@ -116,7 +116,7 @@ The footer links to `/privacy/`, an alphabetical directory of all published app 
 
 ## Where’s My Stuff?
 
-The product page is `/apps/wheres-my-stuff/`. Owner-confirmed name: Where’s My Stuff? (the older supplied “Where Is It?” headers are not used). Added November 11, 2026 from the VP Drive project’s Demo pics folder and current `where-is-it` README/HANDOFF. Real preview screenshots and approved icon live in `src/assets/wheres-my-stuff/`. The YouTube demo is linked without an embedded player. The app is In Development; no store URL, release date or final price is asserted. It appears under Everyday Tools and in the homepage’s recent-project cards. A privacy policy should be added once finalized; none is invented for this page.
+The product page is `/apps/wheres-my-stuff/`. Owner-confirmed name: Where’s My Stuff? (the older supplied “Where Is It?” headers are not used). Added November 11, 2026 from the VP Drive project’s Demo pics folder and current `where-is-it` README/HANDOFF. Real preview screenshots and approved icon live in `src/assets/wheres-my-stuff/`. The YouTube demo is linked without an embedded player. The app is In Development; no store URL, release date or final price is asserted. It appears under Everyday Tools and in the homepage’s recent-project cards. The app-specific privacy policy is `/privacy/wheres-my-stuff/`, added at the owner’s request on November 16, 2026 after review of the 1.0.1/code 18 source. It covers local inventory/photos and drafts, photo hiding versus deletion, retained recovery copies, unencrypted exports, disabled OS backup, and Google Play Billing/SDK processing. Policy publication does not certify the separate Console Data safety questionnaire or device/Play acceptance.
 
 
 ## Before & After Studio release
