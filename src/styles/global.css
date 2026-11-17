@@ -875,7 +875,7 @@ p {
 .tattoo-stencil-generator {
   background: #151317;
 }
-.photo-roulette-video-maker {
+.spinreel {
   background: #1b121a;
 }
 
@@ -1227,4 +1227,26 @@ p {
     font-size: 0.85rem;
     padding-inline: 16px;
   }
+}
+
+.spinreel-subtitle {
+  display: block;
+  font-size: 0.55em;
+  margin-top: 0.2em;
+}
+.spinreel-screenshots {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.spinreel-help details {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+.spinreel-help summary {
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+.spinreel-help details p {
+  margin: 18px 0 0;
+  max-width: 720px;
 }

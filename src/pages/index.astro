@@ -86,9 +86,11 @@ import logo from "../assets/velvet-and-pixel.jpg";
       ))}
     </nav>
     <div class="app-grid">
-      {apps.slice(0, 2).map((app) => (
-        <AppCard app={app} />
-      ))}
+      {apps
+        .filter((app) => app.href)
+        .map((app) => (
+          <AppCard app={app} />
+        ))}
     </div>
   </section>
   <CaseStudies />

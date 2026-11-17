@@ -1,0 +1,218 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import { url } from "../../data/apps";
+import icon from "../../assets/spinreel/icon.png";
+import banner from "../../assets/spinreel/banner.png";
+import photos from "../../assets/spinreel/01-photo-roulette.png";
+import pace from "../../assets/spinreel/02-control-the-pace.png";
+import sound from "../../assets/spinreel/03-add-sound.png";
+import effects from "../../assets/spinreel/04-final-effects.png";
+import save from "../../assets/spinreel/05-save-and-export.png";
+const screenshots = [
+  {
+    image: photos,
+    title: "Make the final photo count",
+    alt: "SpinReel photo-selection screen showing ordering controls and the option to end on a chosen photo.",
+  },
+  {
+    image: pace,
+    title: "Shape the buildup",
+    alt: "SpinReel pacing controls with fast-to-slow, slow-to-fast and even-speed choices.",
+  },
+  {
+    image: sound,
+    title: "Set the mood with sound",
+    alt: "SpinReel audio controls for photo-flip sounds, imported audio and final-photo sound.",
+  },
+  {
+    image: effects,
+    title: "Give the ending its moment",
+    alt: "SpinReel final-photo effects including fade, wipe and zoom choices.",
+  },
+  {
+    image: save,
+    title: "Save your next reveal",
+    alt: "SpinReel project screen with saved-project controls, preview and Export video button.",
+  },
+];
+const software = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "SpinReel",
+  url: new URL(url("apps/spinreel/"), Astro.site).href,
+  operatingSystem: "Android",
+  applicationCategory: "MultimediaApplication",
+  description:
+    "Turn photos into suspenseful reveal videos with custom pacing and sound.",
+  image: new URL(icon.src, Astro.site).href,
+  author: { "@type": "Organization", name: "Velvet & Pixel" },
+};
+---
+
+<Layout
+  title="SpinReel — Photo Roulette Video Maker for Android"
+  description="Turn photos into suspenseful reveal videos with custom pacing, sound and final-photo effects. SpinReel by Velvet & Pixel. Coming soon to Google Play."
+  socialImage={banner.src}
+  socialImageAlt="SpinReel Photo Roulette banner with the Android editing interface"
+  structuredData={software}
+>
+  <section class="wrap page-head product-head">
+    <p class="eyebrow">Video &amp; Creative Tools / Android</p>
+    <span class="status">Coming Soon</span>
+    <div class="product-title">
+      <Image
+        class="product-icon"
+        src={icon}
+        alt=""
+        widths={[96, 144, 288]}
+        sizes="(max-width: 760px) 80px, 144px"
+        width={144}
+        height={144}
+        loading="eager"
+      />
+      <h1>
+        SpinReel<em class="spinreel-subtitle">Photo Roulette.</em>
+      </h1>
+    </div>
+    <p class="intro">Your photos. Your pace. One final moment.</p>
+    <p>
+      A rush of photos. A slowing rhythm. One final reveal. Turn your pictures
+      into roulette-style videos with the pace, sound, and ending you choose.
+    </p>
+    <p class="availability">
+      Development is complete and Google Play release preparation is underway. A
+      download link will appear here when the listing is public.
+    </p>
+  </section>
+  <section class="wrap section" aria-labelledby="screens-title">
+    <p class="eyebrow">Build anticipation</p>
+    <h2 id="screens-title">Make the ending count.</h2>
+    <p>
+      Explore the app in five screens. Select an image to view it full size.
+    </p>
+    <div class="screenshots spinreel-screenshots">
+      {screenshots.map(({ image, title, alt }) => (
+        <figure class="app-screenshot">
+          <a
+            href={image.src}
+            aria-label={`View full-size screenshot: ${title}`}
+          >
+            <Image
+              src={image}
+              alt={alt}
+              widths={[280, 420, 600]}
+              sizes="(max-width: 760px) 75vw, 220px"
+              format="webp"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>{title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="features-title">
+    <p class="eyebrow">From the first flip to the final frame</p>
+    <h2 id="features-title">Make the buildup yours.</h2>
+    <ul class="feature-summary">
+      {[
+        "Arrange your photos and keep your chosen final image in place",
+        "Choose pacing presets or fine-tune a custom speed curve",
+        "Set a sequence duration and add a two-second final hold",
+        "Finish with a fade, zoom, wipe or a clean reveal",
+        "Mix photo-flip sounds, reveal cues and imported background audio",
+        "Save projects and reusable settings presets",
+        "Export portrait video at 720p or 1080p with Fit or Fill framing",
+        "Choose pink, teal or white accents with a light or dark theme",
+      ].map((feature) => (
+        <li>{feature}</li>
+      ))}
+    </ul>
+    <p>
+      Editing, audio mixing, and video rendering happen on your device. No
+      SpinReel account is required.
+    </p>
+  </section>
+  <section class="wrap section pricing" aria-labelledby="pricing-title">
+    <div>
+      <p class="eyebrow">Three free exports. Every editing feature.</p>
+      <h2 id="pricing-title">
+        Try the workflow.
+        <br />
+        <em>Keep creating.</em>
+      </h2>
+      <p>
+        Successfully save three videos free with all editing features included.
+        Failed or cancelled saves do not use a free export.
+      </p>
+      <p>
+        Editing projects and watching previews remain available after the free
+        exports are used.
+      </p>
+    </div>
+    <div class="price-card">
+      <span class="eyebrow">Pro / one-time unlock</span>
+      <h3>Unlimited exports</h3>
+      <p>
+        An optional one-time Pro purchase unlocks further video exports. No
+        subscription.
+      </p>
+      <p class="quiet">
+        Purchase details will be available through Google Play when the app
+        launches.
+      </p>
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="next-title">
+    <p class="eyebrow">Looking ahead</p>
+    <h2 id="next-title">More ways to make it yours.</h2>
+    <p>
+      Text overlays, reveal captions, logos, and branding are planned for a
+      future update. They are not included in this release.
+    </p>
+  </section>
+  <section class="wrap section spinreel-help" aria-labelledby="help-title">
+    <p class="eyebrow">Good to know</p>
+    <h2 id="help-title">Before your next reveal.</h2>
+    <details>
+      <summary>Can I create offline?</summary>
+      <p>
+        Photo editing, audio mixing, and rendering take place on your device.
+        Google Play purchases and restoration require a connection.
+      </p>
+    </details>
+    <details>
+      <summary>How do I keep my finished videos?</summary>
+      <p>
+        Save finished videos outside the app to keep them. Projects stay local
+        to this installation. Keep the app visible and your phone unlocked while
+        exporting.
+      </p>
+    </details>
+    <details>
+      <summary>How do I get help?</summary>
+      <p>
+        Email{" "}
+        <a href="mailto:velvetandpixel@gmail.com?subject=SpinReel%20support">
+          velvetandpixel@gmail.com
+        </a>{" "}
+        with your app version and a description of the problem.
+      </p>
+    </details>
+  </section>
+  <section class="wrap callout">
+    <h2>Questions about SpinReel?</h2>
+    <div>
+      <a class="text-link" href={url("spinreel/privacy/")}>
+        Read the privacy policy →
+      </a>
+      <a
+        class="text-link"
+        href="mailto:velvetandpixel@gmail.com?subject=SpinReel%20enquiry"
+      >
+        Email the studio →
+      </a>
+    </div>
+  </section>
+</Layout>

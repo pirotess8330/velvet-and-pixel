@@ -5,6 +5,9 @@ import beforeAfterIcon from "../assets/before-after-studio/app-icon.png";
 import stuffBanner from "../assets/wheres-my-stuff/banner.png";
 import stuffIcon from "../assets/wheres-my-stuff/icon.png";
 
+import spinIcon from "../assets/spinreel/icon.png";
+import spinBanner from "../assets/spinreel/banner.png";
+
 export const categories = [
   {
     id: "games",
@@ -101,14 +104,17 @@ export const apps: App[] = [
       "A mobile tool for converting photographs and artwork into clean, printable tattoo stencils. Designed for tattoo artists, with adjustable line extraction, contrast, detail cleanup, and stencil-ready output.",
   },
   {
-    slug: "photo-roulette-video-maker",
-    name: "SpinReveal",
-    status: "In Development",
+    slug: "spinreel",
+    name: "SpinReel",
+    status: "Coming Soon",
     category: "Video & Creative Tools",
     categoryId: "photo-apps",
     platform: "Android",
     description:
-      "A creative video-making app that turns collections of photos into fast-flipping, roulette-style videos. Customize the starting speed, deceleration, final reveal, hold duration, and captions. Create everything from dramatic slow-down reveals to continuous rapid-fire photo sequences, ready for social media.",
+      "Turn photos into suspenseful reveal videos with custom pacing, sound and final-photo effects.",
+    href: "apps/spinreel/",
+    icon: spinIcon,
+    artwork: spinBanner,
   },
 ];
 export const url = (path = "") =>
