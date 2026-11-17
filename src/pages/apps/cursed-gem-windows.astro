@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import { url } from "../../data/apps";
+import banner from "../../assets/cursed-gem-windows/banner.png";
+const software = {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  name: "Cursed Gem Windows",
+  url: new URL(url("apps/cursed-gem-windows/"), Astro.site).href,
+  operatingSystem: "Android",
+  applicationCategory: "GameApplication",
+  genre: "Puzzle",
+  description:
+    "Restore stained-glass windows in a gothic gem puzzle game. Explore themed chapels, choose Peaceful or Challenge play, and build a collection of restored windows.",
+  image: new URL(banner.src, Astro.site).href,
+  author: { "@type": "Organization", name: "Velvet & Pixel" },
+};
+---
+
+<Layout
+  title="Cursed Gem Windows — Gothic Stained-Glass Puzzle Game"
+  description="Arrange the gems. Restore the light. Discover Cursed Gem Windows, an upcoming Android puzzle game of stained glass, gothic chapels and collectible windows."
+  socialImage={banner.src}
+  socialImageAlt="Cursed Gem Windows Obsidian Organum promotional artwork in turquoise and violet stained glass"
+  structuredData={software}
+>
+  <section class="wrap page-head game-intro">
+    <p class="eyebrow">Puzzle Game / Android</p>
+    <span class="status">In Development</span>
+    <h1>
+      Cursed Gem
+      <br />
+      <em>Windows.</em>
+    </h1>
+    <p class="intro">Arrange the gems. Restore the light.</p>
+    <p>
+      Step into a world of candlelit chapels, jeweled glass, and windows waiting
+      to shine again. Bring order to the gems, restore intricate stained-glass
+      designs, and uncover a collection of luminous windows—one puzzle at a
+      time.
+    </p>
+  </section>
+  <figure class="wrap game-banner">
+    <Image
+      src={banner}
+      alt="Obsidian Organum: an ornate turquoise and violet stained-glass window, gothic architecture and jeweled settings. Cursed Gem Windows promotional artwork."
+      widths={[640, 960, 1280, 1600]}
+      sizes="(max-width: 760px) 90vw, 1200px"
+      format="webp"
+      loading="eager"
+    />
+    <figcaption>
+      Obsidian Organum · Promotional artwork for an optional premium chapel. Not
+      a gameplay screenshot.
+    </figcaption>
+  </figure>
+  <section class="wrap section" aria-labelledby="coming-title">
+    <p class="eyebrow">Coming soon to Android</p>
+    <h2 id="coming-title">
+      Something beautiful
+      <br />
+      <em>waits beyond the glass.</em>
+    </h2>
+    <p class="game-lead">
+      Take the peaceful path and settle into the restoration, or choose
+      Challenge play for a different test. Explore chapels with their own
+      atmosphere, complete their puzzles, and collect the windows you bring back
+      to life.
+    </p>
+    <div class="feature-grid">
+      <article>
+        <p class="eyebrow">Restore</p>
+        <h3>Light, piece by piece.</h3>
+        <p>
+          Work through gem puzzles and restore stained-glass windows with
+          intricate patterns and ornate settings.
+        </p>
+      </article>
+      <article>
+        <p class="eyebrow">Explore</p>
+        <h3>A chapel for every mood.</h3>
+        <p>
+          Four free chapels, with 30 levels per chapel. Two optional premium
+          chapels open up more places to explore.
+        </p>
+      </article>
+      <article>
+        <p class="eyebrow">Make it yours</p>
+        <h3>Keep a little of the magic.</h3>
+        <p>
+          Build a collection of restored windows and discover optional cosmetic
+          upgrades for your game.
+        </p>
+      </article>
+    </div>
+    <p class="availability">
+      Still in development, with the finishing touches underway. The Google Play
+      link will appear here when the game is publicly available.
+    </p>
+  </section>
+  <section class="wrap callout">
+    <h2>Meet you at the next window.</h2>
+    <div>
+      <a class="text-link" href={url("privacy/cursed-gem-windows/")}>
+        Privacy policy →
+      </a>
+      <a
+        class="text-link"
+        href="mailto:velvetandpixel@gmail.com?subject=Cursed%20Gem%20Windows%20enquiry"
+      >
+        Ask the studio →
+      </a>
+    </div>
+  </section>
+</Layout>

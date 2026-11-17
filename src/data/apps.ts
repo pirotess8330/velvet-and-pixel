@@ -8,6 +8,8 @@ import stuffIcon from "../assets/wheres-my-stuff/icon.png";
 import spinIcon from "../assets/spinreel/icon.png";
 import spinBanner from "../assets/spinreel/banner.png";
 
+import windowsBanner from "../assets/cursed-gem-windows/banner.png";
+
 export const categories = [
   {
     id: "games",
@@ -84,14 +86,16 @@ export const apps: App[] = [
     icon: beforeAfterIcon,
   },
   {
-    slug: "cursed-gem-mosaics",
-    name: "Cursed Gem Mosaics",
+    slug: "cursed-gem-windows",
+    name: "Cursed Gem Windows",
     status: "In Development",
     category: "Puzzle Game",
     categoryId: "games",
     platform: "Android",
     description:
-      "A gothic gem puzzle game featuring themed cathedrals and stained-glass progression.",
+      "Arrange the gems. Restore the light. Explore gothic chapels, bring stained-glass windows back to life, and grow your collection in Peaceful or Challenge play.",
+    href: "apps/cursed-gem-windows/",
+    artwork: windowsBanner,
   },
   {
     slug: "tattoo-stencil-generator",

@@ -270,7 +270,7 @@ p {
   font-size: 0.55rem;
   color: #c5aebe;
 }
-.cursed-gem-mosaics {
+.cursed-gem-windows {
   background:
     repeating-linear-gradient(90deg, transparent 0 95px, #40304266 96px 97px),
     #16101b;
@@ -1169,7 +1169,6 @@ p {
   flex-shrink: 0;
 }
 
-
 .wheres-my-stuff {
   background: #120f16;
 }
@@ -1230,4 +1229,38 @@ p {
 .spinreel-help details p {
   margin: 18px 0 0;
   max-width: 720px;
+}
+
+.game-intro {
+  padding-bottom: 32px;
+}
+.game-intro .status {
+  margin-bottom: 24px;
+}
+.game-banner {
+  margin-block: 0;
+}
+.game-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+.game-banner figcaption {
+  margin-top: 14px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.game-lead {
+  max-width: 760px;
+}
+.app-art.app-art-image.cursed-gem-windows {
+  aspect-ratio: 16 / 9;
+}
+.app-art-image.cursed-gem-windows > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

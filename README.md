@@ -133,3 +133,8 @@ Updated November 17, 2026 from VP Drive → SpinReel → `00 — PLAY STORE — 
 
 
 `src/components/AppIcon.astro` standardizes app-icon presentation without changing source artwork: 64px card frames, 144px desktop/80px mobile product frames, shared rounded clipping and border. It compensates for source padding (including SpinReel’s larger canvas margin) so visible frames align. Use this component for future app icons rather than styling images separately.
+
+
+## Cursed Gem Windows coming-soon page
+
+The former window-game catalog entry Cursed Gem Mosaics is now Cursed Gem Windows, matching the canonical `cursed-gem-windows` repository. Mosaics is a separate future project and is not added to the public catalog. The product page is `/apps/cursed-gem-windows/`, status In Development. Owner-selected Obsidian Organum artwork from Drive file `1Z-YMP-yPK2rwLGILYPkkFuxoEPs1I28M` is used on cards and the page, labeled as promotional artwork for an optional premium chapel. Current project documentation supports four free chapels, two optional premium chapels, 30 levels per chapel, Peaceful/Challenge paths, collectible windows and cosmetics. No store link, release date or price is asserted. The current privacy URL `/privacy/cursed-gem-windows/` is linked; historical policy URLs remain intact.
