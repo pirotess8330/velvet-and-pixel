@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import AppIcon from "../../components/AppIcon.astro";
+import AppVideo from "../../components/AppVideo.astro";
 import Layout from "../../layouts/Layout.astro";
 import { url } from "../../data/apps";
 import icon from "../../assets/spinreel/icon.png";
@@ -103,6 +104,15 @@ const software = {
         </figure>
       ))}
     </div>
+  </section>
+  <section class="wrap section demo-section" aria-labelledby="demo-title">
+    <p class="eyebrow">See the buildup. Watch the reveal.</p>
+    <h2 id="demo-title">SpinReel in motion.</h2>
+    <AppVideo
+      href="https://www.youtube.com/shorts/UWl_eNdgTCM"
+      appName="SpinReel"
+      poster={banner}
+    />
   </section>
   <section class="wrap section" aria-labelledby="features-title">
     <p class="eyebrow">From the first flip to the final frame</p>
