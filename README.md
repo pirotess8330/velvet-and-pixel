@@ -122,3 +122,6 @@ The product page is `/apps/wheres-my-stuff/`. Owner-confirmed name: Where’s My
 ## Before & After Studio release
 
 The owner confirmed the public Play release on November 14, 2026. The verified listing is `https://play.google.com/store/apps/details?id=com.velvetandpixel.beforeafterstudio`, configured in `src/data/apps.ts`. Its product page and reusable homepage/catalog cards link directly to Google Play. The case-study label and software structured data reflect availability. Other apps retain their existing development statuses and have no store links. No ratings or download counts are claimed.
+
+
+Where’s My Stuff? was confirmed released by the owner on November 17, 2026. Its official Play URL is configured in `src/data/apps.ts`; product-page and homepage/catalog download links use that shared value. Earlier development/review notes are historical.

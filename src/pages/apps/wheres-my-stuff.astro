@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import AppVideo from "../../components/AppVideo.astro";
-import { url } from "../../data/apps";
+import { apps, url } from "../../data/apps";
 import icon from "../../assets/wheres-my-stuff/icon.png";
 import add from "../../assets/wheres-my-stuff/add-item.jpg";
 import places from "../../assets/wheres-my-stuff/places.jpg";
@@ -30,12 +30,14 @@ const screenshots = [
     alt: "The same inventory in the app’s light appearance with turquoise accents.",
   },
 ];
+const storeUrl = apps.find((app) => app.slug === "wheres-my-stuff")!.storeUrl!;
 const appUrl = new URL(url("apps/wheres-my-stuff/"), Astro.site).href;
 const software = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Where’s My Stuff?",
   url: appUrl,
+  downloadUrl: storeUrl,
   operatingSystem: "Android",
   applicationCategory: "LifestyleApplication",
   description:
@@ -47,14 +49,14 @@ const software = {
 
 <Layout
   title="Where’s My Stuff? — Android Inventory Organizer"
-  description="Remember what you own and where you put it. Organize items with photos, tags and nested places, then search your inventory on Android. In review on Google Play."
+  description="Remember what you own and where you put it. Organize items with photos, tags and nested places, then search your inventory on Android. Available on Google Play."
   socialImage={icon.src}
   socialImageAlt="Where’s My Stuff? neon cube app icon"
   structuredData={software}
 >
   <section class="wrap page-head product-head">
     <p class="eyebrow">Organization &amp; Everyday Tools / Android</p>
-    <span class="status">In Google Play review</span>
+    <span class="status">Available on Google Play</span>
     <div class="product-title">
       <Image
         class="product-icon"
@@ -77,18 +79,17 @@ const software = {
       Remember what you own—and where you put it. Add an item, give it a place,
       and find it again with photos, tags, and search.
     </p>
-    <p class="availability">
-      An independent Velvet &amp; Pixel app, now in review on Google Play. A Google Play
-      download link will be added when a public listing is available.
-    </p>
+    <div class="product-download">
+      <a class="button" href={storeUrl}>
+        Get it on Google Play <span aria-hidden="true">→</span>
+      </a>
+      <p class="fine">Available now for Android.</p>
+    </div>
   </section>
   <section class="wrap section">
     <p class="eyebrow">From “somewhere” to right here</p>
     <h2>See where it goes.</h2>
-    <p>
-      Real screens from the app. Select a screenshot to view it
-      full size.
-    </p>
+    <p>Real screens from the app. Select a screenshot to view it full size.</p>
     <div class="screenshots">
       {screenshots.map(({ image, title, alt }) => (
         <figure class="app-screenshot">
@@ -134,8 +135,8 @@ const software = {
       ))}
     </ul>
     <p class="fine">
-      Inventory is stored on
-      your device; export a backup before uninstalling or changing phones.
+      Inventory is stored on your device; export a backup before uninstalling or
+      changing phones.
     </p>
   </section>
   <section class="wrap callout">
