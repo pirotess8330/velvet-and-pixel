@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+interface Props {
+  src: ImageMetadata;
+  app: string;
+  variant?: "card" | "product" | "art";
+}
+const { src, app, variant = "card" } = Astro.props;
+---
+
+<span
+  class:list={[
+    "studio-app-icon",
+    `icon-${variant}`,
+    { "icon-spinreel": app === "spinreel" },
+  ]}
+  aria-hidden="true"
+>
+  <Image
+    src={src}
+    alt=""
+    width={192}
+    height={192}
+    widths={[96, 192, 384]}
+    sizes={variant === "card" ? "72px" : "180px"}
+    format="webp"
+    loading={variant === "product" ? "eager" : "lazy"}
+  />
+</span>
+<style>
+  .studio-app-icon {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 26%;
+    border: 1px solid #674257;
+    isolation: isolate;
+    /* Clip source-file corners as well as the box on mobile WebKit. */
+    clip-path: inset(0 round 26%);
+  }
+  .studio-app-icon img {
+    position: absolute;
+    display: block;
+    max-width: none;
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    object-fit: fill;
+  }
+  /* Approved SpinReel artwork has a smaller, higher frame in its canvas. */
+  .icon-spinreel img {
+    width: 140%;
+    height: 140%;
+    left: -20%;
+    top: -11%;
+  }
+  .icon-product {
+    width: 144px;
+    height: 144px;
+  }
+  .icon-art {
+    width: 160px;
+    height: 160px;
+  }
+  @media (max-width: 760px) {
+    .icon-product {
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>

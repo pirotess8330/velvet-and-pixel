@@ -6,6 +6,7 @@ import alignment from "../../assets/before-after-studio/alignment.jpg";
 import layouts from "../../assets/before-after-studio/layouts.jpg";
 import branding from "../../assets/before-after-studio/branding.jpg";
 import demoArtwork from "../../assets/before-after-studio/demo-artwork.png";
+import AppIcon from "../../components/AppIcon.astro";
 import Layout from "../../layouts/Layout.astro";
 import AppVideo from "../../components/AppVideo.astro";
 import { apps, url } from "../../data/apps";
@@ -75,16 +76,7 @@ const features = [
     <p class="eyebrow">Photo & Creative Tools / Android</p>
     <span class="status">Available on Google Play</span>
     <div class="product-title">
-      <Image
-        class="product-icon"
-        src={appIcon}
-        alt=""
-        width={144}
-        height={144}
-        widths={[96, 144, 288]}
-        sizes="(max-width: 760px) 80px, 144px"
-        loading="eager"
-      />
+      <AppIcon src={appIcon} app="before-after-studio" variant="product" />
       <h1>
         Before &amp;
         <br />

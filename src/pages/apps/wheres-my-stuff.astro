@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import AppIcon from "../../components/AppIcon.astro";
 import Layout from "../../layouts/Layout.astro";
 import AppVideo from "../../components/AppVideo.astro";
 import { apps, url } from "../../data/apps";
@@ -58,16 +59,7 @@ const software = {
     <p class="eyebrow">Organization &amp; Everyday Tools / Android</p>
     <span class="status">Available on Google Play</span>
     <div class="product-title">
-      <Image
-        class="product-icon"
-        src={icon}
-        alt=""
-        widths={[96, 144, 288]}
-        sizes="(max-width: 760px) 80px, 144px"
-        width={144}
-        height={144}
-        loading="eager"
-      />
+      <AppIcon src={icon} app="wheres-my-stuff" variant="product" />
       <h1>
         Where’s
         <br />

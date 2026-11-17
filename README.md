@@ -130,3 +130,6 @@ Where’s My Stuff? was confirmed released by the owner on November 17, 2026. It
 ## SpinReel product page
 
 Updated November 17, 2026 from VP Drive → SpinReel → `00 — PLAY STORE — USE THESE` (LISTING.json, ICON.png, FEATURE_GRAPHIC.png and SCREENSHOTS — UPLOAD ORDER), and the current snap-spin-reel-app README. SpinReel replaces the former SpinReveal catalog label. The product route is `/apps/spinreel/`; the existing `/spinreel/privacy/` URL stays unchanged. Status is Coming Soon: the owner confirms development complete, with listing preparation ongoing. No store URL, video link, release date or unconfirmed dollar price is rendered. Text, captions, logos and branding are explicitly future features. Assets live in `src/assets/spinreel/`; add the real video and public store link when supplied. The listing is a release-preparation source, not evidence of Google Play approval.
+
+
+`src/components/AppIcon.astro` standardizes app-icon presentation without changing source artwork: 64px card frames, 144px desktop/80px mobile product frames, shared rounded clipping and border. It compensates for source padding (including SpinReel’s larger canvas margin) so visible frames align. Use this component for future app icons rather than styling images separately.

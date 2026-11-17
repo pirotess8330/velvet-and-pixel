@@ -1,4 +1,5 @@
 ---
+import AppIcon from "./AppIcon.astro";
 import { Image } from "astro:assets";
 import type { App } from "../data/apps";
 import { url } from "../data/apps";
@@ -23,15 +24,7 @@ const { app } = Astro.props;
         loading="lazy"
       />
     ) : app.icon ? (
-      <Image
-        class="app-art-icon"
-        src={app.icon}
-        alt=""
-        width={200}
-        height={200}
-        format="webp"
-        loading="lazy"
-      />
+      <AppIcon src={app.icon} app={app.slug} variant="art" />
     ) : app.slug === "cursed-gem-mosaics" ? (
       <div class="gem">◇</div>
     ) : (
@@ -48,18 +41,7 @@ const { app } = Astro.props;
       <span class="status">{app.status}</span>
     </div>
     <div class="card-app-title">
-      {app.icon && (
-        <Image
-          src={app.icon}
-          alt=""
-          width={64}
-          height={64}
-          widths={[64, 128]}
-          sizes="64px"
-          format="webp"
-          loading="lazy"
-        />
-      )}
+      {app.icon && <AppIcon src={app.icon} app={app.slug} />}
       <h3>{app.name}</h3>
     </div>
     <p>{app.description}</p>

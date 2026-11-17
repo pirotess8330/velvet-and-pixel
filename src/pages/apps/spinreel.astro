@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import AppIcon from "../../components/AppIcon.astro";
 import Layout from "../../layouts/Layout.astro";
 import { url } from "../../data/apps";
 import icon from "../../assets/spinreel/icon.png";
@@ -61,16 +62,7 @@ const software = {
     <p class="eyebrow">Video &amp; Creative Tools / Android</p>
     <span class="status">Coming Soon</span>
     <div class="product-title">
-      <Image
-        class="product-icon"
-        src={icon}
-        alt=""
-        widths={[96, 144, 288]}
-        sizes="(max-width: 760px) 80px, 144px"
-        width={144}
-        height={144}
-        loading="eager"
-      />
+      <AppIcon src={icon} app="spinreel" variant="product" />
       <h1>
         SpinReel<em class="spinreel-subtitle">Photo Roulette.</em>
       </h1>
