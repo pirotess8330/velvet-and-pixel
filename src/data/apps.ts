@@ -54,7 +54,7 @@ export const apps: App[] = [
   {
     slug: "wheres-my-stuff",
     name: "Where’s My Stuff?",
-    status: "In Development",
+    status: "In Google Play review",
     category: "Organization & Everyday Tools",
     categoryId: "everyday-tools",
     platform: "Android",
