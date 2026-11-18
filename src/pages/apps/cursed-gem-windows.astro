@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import { url } from "../../data/apps";
 import { chapelShowcases, gameScreenshots } from "../../data/cursed-gem-media";
-import banner from "../../assets/cursed-gem-windows/banner.png";
+import banner from "../../assets/cursed-gem-windows/banner.webp";
 const software = {
   "@context": "https://schema.org",
   "@type": "VideoGame",
@@ -23,7 +23,7 @@ const software = {
   title="Cursed Gem Windows — Gothic Stained-Glass Puzzle Game"
   description="Arrange the gems. Restore the light. Discover Cursed Gem Windows, an upcoming Android puzzle game of stained glass, gothic chapels and collectible windows."
   socialImage={banner.src}
-  socialImageAlt="Cursed Gem Windows Obsidian Organum promotional artwork in turquoise and violet stained glass"
+  socialImageAlt="Cursed Gem Windows: Find your light, with windows and jeweled settings from all six chapels"
   structuredData={software}
 >
   <section class="wrap page-head game-intro">
@@ -45,15 +45,15 @@ const software = {
   <figure class="wrap game-banner">
     <Image
       src={banner}
-      alt="Obsidian Organum: an ornate turquoise and violet stained-glass window, gothic architecture and jeweled settings. Cursed Gem Windows promotional artwork."
+      alt="Find your light: Cursed Gem Windows promotional artwork combining stained-glass windows and jeweled settings from the six chapels."
       widths={[640, 960, 1280, 1600]}
       sizes="(max-width: 760px) 90vw, 1200px"
       format="webp"
       loading="eager"
     />
     <figcaption>
-      Obsidian Organum · Promotional artwork for an optional premium chapel. Not
-      a gameplay screenshot.
+      Find your light · Promotional artwork featuring the six chapels. Not a
+      gameplay screenshot.
     </figcaption>
   </figure>
   <section class="wrap section" aria-labelledby="chapels-title">

@@ -8,7 +8,7 @@ import stuffIcon from "../assets/wheres-my-stuff/icon.png";
 import spinIcon from "../assets/spinreel/icon.png";
 import spinBanner from "../assets/spinreel/banner.png";
 
-import windowsBanner from "../assets/cursed-gem-windows/banner.png";
+import windowsBanner from "../assets/cursed-gem-windows/banner.webp";
 
 export const categories = [
   {

@@ -141,3 +141,6 @@ The former window-game catalog entry Cursed Gem Mosaics is now Cursed Gem Window
 
 
 Cursed Gem Windows gallery media is curated in `src/data/cursed-gem-media.ts`: six promotional chapel showcases from VP Drive’s “Six World Showcases and New Trailer - 2026-11-17” folder, and four actual captures from Screenshots (Obsidian/Crimson restoration, Moonlit puzzle, Blooming map). Promotional artwork and in-game screens are labeled separately, with free/premium chapel labels, responsive lazy-loaded images and full-size links. The page remains In Development.
+
+
+The main Cursed Gem Windows banner is the owner-designated “Find Your Light - Mixed Hero - Showcase.webp” (VP Drive file `1hm_GicwIzgLTJfFirTRCAbcM2FbZtheb`), stored as `src/assets/cursed-gem-windows/banner.webp` and shared by homepage/catalog, product hero and social metadata. The individual Obsidian artwork remains in the chapel showcase gallery.
