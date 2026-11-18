@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import { url } from "../../data/apps";
+import { chapelShowcases, gameScreenshots } from "../../data/cursed-gem-media";
 import banner from "../../assets/cursed-gem-windows/banner.png";
 const software = {
   "@context": "https://schema.org",
@@ -55,6 +56,75 @@ const software = {
       a gameplay screenshot.
     </figcaption>
   </figure>
+  <section class="wrap section" aria-labelledby="chapels-title">
+    <p class="eyebrow">Six worlds behind the glass</p>
+    <h2 id="chapels-title">Find your light.</h2>
+    <p>
+      From candlelit gold to midnight violet, each chapel has a world of its
+      own. These promotional showcases bring together its windows and optional
+      cosmetic looks.
+    </p>
+    <p class="fine">
+      Promotional artwork, not gameplay screenshots. Four chapels are free;
+      Obsidian Organum and Crimson Vespers are optional premium chapels.
+      Cosmetic upgrades are optional.
+    </p>
+    <div class="chapel-showcases">
+      {chapelShowcases.map(({ image, title, detail, alt }) => (
+        <figure>
+          <a
+            href={image.src}
+            aria-label={`View full-size ${title} promotional showcase`}
+          >
+            <Image
+              src={image}
+              alt={alt}
+              widths={[480, 800, 1200]}
+              sizes="(max-width: 760px) 90vw, 560px"
+              format="webp"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>
+            <h3>{title}</h3>
+            <span>{detail}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="gameplay-title">
+    <p class="eyebrow">Captured in the game</p>
+    <h2 id="gameplay-title">
+      From the first gem
+      <br />
+      <em>to the restored window.</em>
+    </h2>
+    <p>
+      Actual in-game screens: two restored windows, a puzzle in progress, and a
+      path through the levels. Select any image to see it full size.
+    </p>
+    <div class="screenshots">
+      {gameScreenshots.map(({ image, title, alt }) => (
+        <figure class="app-screenshot">
+          <a
+            href={image.src}
+            aria-label={`View full-size game screenshot: ${title}`}
+          >
+            <Image
+              src={image}
+              alt={alt}
+              widths={[280, 420, 600]}
+              sizes="(max-width: 760px) 75vw, 260px"
+              format="webp"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>{title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
   <section class="wrap section" aria-labelledby="coming-title">
     <p class="eyebrow">Coming soon to Android</p>
     <h2 id="coming-title">

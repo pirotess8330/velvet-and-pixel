@@ -1264,3 +1264,41 @@ p {
   height: 100%;
   object-fit: contain;
 }
+
+.chapel-showcases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 24px;
+  margin-top: 32px;
+}
+.chapel-showcases figure {
+  margin: 0;
+  min-width: 0;
+}
+.chapel-showcases a {
+  display: block;
+  border: 1px solid var(--line);
+}
+.chapel-showcases img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.chapel-showcases figcaption {
+  padding-top: 14px;
+}
+.chapel-showcases h3 {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+.chapel-showcases figcaption span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+@media (max-width: 760px) {
+  .chapel-showcases {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
