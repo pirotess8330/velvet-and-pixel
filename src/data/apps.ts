@@ -8,6 +8,7 @@ import stuffIcon from "../assets/wheres-my-stuff/icon.png";
 import spinIcon from "../assets/spinreel/icon.png";
 import spinBanner from "../assets/spinreel/banner.png";
 
+import windowsIcon from "../assets/cursed-gem-windows/icon.png";
 import windowsBanner from "../assets/cursed-gem-windows/banner.webp";
 
 export const categories = [
@@ -96,6 +97,7 @@ export const apps: App[] = [
       "Arrange the gems. Restore the light. Explore gothic chapels, bring stained-glass windows back to life, and grow your collection in Peaceful or Challenge play.",
     href: "apps/cursed-gem-windows/",
     artwork: windowsBanner,
+    icon: windowsIcon,
   },
   {
     slug: "tattoo-stencil-generator",

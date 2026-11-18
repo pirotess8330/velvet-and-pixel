@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import AppIcon from "../../components/AppIcon.astro";
+import icon from "../../assets/cursed-gem-windows/icon.png";
 import Layout from "../../layouts/Layout.astro";
 import { url } from "../../data/apps";
 import { chapelShowcases, gameScreenshots } from "../../data/cursed-gem-media";
@@ -29,11 +31,14 @@ const software = {
   <section class="wrap page-head game-intro">
     <p class="eyebrow">Puzzle Game / Android</p>
     <span class="status">In Development</span>
-    <h1>
-      Cursed Gem
-      <br />
-      <em>Windows.</em>
-    </h1>
+    <div class="product-title">
+      <AppIcon src={icon} app="cursed-gem-windows" variant="product" />
+      <h1>
+        Cursed Gem
+        <br />
+        <em>Windows.</em>
+      </h1>
+    </div>
     <p class="intro">Arrange the gems. Restore the light.</p>
     <p>
       Step into a world of candlelit chapels, jeweled glass, and windows waiting
