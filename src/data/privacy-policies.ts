@@ -4,6 +4,7 @@ export const privacyPolicies = [
   { name: "Cursed Gem Mosaics", path: "privacy/cursed-gem-mosaics/" },
   { name: "Cursed Gem Windows", path: "privacy/cursed-gem-windows/" },
   { name: "IndexPilot", path: "privacy/indexpilot/" },
+  { name: "Social Media Manager", path: "privacy/social-media-manager/" },
   { name: "SpinReel", path: "spinreel/privacy/" },
   { name: "Tattoo Flash Sheet Maker", path: "privacy/tattoo-flash-organizer/" },
   { name: "Where’s My Stuff?", path: "privacy/wheres-my-stuff/" },

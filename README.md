@@ -144,3 +144,8 @@ Cursed Gem Windows gallery media is curated in `src/data/cursed-gem-media.ts`: s
 
 
 The main Cursed Gem Windows banner is the owner-designated “Find Your Light - Mixed Hero - Showcase.webp” (VP Drive file `1hm_GicwIzgLTJfFirTRCAbcM2FbZtheb`), stored as `src/assets/cursed-gem-windows/banner.webp` and shared by homepage/catalog, product hero and social metadata. The individual Obsidian artwork remains in the chapel showcase gallery.
+
+
+## Social Media Manager privacy policy
+
+Public URL: `/privacy/social-media-manager/`, linked in the privacy directory. Working product name: Social Media Manager (Social HQ private pilot). Published by owner request with effective date November 17, 2026 (owner’s Pacific date). Content comes from the prepared policy document; the internal publication checklist and source-review appendix are not published. It discloses hosted media/workspace processing, optional OpenAI text context, Meta credentials and publishing, necessary cookies, retention/deletion limits and provider processing. No fixed retention/deletion timeline, zero-provider-retention promise, live-integration certification or multi-customer isolation is asserted. Update it when deployed providers, integrations, retention rules or product scope change.
