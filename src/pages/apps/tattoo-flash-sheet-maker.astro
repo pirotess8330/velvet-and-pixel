@@ -5,30 +5,36 @@ import Layout from "../../layouts/Layout.astro";
 import { url } from "../../data/apps";
 import icon from "../../assets/tattoo-flash-sheet-maker/icon.png";
 import banner from "../../assets/tattoo-flash-sheet-maker/banner.png";
-import sheets from "../../assets/tattoo-flash-sheet-maker/saved-sheets.jpg";
-import editor from "../../assets/tattoo-flash-sheet-maker/sheet-editor.jpg";
-import details from "../../assets/tattoo-flash-sheet-maker/design-details.jpg";
-import exports from "../../assets/tattoo-flash-sheet-maker/export.jpg";
+import editor from "../../assets/tattoo-flash-sheet-maker/01_Create_Your_Flash_Sheet.png";
+import sheets from "../../assets/tattoo-flash-sheet-maker/02_Keep_Your_Sheets_Together.png";
+import labels from "../../assets/tattoo-flash-sheet-maker/03_Position_Size_And_Labels.png";
+import details from "../../assets/tattoo-flash-sheet-maker/04_Name_Your_Art_Set_Your_Price.png";
+import exports from "../../assets/tattoo-flash-sheet-maker/05_Save_Share_And_Print.png";
 const screenshots = [
   {
-    image: sheets,
-    title: "Keep your sheets ready",
-    alt: "Tattoo Flash Sheet Maker saved sheets with artwork previews, edit, duplicate and Trash controls.",
+    image: editor,
+    title: "Make your flash shine",
+    alt: "Make your flash shine. A Halloween flash sheet in the editor, with Pan, Arrange and Fit sheet controls.",
   },
   {
-    image: editor,
-    title: "Arrange your next flash sheet",
-    alt: "A Halloween flash sheet in the editor with Pan, Arrange and Fit sheet controls.",
+    image: sheets,
+    title: "Your next sheet. One tap away",
+    alt: "Your next sheet. One tap away. Saved flash sheets with previews and edit, duplicate and Trash controls.",
+  },
+  {
+    image: labels,
+    title: "Fine-tune every detail",
+    alt: "Fine-tune every detail. Position, size and label settings, including price and artwork availability labels.",
   },
   {
     image: details,
-    title: "Give every design its details",
-    alt: "Design details for a spider tattoo with title, price, currency, availability, background removal and collection controls.",
+    title: "Name your art. Set your price",
+    alt: "Name your art. Set your price. Design details with title, price, currency, availability, background removal and collections.",
   },
   {
     image: exports,
-    title: "Ready for print or sharing",
-    alt: "Export sheet preview with PNG, JPEG and Pro PDF options, output sizes, and save and share controls.",
+    title: "From your phone to your next session",
+    alt: "From your phone. To your next session. Export preview with PNG, JPEG and Pro PDF options, output sizes, save and share controls.",
   },
 ];
 const software = {
@@ -74,7 +80,7 @@ const software = {
     <p class="eyebrow">From your library to the studio wall</p>
     <h2 id="screens-title">Make your flash look the part.</h2>
     <p>Select a screenshot to view it full size.</p>
-    <div class="screenshots">
+    <div class="screenshots flash-screenshots">
       {screenshots.map(({ image, title, alt }) => (
         <figure class="app-screenshot">
           <a
@@ -85,7 +91,7 @@ const software = {
               src={image}
               alt={alt}
               widths={[280, 420, 600]}
-              sizes="(max-width: 760px) 75vw, 260px"
+              sizes="(max-width: 760px) 75vw, 220px"
               format="webp"
               loading="lazy"
             />
@@ -194,3 +200,11 @@ const software = {
     </div>
   </section>
 </Layout>
+
+<style>
+  @media (min-width: 761px) {
+    .flash-screenshots {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+</style>
