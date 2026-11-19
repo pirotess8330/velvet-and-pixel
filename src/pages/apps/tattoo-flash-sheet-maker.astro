@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import AppVideo from "../../components/AppVideo.astro";
 import AppIcon from "../../components/AppIcon.astro";
 import Layout from "../../layouts/Layout.astro";
 import { url } from "../../data/apps";
@@ -100,6 +101,15 @@ const software = {
         </figure>
       ))}
     </div>
+  </section>
+  <section class="wrap section demo-section" aria-labelledby="demo-title">
+    <p class="eyebrow">From artwork to flash sheet</p>
+    <h2 id="demo-title">See the workflow in action.</h2>
+    <AppVideo
+      href="https://www.youtube.com/shorts/8TwFTnb0Eiw"
+      appName="Tattoo Flash Sheet Maker"
+      poster={banner}
+    />
   </section>
   <section class="wrap section" aria-labelledby="features-title">
     <p class="eyebrow">A working library. A thoughtful layout.</p>
