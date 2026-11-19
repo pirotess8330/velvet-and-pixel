@@ -11,6 +11,9 @@ import spinBanner from "../assets/spinreel/banner.png";
 import windowsIcon from "../assets/cursed-gem-windows/icon.png";
 import windowsBanner from "../assets/cursed-gem-windows/banner.webp";
 
+import flashIcon from "../assets/tattoo-flash-sheet-maker/icon.png";
+import flashBanner from "../assets/tattoo-flash-sheet-maker/banner.png";
+
 export const categories = [
   {
     id: "games",
@@ -100,6 +103,19 @@ export const apps: App[] = [
     icon: windowsIcon,
   },
   {
+    slug: "tattoo-flash-sheet-maker",
+    name: "Tattoo Flash Sheet Maker",
+    status: "Coming Soon",
+    category: "Tattoo & Creative Tools",
+    categoryId: "tattoo-apps",
+    platform: "Android",
+    description:
+      "Organize your tattoo artwork, arrange polished flash sheets, add prices and availability labels, and export for print or sharing.",
+    href: "apps/tattoo-flash-sheet-maker/",
+    icon: flashIcon,
+    artwork: flashBanner,
+  },
+  {
     slug: "tattoo-stencil-generator",
     name: "Tattoo Stencil Generator",
     status: "Planned",
@@ -112,7 +128,7 @@ export const apps: App[] = [
   {
     slug: "spinreel",
     name: "SpinReel",
-    status: "Coming Soon",
+    status: "In Google Play review",
     category: "Video & Creative Tools",
     categoryId: "photo-apps",
     platform: "Android",

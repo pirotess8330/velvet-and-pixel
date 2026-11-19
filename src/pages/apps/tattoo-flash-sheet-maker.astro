@@ -1,0 +1,196 @@
+---
+import { Image } from "astro:assets";
+import AppIcon from "../../components/AppIcon.astro";
+import Layout from "../../layouts/Layout.astro";
+import { url } from "../../data/apps";
+import icon from "../../assets/tattoo-flash-sheet-maker/icon.png";
+import banner from "../../assets/tattoo-flash-sheet-maker/banner.png";
+import sheets from "../../assets/tattoo-flash-sheet-maker/saved-sheets.jpg";
+import editor from "../../assets/tattoo-flash-sheet-maker/sheet-editor.jpg";
+import details from "../../assets/tattoo-flash-sheet-maker/design-details.jpg";
+import exports from "../../assets/tattoo-flash-sheet-maker/export.jpg";
+const screenshots = [
+  {
+    image: sheets,
+    title: "Keep your sheets ready",
+    alt: "Tattoo Flash Sheet Maker saved sheets with artwork previews, edit, duplicate and Trash controls.",
+  },
+  {
+    image: editor,
+    title: "Arrange your next flash sheet",
+    alt: "A Halloween flash sheet in the editor with Pan, Arrange and Fit sheet controls.",
+  },
+  {
+    image: details,
+    title: "Give every design its details",
+    alt: "Design details for a spider tattoo with title, price, currency, availability, background removal and collection controls.",
+  },
+  {
+    image: exports,
+    title: "Ready for print or sharing",
+    alt: "Export sheet preview with PNG, JPEG and Pro PDF options, output sizes, and save and share controls.",
+  },
+];
+const software = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Tattoo Flash Sheet Maker",
+  url: new URL(url("apps/tattoo-flash-sheet-maker/"), Astro.site).href,
+  operatingSystem: "Android",
+  applicationCategory: "DesignApplication",
+  description:
+    "Organize tattoo artwork, arrange flash sheets, and export for print or sharing.",
+  image: new URL(icon.src, Astro.site).href,
+  author: { "@type": "Organization", name: "Velvet & Pixel" },
+};
+---
+
+<Layout
+  title="Tattoo Flash Sheet Maker — Organize, Arrange & Export"
+  description="Turn your tattoo artwork into polished flash sheets. Organize designs, add prices and availability labels, remove solid backgrounds, and export. Coming soon to Google Play."
+  socialImage={banner.src}
+  socialImageAlt="Tattoo Flash Sheet Maker feature banner with a flash sheet preview"
+  structuredData={software}
+>
+  <section class="wrap page-head product-head">
+    <p class="eyebrow">Tattoo &amp; Creative Tools / Android</p>
+    <span class="status">Coming Soon</span>
+    <div class="product-title">
+      <AppIcon src={icon} app="tattoo-flash-sheet-maker" variant="product" />
+      <h1>Tattoo Flash Sheet Maker</h1>
+    </div>
+    <p class="intro">Your artwork. A great flash sheet.</p>
+    <p>
+      Bring your designs together, arrange them just right, and send a polished
+      sheet to print or share. Built for the artwork—and the everyday
+      organization—behind your tattoo practice.
+    </p>
+    <p class="availability">
+      Coming soon to Google Play. The listing is being prepared; a download link
+      will appear here when it is public.
+    </p>
+  </section>
+  <section class="wrap section" aria-labelledby="screens-title">
+    <p class="eyebrow">From your library to the studio wall</p>
+    <h2 id="screens-title">Make your flash look the part.</h2>
+    <p>Select a screenshot to view it full size.</p>
+    <div class="screenshots">
+      {screenshots.map(({ image, title, alt }) => (
+        <figure class="app-screenshot">
+          <a
+            href={image.src}
+            aria-label={`View full-size screenshot: ${title}`}
+          >
+            <Image
+              src={image}
+              alt={alt}
+              widths={[280, 420, 600]}
+              sizes="(max-width: 760px) 75vw, 260px"
+              format="webp"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>{title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="features-title">
+    <p class="eyebrow">A working library. A thoughtful layout.</p>
+    <h2 id="features-title">More than a page of pictures.</h2>
+    <ul class="feature-summary">
+      <li>
+        Import PNG, JPEG and still WebP artwork; organize designs into
+        collections and search by title.
+      </li>
+      <li>
+        Add titles, prices and currencies. Track unique or repeatable designs,
+        reservations, sales and retirement.
+      </li>
+      <li>
+        Start with a grid or arrange manually. Move, resize, rotate, layer and
+        lock artwork, with undo, redo and autosave.
+      </li>
+      <li>
+        Use portrait A4, landscape or square sheets, with size controls in
+        inches or millimeters.
+      </li>
+      <li>
+        Add prices, availability badges and custom text labels, then choose
+        their placement and background bars.
+      </li>
+      <li>
+        Remove solid backgrounds locally with automatic color detection, a tap
+        color picker, tolerance and edge controls. Keep your original artwork.
+      </li>
+      <li>
+        Preview output size and save or share PNG and JPEG sheets. Pro also adds
+        PDF export.
+      </li>
+      <li>
+        Duplicate saved sheets, recover artwork and sheets from Trash, and back
+        up or restore your library.
+      </li>
+      <li>Choose pink or teal accents and a light or dark appearance.</li>
+      <li>
+        Organize and edit on your device, without an account, ads or a
+        subscription.
+      </li>
+    </ul>
+    <p>Each sheet supports up to 50 artwork placements, including with Pro.</p>
+  </section>
+  <section class="wrap section pricing" aria-labelledby="pricing-title">
+    <div>
+      <p class="eyebrow">Start with your own artwork</p>
+      <h2 id="pricing-title">
+        Build your library.
+        <br />
+        <em>Make it yours.</em>
+      </h2>
+      <p>
+        The free version supports 50 active designs and three saved sheets. PNG
+        and JPEG exports, solid-background removal, and backup and restore are
+        included.
+      </p>
+    </div>
+    <div class="price-card">
+      <span class="eyebrow">Pro / one-time unlock</span>
+      <h3>Room for more flash</h3>
+      <p>
+        Unlock unlimited library designs and saved sheets, plus PDF export. No
+        subscription.
+      </p>
+      <p class="quiet">
+        Purchase details will be available through Google Play when the app
+        launches.
+      </p>
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="storage-title">
+    <p class="eyebrow">Your artwork stays with you</p>
+    <h2 id="storage-title">Create offline. Keep a backup.</h2>
+    <p>
+      Artwork, editing and sheet creation stay on your device. Google Play
+      purchases and restoration require a connection.
+    </p>
+    <p>
+      Export backups somewhere safe: there is no cloud synchronization. Backup
+      files are not encrypted, and restoring a backup replaces the current
+      library rather than merging it.
+    </p>
+  </section>
+  <section class="wrap callout">
+    <h2>Questions about your next flash sheet?</h2>
+    <div>
+      <a class="text-link" href={url("privacy/tattoo-flash-organizer/")}>
+        Read the privacy policy →
+      </a>
+      <a
+        class="text-link"
+        href="mailto:velvetandpixel@gmail.com?subject=Tattoo%20Flash%20Sheet%20Maker%20support"
+      >
+        Email the studio →
+      </a>
+    </div>
+  </section>
+</Layout>

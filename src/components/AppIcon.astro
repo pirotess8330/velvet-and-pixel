@@ -14,6 +14,7 @@ const { src, app, variant = "card" } = Astro.props;
     "studio-app-icon",
     `icon-${variant}`,
     { "icon-spinreel": app === "spinreel" },
+    { "icon-flash": app === "tattoo-flash-sheet-maker" },
   ]}
   aria-hidden="true"
 >
@@ -58,6 +59,13 @@ const { src, app, variant = "card" } = Astro.props;
     height: 140%;
     left: -20%;
     top: -11%;
+  }
+  /* The flash icon has a generous canvas around its portrait neon frame. */
+  .icon-flash img {
+    width: 150%;
+    height: 150%;
+    left: -25%;
+    top: -25%;
   }
   .icon-product {
     width: 144px;

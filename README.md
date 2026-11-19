@@ -149,3 +149,10 @@ The main Cursed Gem Windows banner is the owner-designated “Find Your Light - 
 ## Social Media Manager privacy policy
 
 Public URL: `/privacy/social-media-manager/`, linked in the privacy directory. Working product name: Social Media Manager (Social HQ private pilot). Published by owner request with effective date November 17, 2026 (owner’s Pacific date). Content comes from the prepared policy document; the internal publication checklist and source-review appendix are not published. It discloses hosted media/workspace processing, optional OpenAI text context, Meta credentials and publishing, necessary cookies, retention/deletion limits and provider processing. No fixed retention/deletion timeline, zero-provider-retention promise, live-integration certification or multi-customer isolation is asserted. Update it when deployed providers, integrations, retention rules or product scope change.
+
+Tattoo Flash Sheet Maker has a product page at `apps/tattoo-flash-sheet-maker/`
+with approved Drive artwork and screenshots. Its feature and free/Pro details
+were checked against the app repository README and current listing draft. Keep
+its existing `privacy/tattoo-flash-organizer/` URL stable. The separate Tattoo
+Stencil Generator remains planned. SpinReel is in Google Play review; neither
+unreleased app has a download link. Add store/video links only when supplied.
