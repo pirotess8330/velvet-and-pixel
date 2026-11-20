@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import AppVideo from "../../components/AppVideo.astro";
 import AppIcon from "../../components/AppIcon.astro";
 import icon from "../../assets/cursed-gem-windows/icon.png";
 import Layout from "../../layouts/Layout.astro";
@@ -97,6 +98,15 @@ const software = {
         </figure>
       ))}
     </div>
+  </section>
+  <section class="wrap section demo-section" aria-labelledby="demo-title">
+    <p class="eyebrow">See the light return</p>
+    <h2 id="demo-title">Cursed Gem Windows in motion.</h2>
+    <AppVideo
+      href="https://www.youtube.com/watch?v=93B7MufBgNo"
+      appName="Cursed Gem Windows"
+      poster={banner}
+    />
   </section>
   <section class="wrap section" aria-labelledby="gameplay-title">
     <p class="eyebrow">Captured in the game</p>
