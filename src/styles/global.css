@@ -93,8 +93,17 @@ p {
   text-decoration: none;
   white-space: nowrap;
 }
-.wordmark span {
-  font-style: italic;
+.wordmark .wordmark-velvet {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.wordmark .wordmark-pixel {
+  font-family: "Silkscreen", monospace;
+  font-size: 0.65em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.04em;
 }
 .wordmark i {
   font-family: var(--sans);

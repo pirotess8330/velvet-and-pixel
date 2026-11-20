@@ -156,3 +156,5 @@ were checked against the app repository README and current listing draft. Keep
 its existing `privacy/tattoo-flash-organizer/` URL stable. The separate Tattoo
 Stencil Generator remains planned. SpinReel is in Google Play review; neither
 unreleased app has a download link. Add store/video links only when supplied.
+
+The header and footer text wordmark pairs Great Vibes (Velvet &) with Silkscreen (Pixel). Both are self-hosted through Fontsource under the SIL Open Font License; license files ship in their npm packages. Brand artwork is unchanged.

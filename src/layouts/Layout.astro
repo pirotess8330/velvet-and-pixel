@@ -2,6 +2,8 @@
 import "@fontsource-variable/dm-sans";
 import "@fontsource/cormorant-garamond/500.css";
 import "@fontsource/cormorant-garamond/500-italic.css";
+import "@fontsource/great-vibes/latin-400.css";
+import "@fontsource/silkscreen/latin-400.css";
 import "../styles/global.css";
 import { url } from "../data/apps";
 interface Props {
@@ -77,7 +79,7 @@ const nav = [
     </a>
     <header class="header wrap">
       <a class="wordmark" href={url()} aria-label="Velvet & Pixel home">
-        Velvet <span>&amp; Pixel</span>
+        <span class="wordmark-velvet">Velvet &amp;</span>{" "}<span class="wordmark-pixel">Pixel</span>
         <i aria-hidden="true">+</i>
       </a>
       <nav aria-label="Main navigation">
@@ -100,8 +102,8 @@ const nav = [
     </main>
     <footer class="wrap footer">
       <div>
-        <a class="wordmark" href={url()}>
-          Velvet <span>&amp; Pixel</span>
+        <a class="wordmark" href={url()} aria-label="Velvet & Pixel home">
+          <span class="wordmark-velvet">Velvet &amp;</span>{" "}<span class="wordmark-pixel">Pixel</span>
         </a>
         <p>Beautifully Strange Software</p>
       </div>
