@@ -1,3 +1,8 @@
+import promo0 from "../assets/cursed-gem-windows/01-follow-the-gems.png";
+import promo1 from "../assets/cursed-gem-windows/02-restore-the-glass.png";
+import promo2 from "../assets/cursed-gem-windows/03-find-your-chapel.png";
+import promo3 from "../assets/cursed-gem-windows/04-choose-your-challenge.png";
+import promo4 from "../assets/cursed-gem-windows/05-make-it-yours.png";
 import obsidianShowcase from "../assets/cursed-gem-windows/obsidian-showcase.webp";
 import crimsonShowcase from "../assets/cursed-gem-windows/crimson-showcase.webp";
 import abbeyShowcase from "../assets/cursed-gem-windows/abbey-showcase.webp";
@@ -68,5 +73,33 @@ export const gameScreenshots = [
     image: bloomingMap,
     title: "Follow the path",
     alt: "Blooming Cloister level map with numbered gem-shaped stages and completed-level markers.",
+  },
+];
+
+export const promotionalScreenshots = [
+  {
+    image: promo0,
+    title: "Follow the gems. Find the light",
+    alt: "Follow the gems. Find the light. A blue stained-glass puzzle with connected gem settings.",
+  },
+  {
+    image: promo1,
+    title: "Piece by piece. Beauty returns",
+    alt: "Piece by piece. Beauty returns. A restored golden stained-glass window.",
+  },
+  {
+    image: promo2,
+    title: "Find your kind of magic",
+    alt: "Find your kind of magic. The chapel selection and game menu.",
+  },
+  {
+    image: promo3,
+    title: "Your pace. Your challenge",
+    alt: "Your pace. Your challenge. A pink gem puzzle illustrating Peaceful and Challenge play.",
+  },
+  {
+    image: promo4,
+    title: "A little more you in every jewel",
+    alt: "A little more you in every jewel. Gem customization preview with color controls.",
   },
 ];

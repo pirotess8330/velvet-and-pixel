@@ -5,30 +5,30 @@ import Layout from "../../layouts/Layout.astro";
 import AppVideo from "../../components/AppVideo.astro";
 import { apps, url } from "../../data/apps";
 import icon from "../../assets/wheres-my-stuff/icon.png";
-import add from "../../assets/wheres-my-stuff/add-item.jpg";
-import places from "../../assets/wheres-my-stuff/places.jpg";
-import find from "../../assets/wheres-my-stuff/find.jpg";
-import light from "../../assets/wheres-my-stuff/light-appearance.jpg";
+import find from "../../assets/wheres-my-stuff/01_find_your_stuff.png";
+import places from "../../assets/wheres-my-stuff/02_organize_your_places.png";
+import details from "../../assets/wheres-my-stuff/03_save_the_details.png";
+import backup from "../../assets/wheres-my-stuff/04_take_it_with_you.png";
 const screenshots = [
   {
-    image: add,
-    title: "Add what you want to find",
-    alt: "Where’s My Stuff? Add item screen with a name, optional photo and save controls.",
+    image: find,
+    title: "Find your stuff",
+    alt: "Find your stuff. Search your saved belongings and remember where you put them.",
   },
   {
     image: places,
-    title: "Give everything a place",
-    alt: "Nested place picker showing garage, left side shelves and storage box 3.",
+    title: "A place for everything",
+    alt: "A place for everything. Organize rooms, shelves, drawers and boxes in nested places.",
   },
   {
-    image: find,
-    title: "Find the full path",
-    alt: "Saved Christmas lights with tags and the storage path garage, left side shelves, storage box 3.",
+    image: details,
+    title: "Save it once. Find it later",
+    alt: "Save it once. Find it later. Edit an item with its name, photo, tags, notes and location.",
   },
   {
-    image: light,
-    title: "Choose your appearance",
-    alt: "The same inventory in the app’s light appearance with turquoise accents.",
+    image: backup,
+    title: "Your stuff. Your device",
+    alt: "Your stuff. Your device. Offline inventory settings with backup export and import controls.",
   },
 ];
 const storeUrl = apps.find((app) => app.slug === "wheres-my-stuff")!.storeUrl!;

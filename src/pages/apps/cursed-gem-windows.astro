@@ -5,7 +5,11 @@ import AppIcon from "../../components/AppIcon.astro";
 import icon from "../../assets/cursed-gem-windows/icon.png";
 import Layout from "../../layouts/Layout.astro";
 import { url } from "../../data/apps";
-import { chapelShowcases, gameScreenshots } from "../../data/cursed-gem-media";
+import {
+  chapelShowcases,
+  gameScreenshots,
+  promotionalScreenshots,
+} from "../../data/cursed-gem-media";
 import banner from "../../assets/cursed-gem-windows/banner.webp";
 const software = {
   "@context": "https://schema.org",
@@ -62,6 +66,34 @@ const software = {
       gameplay screenshot.
     </figcaption>
   </figure>
+  <section class="wrap section" aria-labelledby="promo-title">
+    <p class="eyebrow">A closer look</p>
+    <h2 id="promo-title">Follow the gems. Find the light.</h2>
+    <p>
+      Explore the game in five promotional screenshots. Select one to view it
+      full size.
+    </p>
+    <div class="screenshots game-promos">
+      {promotionalScreenshots.map(({ image, title, alt }) => (
+        <figure class="app-screenshot">
+          <a
+            href={image.src}
+            aria-label={`View full-size screenshot: ${title}`}
+          >
+            <Image
+              src={image}
+              alt={alt}
+              widths={[280, 420, 600]}
+              sizes="(max-width: 760px) 75vw, 220px"
+              format="webp"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>{title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
   <section class="wrap section" aria-labelledby="chapels-title">
     <p class="eyebrow">Six worlds behind the glass</p>
     <h2 id="chapels-title">Find your light.</h2>
@@ -199,3 +231,11 @@ const software = {
     </div>
   </section>
 </Layout>
+
+<style>
+  @media (min-width: 761px) {
+    .game-promos {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+</style>
