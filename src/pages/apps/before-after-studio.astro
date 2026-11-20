@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import appIcon from "../../assets/before-after-studio/app-icon.png";
-import photos from "../../assets/before-after-studio/photos.jpg";
-import alignment from "../../assets/before-after-studio/alignment.jpg";
-import layouts from "../../assets/before-after-studio/layouts.jpg";
-import branding from "../../assets/before-after-studio/branding.jpg";
+import comparison from "../../assets/before-after-studio/01_show_the_difference.png";
+import layouts from "../../assets/before-after-studio/02_choose_your_layout.png";
+import branding from "../../assets/before-after-studio/03_make_it_yours.png";
+import exports from "../../assets/before-after-studio/04_create_and_export.png";
 import demoArtwork from "../../assets/before-after-studio/demo-artwork.png";
 import AppIcon from "../../components/AppIcon.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -35,24 +35,24 @@ const software = {
 };
 const screenshots = [
   {
-    image: photos,
-    title: "Start with your photos",
-    alt: "Photo selection screen with before and after image controls and a project name field.",
-  },
-  {
-    image: alignment,
-    title: "Fine-tune the fit",
-    alt: "Alignment screen showing an overlapping photo preview, rotation control, and reset option.",
+    image: comparison,
+    title: "Show the difference",
+    alt: "Show the difference. Turn two photos into one polished comparison: a cat artwork and its finished tattoo side by side.",
   },
   {
     image: layouts,
     title: "Choose your layout",
-    alt: "Layout screen with side-by-side, top-and-bottom, and vertical-split options and export size selection.",
+    alt: "Choose your layout. Side-by-side, top-and-bottom and vertical-split comparison choices in Before & After Studio.",
   },
   {
     image: branding,
-    title: "Make it your own",
-    alt: "Branding screen with a comparison preview, accent colors, label styles, and brand presets.",
+    title: "Make it yours",
+    alt: "Make it yours. Branding controls for your logo, watermark and custom colors, with label styles and brand presets.",
+  },
+  {
+    image: exports,
+    title: "Create. Export. Share",
+    alt: "Create. Export. Share. Finished comparison with export size, PNG and JPEG options, and Export image control.",
   },
 ];
 const features = [
