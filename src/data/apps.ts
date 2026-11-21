@@ -105,7 +105,7 @@ export const apps: App[] = [
   {
     slug: "tattoo-flash-sheet-maker",
     name: "Tattoo Flash Sheet Maker",
-    status: "Coming Soon",
+    status: "In Google Play review",
     category: "Tattoo & Creative Tools",
     categoryId: "tattoo-apps",
     platform: "Android",
