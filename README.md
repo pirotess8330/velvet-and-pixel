@@ -2,6 +2,18 @@
 
 Production static website for Velvet & Pixel, built with Astro and TypeScript. No backend, tracking, cookies, remote fonts or client-side framework.
 
+## Canonical project records
+
+Current technical stack, release ledger, MVP evidence, limitations and portfolio summary:
+
+- [RELEASE_ROADMAP](https://docs.google.com/document/d/1kEP8syiAECOZimD7oZcysYCVunr3v5K6szLnYIcJrg0/edit)
+- [PROJECT_HANDOFF](https://docs.google.com/document/d/1O6TRHD-EAeB1FXB47Ytr2QVgChvULpx6ayP-0PYDK_Y/edit)
+
+Maintain these existing Drive records at each milestone and handoff; see AGENTS.md.
+Older app/media notes below describe prior milestones and may be superseded.
+Current catalog statuses and links come from `src/data/apps.ts`; verify app release
+claims independently before changing public copy.
+
 ## Local development
 
 Use Node.js 24 (the CI version), or Node.js 22.23.4 or newer.
