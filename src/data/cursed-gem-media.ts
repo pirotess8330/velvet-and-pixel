@@ -1,3 +1,5 @@
+import windowCollection from "../assets/cursed-gem-windows/window-collection.webp";
+import gemCustomization from "../assets/cursed-gem-windows/gem-customization.webp";
 import promo0 from "../assets/cursed-gem-windows/01-follow-the-gems.png";
 import promo1 from "../assets/cursed-gem-windows/02-restore-the-glass.png";
 import promo2 from "../assets/cursed-gem-windows/03-find-your-chapel.png";
@@ -54,6 +56,16 @@ export const chapelShowcases = [
 ];
 
 export const gameScreenshots = [
+  {
+    image: windowCollection,
+    title: "A collection of restored light",
+    alt: "Cursed Gem Windows Window Collection screen with colorful restored stained-glass windows from different chapels.",
+  },
+  {
+    image: gemCustomization,
+    title: "Choose your gemstone’s look",
+    alt: "In-game gemstone customization screen with a turquoise gem preview, decorative setting and puzzle palette choices.",
+  },
   {
     image: obsidianRestored,
     title: "The Organum awakens",
