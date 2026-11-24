@@ -182,3 +182,5 @@ button. Existing YouTube URL and policy routes are unchanged. Media comes from
 VP Drive’s November 24 expansion launch set; feature/access context comes from
 `feature/emerald-abyss` project handoffs. This website preview does not establish
 a published Android expansion or successful Play billing verification.
+
+Owner clarification, November 24: retain the original Cursed Gem Windows galleries and add expansion media alongside them. The combined galleries now contain 11 enhanced screenshots and 12 actual game/preview captures; all nine chapel showcases remain.
