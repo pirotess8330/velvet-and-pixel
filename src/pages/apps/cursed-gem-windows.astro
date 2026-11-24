@@ -20,7 +20,7 @@ const software = {
   applicationCategory: "GameApplication",
   genre: "Puzzle",
   description:
-    "Restore stained-glass windows in a gothic gem puzzle game. Explore themed chapels, choose Peaceful or Challenge play, and build a collection of restored windows.",
+    "Restore stained-glass windows in a gothic gem puzzle game. Preview nine themed chapels and Grand Restorations in the upcoming expansion, with Peaceful and Challenge play.",
   image: new URL(banner.src, Astro.site).href,
   author: { "@type": "Organization", name: "Velvet & Pixel" },
 };
@@ -28,9 +28,9 @@ const software = {
 
 <Layout
   title="Cursed Gem Windows — Gothic Stained-Glass Puzzle Game"
-  description="Arrange the gems. Restore the light. Discover Cursed Gem Windows, an upcoming Android puzzle game of stained glass, gothic chapels and collectible windows."
+  description="Preview nine gothic chapels, luminous stained-glass puzzles and Grand Restorations in Cursed Gem Windows’ upcoming Android expansion."
   socialImage={banner.src}
-  socialImageAlt="Cursed Gem Windows: Find your light, with windows and jeweled settings from all six chapels"
+  socialImageAlt="Cursed Gem Windows: Find your light, with windows and jeweled settings from a selection of chapels"
   structuredData={software}
 >
   <section class="wrap page-head game-intro">
@@ -51,27 +51,32 @@ const software = {
       designs, and uncover a collection of luminous windows—one puzzle at a
       time.
     </p>
+    <p class="availability">
+      Expansion preview: three new worlds and Grand Restorations are in
+      development. Images below show the upcoming update, not a published Google
+      Play release.
+    </p>
   </section>
   <figure class="wrap game-banner">
     <Image
       src={banner}
-      alt="Find your light: Cursed Gem Windows promotional artwork combining stained-glass windows and jeweled settings from the six chapels."
+      alt="Find your light: Cursed Gem Windows promotional artwork combining stained-glass windows and jeweled settings from a selection of chapels."
       widths={[640, 960, 1280, 1600]}
       sizes="(max-width: 760px) 90vw, 1200px"
       format="webp"
       loading="eager"
     />
     <figcaption>
-      Find your light · Promotional artwork featuring the six chapels. Not a
-      gameplay screenshot.
+      Find your light · Promotional artwork featuring a selection of chapels.
+      Not a gameplay screenshot.
     </figcaption>
   </figure>
   <section class="wrap section" aria-labelledby="promo-title">
     <p class="eyebrow">A closer look</p>
     <h2 id="promo-title">Follow the gems. Find the light.</h2>
     <p>
-      Explore the game in five promotional screenshots. Select one to view it
-      full size.
+      Preview the upcoming expansion in six enhanced screenshots. Select one to
+      view it full size.
     </p>
     <div class="screenshots game-promos">
       {promotionalScreenshots.map(({ image, title, alt }) => (
@@ -84,7 +89,7 @@ const software = {
               src={image}
               alt={alt}
               widths={[280, 420, 600]}
-              sizes="(max-width: 760px) 75vw, 220px"
+              sizes="(max-width: 760px) 75vw, 380px"
               format="webp"
               loading="lazy"
             />
@@ -104,7 +109,7 @@ const software = {
     />
   </section>
   <section class="wrap section" aria-labelledby="chapels-title">
-    <p class="eyebrow">Six worlds behind the glass</p>
+    <p class="eyebrow">Nine worlds behind the glass</p>
     <h2 id="chapels-title">Find your light.</h2>
     <p>
       From candlelit gold to midnight violet, each chapel has a world of its
@@ -112,9 +117,10 @@ const software = {
       cosmetic looks.
     </p>
     <p class="fine">
-      Promotional artwork, not gameplay screenshots. Four chapels are free;
-      Obsidian Organum and Crimson Vespers are optional premium chapels.
-      Cosmetic upgrades are optional.
+      Promotional artwork, not gameplay screenshots. Four original chapels are
+      free; Obsidian Organum and Crimson Vespers are optional premium chapels.
+      The upcoming expansion adds Emerald Abyss, Astral Basilica and Cathedral
+      of Cascades as optional premium chapels. Cosmetic upgrades are optional.
     </p>
     <div class="chapel-showcases">
       {chapelShowcases.map(({ image, title, detail, alt }) => (
@@ -148,9 +154,9 @@ const software = {
       <em>to the restored window.</em>
     </h2>
     <p>
-      Actual in-game screens: restored windows, your window collection, gemstone
-      customization, a puzzle in progress, and a path through the levels.
-      Select any image to see it full size.
+      Actual expansion-preview captures: three new chapel windows, two Grand
+      Restorations, and a Grand Restoration puzzle in progress. Select any image
+      to see it full size.
     </p>
     <div class="screenshots">
       {gameScreenshots.map(({ image, title, alt }) => (
@@ -199,8 +205,17 @@ const software = {
         <p class="eyebrow">Explore</p>
         <h3>A chapel for every mood.</h3>
         <p>
-          Four free chapels, with 30 levels per chapel. Two optional premium
-          chapels open up more places to explore.
+          Four free chapels and five optional premium chapels in the expanded
+          game, with 30 levels per chapel in Peaceful and Challenge modes.
+        </p>
+      </article>
+      <article>
+        <p class="eyebrow">Grand Restorations / upcoming</p>
+        <h3>A whole sanctuary, piece by piece.</h3>
+        <p>
+          Work through puzzles to reveal larger installations in Candlelit Abbey
+          and Moonlit Cathedral. Abbey is included; Moonlit is an optional
+          separate one-time purchase in the upcoming release.
         </p>
       </article>
       <article>
@@ -236,7 +251,7 @@ const software = {
 <style>
   @media (min-width: 761px) {
     .game-promos {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 </style>

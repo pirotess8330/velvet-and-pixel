@@ -170,3 +170,15 @@ Stencil Generator remains planned. SpinReel is in Google Play review; neither
 unreleased app has a download link. Add store/video links only when supplied.
 
 The header and footer text wordmark pairs Great Vibes (Velvet &) with Silkscreen (Pixel). Both are self-hosted through Fontsource under the SIL Open Font License; license files ship in their npm packages. Brand artwork is unchanged.
+
+## November 24 game expansion preview
+
+Cursed Gem Windows now previews nine worlds: the original six plus Emerald Abyss,
+Astral Basilica and Cathedral of Cascades. Its page uses three new showcase
+banners, six expansion promo cards and six curated expansion captures, including
+Candlelit Abbey and Moonlit Cathedral Grand Restorations. The expansion is
+explicitly labeled upcoming and the game remains In Development, without a store
+button. Existing YouTube URL and policy routes are unchanged. Media comes from
+VP Drive’s November 24 expansion launch set; feature/access context comes from
+`feature/emerald-abyss` project handoffs. This website preview does not establish
+a published Android expansion or successful Play billing verification.

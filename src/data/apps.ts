@@ -97,7 +97,7 @@ export const apps: App[] = [
     categoryId: "games",
     platform: "Android",
     description:
-      "Arrange the gems. Restore the light. Explore gothic chapels, bring stained-glass windows back to life, and grow your collection in Peaceful or Challenge play.",
+      "Arrange the gems. Restore the light. Preview nine gothic chapels and larger Grand Restorations in the upcoming expansion, with Peaceful and Challenge play.",
     href: "apps/cursed-gem-windows/",
     artwork: windowsBanner,
     icon: windowsIcon,
