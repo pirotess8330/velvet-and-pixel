@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import AppIcon from "../../components/AppIcon.astro";
 import AppVideo from "../../components/AppVideo.astro";
 import Layout from "../../layouts/Layout.astro";
-import { url } from "../../data/apps";
+import { apps, url } from "../../data/apps";
 import icon from "../../assets/spinreel/icon.png";
 import banner from "../../assets/spinreel/banner.png";
 import photos from "../../assets/spinreel/01-photo-roulette.png";
@@ -38,11 +38,13 @@ const screenshots = [
     alt: "SpinReel project screen with saved-project controls, preview and Export video button.",
   },
 ];
+const storeUrl = apps.find((app) => app.slug === "spinreel")!.storeUrl!;
 const software = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "SpinReel",
   url: new URL(url("apps/spinreel/"), Astro.site).href,
+  downloadUrl: storeUrl,
   operatingSystem: "Android",
   applicationCategory: "MultimediaApplication",
   description:
@@ -54,14 +56,14 @@ const software = {
 
 <Layout
   title="SpinReel — Photo Roulette Video Maker for Android"
-  description="Turn photos into suspenseful reveal videos with custom pacing, sound and final-photo effects. SpinReel by Velvet & Pixel. Now in Google Play review."
+  description="Turn photos into suspenseful reveal videos with custom pacing, sound and final-photo effects. SpinReel by Velvet & Pixel. Available now on Google Play."
   socialImage={banner.src}
   socialImageAlt="SpinReel Photo Roulette banner with the Android editing interface"
   structuredData={software}
 >
   <section class="wrap page-head product-head">
     <p class="eyebrow">Video &amp; Creative Tools / Android</p>
-    <span class="status">In Google Play review</span>
+    <span class="status">Available on Google Play</span>
     <div class="product-title">
       <AppIcon src={icon} app="spinreel" variant="product" />
       <h1>
@@ -73,10 +75,15 @@ const software = {
       A rush of photos. A slowing rhythm. One final reveal. Turn your pictures
       into roulette-style videos with the pace, sound, and ending you choose.
     </p>
-    <p class="availability">
-      SpinReel is currently in review on Google Play. A download link will
-      appear here when the listing is public.
-    </p>
+    <div class="product-download">
+      <a class="button" href={storeUrl}>
+        Get it on Google Play <span aria-hidden="true">→</span>
+      </a>
+      <p class="fine">
+        Available now for Android. Free download with an optional one-time Pro
+        unlock.
+      </p>
+    </div>
   </section>
   <section class="wrap section" aria-labelledby="screens-title">
     <p class="eyebrow">Build anticipation</p>
@@ -161,8 +168,8 @@ const software = {
         subscription.
       </p>
       <p class="quiet">
-        Purchase details will be available through Google Play when the app
-        launches.
+        The current localized Pro price is shown in Google Play checkout before
+        you confirm your purchase.
       </p>
     </div>
   </section>

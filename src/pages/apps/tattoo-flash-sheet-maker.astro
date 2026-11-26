@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import AppVideo from "../../components/AppVideo.astro";
 import AppIcon from "../../components/AppIcon.astro";
 import Layout from "../../layouts/Layout.astro";
-import { url } from "../../data/apps";
+import { apps, url } from "../../data/apps";
 import icon from "../../assets/tattoo-flash-sheet-maker/icon.png";
 import banner from "../../assets/tattoo-flash-sheet-maker/banner.png";
 import editor from "../../assets/tattoo-flash-sheet-maker/01_Create_Your_Flash_Sheet.png";
@@ -38,11 +38,15 @@ const screenshots = [
     alt: "From your phone. To your next session. Export preview with PNG, JPEG and Pro PDF options, output sizes, save and share controls.",
   },
 ];
+const storeUrl = apps.find(
+  (app) => app.slug === "tattoo-flash-sheet-maker",
+)!.storeUrl!;
 const software = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Tattoo Flash Sheet Maker",
   url: new URL(url("apps/tattoo-flash-sheet-maker/"), Astro.site).href,
+  downloadUrl: storeUrl,
   operatingSystem: "Android",
   applicationCategory: "DesignApplication",
   description:
@@ -54,14 +58,14 @@ const software = {
 
 <Layout
   title="Tattoo Flash Sheet Maker — Organize, Arrange & Export"
-  description="Turn your tattoo artwork into polished flash sheets. Organize designs, add prices and availability labels, remove solid backgrounds, and export. Now in Google Play review."
+  description="Turn your tattoo artwork into polished flash sheets. Organize designs, add prices and availability labels, remove solid backgrounds, and export. Available now on Google Play."
   socialImage={banner.src}
   socialImageAlt="Tattoo Flash Sheet Maker feature banner with a flash sheet preview"
   structuredData={software}
 >
   <section class="wrap page-head product-head">
     <p class="eyebrow">Tattoo &amp; Creative Tools / Android</p>
-    <span class="status">In Google Play review</span>
+    <span class="status">Available on Google Play</span>
     <div class="product-title">
       <AppIcon src={icon} app="tattoo-flash-sheet-maker" variant="product" />
       <h1>Tattoo Flash Sheet Maker</h1>
@@ -72,10 +76,15 @@ const software = {
       sheet to print or share. Built for the artwork—and the everyday
       organization—behind your tattoo practice.
     </p>
-    <p class="availability">
-      Tattoo Flash Sheet Maker is currently in review on Google Play. A download link
-      will appear here when it is public.
-    </p>
+    <div class="product-download">
+      <a class="button" href={storeUrl}>
+        Get it on Google Play <span aria-hidden="true">→</span>
+      </a>
+      <p class="fine">
+        Available now for Android. Free download with an optional one-time Pro
+        unlock.
+      </p>
+    </div>
   </section>
   <section class="wrap section" aria-labelledby="screens-title">
     <p class="eyebrow">From your library to the studio wall</p>
@@ -177,8 +186,8 @@ const software = {
         subscription.
       </p>
       <p class="quiet">
-        Purchase details will be available through Google Play when the app
-        launches.
+        The current localized Pro price is shown in Google Play checkout before
+        you confirm your purchase.
       </p>
     </div>
   </section>

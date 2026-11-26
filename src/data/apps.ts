@@ -105,7 +105,9 @@ export const apps: App[] = [
   {
     slug: "tattoo-flash-sheet-maker",
     name: "Tattoo Flash Sheet Maker",
-    status: "In Google Play review",
+    status: "Available on Google Play",
+    storeUrl:
+      "https://play.google.com/store/apps/details?id=com.velvetandpixel.tattooflashsheetmaker",
     category: "Tattoo & Creative Tools",
     categoryId: "tattoo-apps",
     platform: "Android",
@@ -128,7 +130,9 @@ export const apps: App[] = [
   {
     slug: "spinreel",
     name: "SpinReel",
-    status: "In Google Play review",
+    status: "Available on Google Play",
+    storeUrl:
+      "https://play.google.com/store/apps/details?id=com.velvetandpixel.spinreel",
     category: "Video & Creative Tools",
     categoryId: "photo-apps",
     platform: "Android",

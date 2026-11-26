@@ -184,3 +184,5 @@ VP Drive’s November 24 expansion launch set; feature/access context comes from
 a published Android expansion or successful Play billing verification.
 
 Owner clarification, November 24: retain the original Cursed Gem Windows galleries and add expansion media alongside them. The combined galleries now contain 11 enhanced screenshots and 12 actual game/preview captures; all nine chapel showcases remain.
+
+November 26: SpinReel and Tattoo Flash Sheet Maker are published on Google Play (owner-confirmed public links). Their catalog entries and product pages now show Available on Google Play, real download buttons and SoftwareApplication downloadUrl metadata. Privacy URLs, feature lists and free/Pro limits are unchanged.
