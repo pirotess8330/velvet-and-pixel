@@ -14,6 +14,11 @@ import windowsBanner from "../assets/cursed-gem-windows/banner.webp";
 import flashIcon from "../assets/tattoo-flash-sheet-maker/icon.png";
 import flashBanner from "../assets/tattoo-flash-sheet-maker/banner.png";
 
+import mosaicsBanner from "../assets/cursed-gem-mosaics/banner.webp";
+import mosaicsIcon from "../assets/cursed-gem-mosaics/icon.png";
+import potionsBanner from "../assets/cursed-potion-lab/banner.webp";
+import potionsIcon from "../assets/cursed-potion-lab/icon.png";
+
 export const categories = [
   {
     id: "games",
@@ -60,6 +65,32 @@ export interface App {
   screenshots?: { src: string; alt: string }[];
 }
 export const apps: App[] = [
+  {
+    slug: "cursed-gem-mosaics",
+    name: "Cursed Gem Mosaics",
+    status: "Coming Soon",
+    category: "Jewel Placement Puzzle",
+    categoryId: "games",
+    platform: "Android",
+    description:
+      "Piece together a little magic. Fit luminous crystals into ornate mosaics across three Art Nouveau worlds.",
+    href: "apps/cursed-gem-mosaics/",
+    icon: mosaicsIcon,
+    artwork: mosaicsBanner,
+  },
+  {
+    slug: "cursed-potion-lab",
+    name: "Cursed Potion Lab",
+    status: "Coming Soon",
+    category: "Potion Mixing & Discovery",
+    categoryId: "games",
+    platform: "Android",
+    description:
+      "Mix a little mischief. Pour luminous liquids, stir in sparkling ingredients, and discover curious potions—with some unusual company.",
+    href: "apps/cursed-potion-lab/",
+    icon: potionsIcon,
+    artwork: potionsBanner,
+  },
   {
     slug: "wheres-my-stuff",
     name: "Where’s My Stuff?",

@@ -1,0 +1,68 @@
+---
+import ComingSoonGame from "../../components/ComingSoonGame.astro";
+import banner from "../../assets/cursed-gem-mosaics/banner.webp";
+import victorian from "../../assets/cursed-gem-mosaics/01_one_stone_a_little_wonder.webp";
+import botanical from "../../assets/cursed-gem-mosaics/02_let_beauty_bloom.webp";
+import vampiric from "../../assets/cursed-gem-mosaics/03_treasures_after_dark.webp";
+import completed from "../../assets/cursed-gem-mosaics/04_keep_what_you_create.webp";
+---
+
+<ComingSoonGame
+  slug="cursed-gem-mosaics"
+  title="Cursed Gem Mosaics — Art Nouveau Jewel Placement Puzzles"
+  tagline="Piece together a little magic."
+  introduction="A little darkness. A lot of sparkle. Fit luminous crystals into ornate mosaics, from enchanted botanical specimens to elaborate cabinet treasures and silver-lit Gothic designs. Take your time, find each setting, and watch a jeweled picture come to life."
+  banner={banner}
+  bannerAlt="A turquoise-and-amber glass cicada mosaic beside a purple botanical moth and a silver crescent set with ruby and opal."
+  screenshots={[
+    {
+      image: victorian,
+      title: "One stone. A little wonder.",
+      alt: "Placing crystals in Amberwing Cicada, with its turquoise and amber Smoke Glass jewels and crystal tray.",
+    },
+    {
+      image: botanical,
+      title: "Let something beautiful bloom.",
+      alt: "Arranging The Nightshade Moth in an ornate botanical garden setting.",
+    },
+    {
+      image: vampiric,
+      title: "Some treasures prefer the dark.",
+      alt: "Arranging The Crescent Seal in a moonlit silver setting with ruby and opal stones.",
+    },
+    {
+      image: completed,
+      title: "Keep what you create.",
+      alt: "Viewing the completed Amberwing Cicada mosaic in Smoke Glass.",
+    },
+  ]}
+  videoDescription="Silent gameplay preview: four crystals are selected and placed into the cicada’s matching settings. The completed mosaic opens for viewing, followed by Botanical and Vampiric glimpses. The demonstration begins near completion."
+  worlds={[
+    {
+      name: "The Herbalist’s Book",
+      description:
+        "Botanical wonder: emerald leaves, pale opals, flowers, moths and jeweled specimens in an enchanted garden.",
+    },
+    {
+      name: "The Jeweler’s Cabinet",
+      description:
+        "Victorian treasures in turquoise, ivory enamel and aged brass—from ornate brooches to the Amberwing Cicada.",
+    },
+    {
+      name: "The Moonlit Vault",
+      description:
+        "Vampiric Gothic ornament: silver fittings, ruby red, dark opals, crescents and nocturnal keepsakes.",
+    },
+  ]}
+  features={[
+    "Fit individual crystals into matching settings to complete a picture, one placement at a time.",
+    "Explore 30 mosaics across three worlds in the current development catalogue, including content intended for optional paid collections.",
+    "Choose Peaceful with correctly oriented crystals, or Challenging and turn each stone to find its fit.",
+    "Play without timers or placement penalties, with a finished reference, enlargement, Undo and hints when you need them.",
+    "Preview Original jewels and the flowing color and light of Smoke Glass, an optional cosmetic finish.",
+    "Revisit completed mosaics in an enlarged artwork viewer with optional individual-gem light effects.",
+    "Play puzzles offline, save progress locally, and use backup and restore controls. No automatic cloud synchronization.",
+  ]}
+  contentNote="The media shows development build 0.64.0. The 30-artwork catalogue includes intended paid mosaic collections; alternate finishes are optional cosmetic content. Final included content, prices and release timing are not announced."
+  closing="Take your time. Keep the sparkle."
+/>

@@ -1,0 +1,175 @@
+---
+import { Image, getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import AppIcon from "./AppIcon.astro";
+import Layout from "../layouts/Layout.astro";
+import { apps, url } from "../data/apps";
+interface Props {
+  slug: string;
+  title: string;
+  tagline: string;
+  introduction: string;
+  banner: ImageMetadata;
+  bannerAlt: string;
+  screenshots: { image: ImageMetadata; title: string; alt: string }[];
+  videoDescription: string;
+  features: string[];
+  worlds: { name: string; description: string }[];
+  contentNote: string;
+  closing: string;
+}
+const {
+  slug,
+  title,
+  tagline,
+  introduction,
+  banner,
+  bannerAlt,
+  screenshots,
+  videoDescription,
+  features,
+  worlds,
+  contentNote,
+  closing,
+} = Astro.props;
+const app = apps.find((entry) => entry.slug === slug)!;
+const poster = await getImage({ src: banner, width: 1280, format: "webp" });
+const software = {
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  name: app.name,
+  url: new URL(url(`apps/${slug}/`), Astro.site).href,
+  operatingSystem: "Android",
+  applicationCategory: "GameApplication",
+  description: app.description,
+  image: new URL(banner.src, Astro.site).href,
+  author: { "@type": "Organization", name: "Velvet & Pixel" },
+};
+---
+
+<Layout
+  title={title}
+  description={`${app.description} Coming soon for Android from Velvet & Pixel.`}
+  socialImage={banner.src}
+  socialImageAlt={bannerAlt}
+  structuredData={software}
+>
+  <section class="wrap page-head product-head">
+    <p class="eyebrow">Games / Android</p>
+    <span class="status">Coming Soon</span>
+    <div class="product-title">
+      {app.icon && <AppIcon src={app.icon} app={slug} variant="product" />}
+      <h1>{app.name}</h1>
+    </div>
+    <p class="intro">{tagline}</p>
+    <p>{introduction}</p>
+    <p class="availability">
+      In development for Android. These previews show the current development
+      game; a Google Play link will appear here when it is publicly available.
+    </p>
+  </section>
+  <figure class="wrap game-banner">
+    <Image
+      src={banner}
+      alt={bannerAlt}
+      widths={[640, 960, 1280, 1600]}
+      sizes="(max-width: 760px) 90vw, 1200px"
+      format="webp"
+      loading="eager"
+    />
+    <figcaption>
+      Owner-supplied promotional artwork and actual development-game captures.
+    </figcaption>
+  </figure>
+  <section class="wrap section" aria-labelledby="screens-title">
+    <p class="eyebrow">A closer look</p>
+    <h2 id="screens-title">{tagline}</h2>
+    <p>Select a screenshot to explore it full size.</p>
+    <div class="screenshots">
+      {screenshots.map(({ image, title, alt }) => (
+        <figure class="app-screenshot">
+          <a
+            href={image.src}
+            aria-label={`View full-size screenshot: ${title}`}
+          >
+            <Image
+              src={image}
+              alt={alt}
+              widths={[280, 420, 600]}
+              sizes="(max-width: 760px) 75vw, 260px"
+              format="webp"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>{title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="demo-title">
+    <p class="eyebrow">Actual development gameplay</p>
+    <h2 id="demo-title">A little magic, in motion.</h2>
+    <video
+      controls
+      playsinline
+      preload="none"
+      poster={poster.src}
+      aria-label={`${app.name} gameplay preview`}
+      aria-describedby="video-description"
+    >
+      <source src={url(`media/${slug}/gameplay.mp4`)} type="video/mp4" />
+      Your browser does not support inline video.{" "}
+      <a href={url(`media/${slug}/gameplay.mp4`)}>Watch the gameplay preview</a>
+      .
+    </video>
+    <p id="video-description" class="fine">
+      {videoDescription}
+    </p>
+  </section>
+  <section class="wrap section" aria-labelledby="worlds-title">
+    <p class="eyebrow">Three different moods</p>
+    <h2 id="worlds-title">Find your kind of magic.</h2>
+    <div class="feature-grid">
+      {worlds.map(({ name, description }) => (
+        <article>
+          <h3>{name}</h3>
+          <p>{description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="features-title">
+    <p class="eyebrow">Made to be explored</p>
+    <h2 id="features-title">{closing}</h2>
+    <ul class="feature-summary">
+      {features.map((feature) => (
+        <li>{feature}</li>
+      ))}
+    </ul>
+    <p class="fine">{contentNote}</p>
+  </section>
+  <section class="wrap callout">
+    <h2>Curious about {app.name}?</h2>
+    <div>
+      <a
+        class="text-link"
+        href={`mailto:velvetandpixel@gmail.com?subject=${encodeURIComponent(app.name + " enquiry")}`}
+      >
+        Email the studio →
+      </a>
+      <a class="text-link" href={url("apps/")}>
+        Explore the collection →
+      </a>
+    </div>
+  </section>
+</Layout>
+<style>
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    background: #08080a;
+    border: 1px solid var(--line);
+  }
+</style>

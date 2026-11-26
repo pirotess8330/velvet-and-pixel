@@ -1,0 +1,68 @@
+---
+import ComingSoonGame from "../../components/ComingSoonGame.astro";
+import banner from "../../assets/cursed-potion-lab/banner.webp";
+import apothecary from "../../assets/cursed-potion-lab/01-mix-a-little-mischief.webp";
+import nocturne from "../../assets/cursed-potion-lab/02-find-your-atmosphere.webp";
+import sparkworks from "../../assets/cursed-potion-lab/03-make-room-for-magic.webp";
+import grimoire from "../../assets/cursed-potion-lab/04-keep-your-discoveries.webp";
+---
+
+<ComingSoonGame
+  slug="cursed-potion-lab"
+  title="Cursed Potion Lab — Mix, Discover & Make a Little Magic"
+  tagline="Mix a little mischief."
+  introduction="A pour, a pinch, a swirl—and a little company. Pour luminous liquids, stir in sparkling ingredients, and turn curious experiments into a grimoire of discoveries. Meet unusual companions, keep favorite brews on your shelves, and make the laboratory your own."
+  banner={banner}
+  bannerAlt="Cursed Potion Lab promotional banner with an ornate blue potion flask, laboratory shelves and sparkling ingredients."
+  screenshots={[
+    {
+      image: apothecary,
+      title: "Mix a little mischief.",
+      alt: "A turquoise potion with sparkling opal chips in the Moonlit Apothecary, beside Pip the dragon.",
+    },
+    {
+      image: nocturne,
+      title: "Find your atmosphere.",
+      alt: "Violet potion mixing in an ornate Velvet Nocturne flask, with Pip on his velvet perch.",
+    },
+    {
+      image: sparkworks,
+      title: "Make room for magic.",
+      alt: "A glittering blue-green potion in The Sparkworks, with its luminous green laboratory bubbler.",
+    },
+    {
+      image: grimoire,
+      title: "Keep your discoveries.",
+      alt: "An open illustrated grimoire displaying discovered potions in Cursed Potion Lab.",
+    },
+  ]}
+  videoDescription="Gameplay preview with original game music and no spoken dialogue: pouring, mixing, laboratory ambience and a companion greeting. It shows the free earned content in a prepared demonstration session."
+  worlds={[
+    {
+      name: "Moonlit Apothecary",
+      description:
+        "Timber, herbs and moonlit warmth. An inviting corner for luminous brews, favorite bottles and curious little companions.",
+    },
+    {
+      name: "Velvet Nocturne",
+      description:
+        "A velvet Gothic glow, ornate glass and violet mixtures—a little laboratory with a darker mood.",
+    },
+    {
+      name: "The Sparkworks",
+      description:
+        "Worn industrial character, bubbling machinery and bright glitter. Magic with a mischievous mechanical streak.",
+    },
+  ]}
+  features={[
+    "Tap, hold or drag to pour ingredients, then circle a finger to stir—or use the Stir button.",
+    "Experiment with luminous liquids, slower glassy syrups, fine glitter, pearlescent effects and chunky opal chips.",
+    "Collect named potion discoveries in an illustrated grimoire, with mystery clues and recipe history to guide your next experiment.",
+    "Meet discovered companions that greet, idle, celebrate and react. Pip the little red dragon is just one example.",
+    "Arrange favorite potion bottles, earned emblems and curios across six room shelf spots. Keep three reusable favorite potions.",
+    "Choose among three richly illustrated laboratories, with optional music, sound, haptics, Reduced Motion and a lower graphics setting.",
+    "Earn more ingredients and keepsakes through discoveries and collection goals, giving your experiments a place in the room.",
+  ]}
+  contentNote="These are actual development-game captures from v0.0.128. Optional ingredient chapters, collector flasks, decorations and a second companion perch are separate development content; the preview does not portray them as included. Public store purchases, final prices and release timing are not announced."
+  closing="Pour. Stir. Discover."
+/>

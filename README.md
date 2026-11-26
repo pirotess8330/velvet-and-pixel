@@ -186,3 +186,21 @@ a published Android expansion or successful Play billing verification.
 Owner clarification, November 24: retain the original Cursed Gem Windows galleries and add expansion media alongside them. The combined galleries now contain 11 enhanced screenshots and 12 actual game/preview captures; all nine chapel showcases remain.
 
 November 26: SpinReel and Tattoo Flash Sheet Maker are published on Google Play (owner-confirmed public links). Their catalog entries and product pages now show Available on Google Play, real download buttons and SoftwareApplication downloadUrl metadata. Privacy URLs, feature lists and free/Pro limits are unchanged.
+
+## Coming Soon games — November 26
+
+`apps/cursed-gem-mosaics/` and `apps/cursed-potion-lab/` present the distinct upcoming
+Android games, using `ComingSoonGame.astro`, existing catalog/icon styling and
+owner-supplied Drive media. Each page includes four enhanced screenshots and a
+locally hosted MP4 with controls, inline playback, a local poster and no autoplay
+or preloading. Videos live under `public/media/`; image sources use Astro assets.
+No store URL, release date or unconfirmed price is rendered. Other galleries are
+unchanged. Mosaics is jewel placement, separate from Cursed Gem Windows.
+
+Product copy follows the current Drive promotion guides (Mosaics 0.64.0 and
+Potion Lab v0.0.128). Optional content is qualified; Android performance, live
+billing, native export acceptance and unreleased features are not claimed.
+Mosaics uses the supplied Play icon. Potion Lab's icon is the actual
+`assets/art/spirit.png` configured by `project.godot` in its Drive source archive.
+The legacy Mosaics privacy URL is retained, but is not linked from the new product
+page because its window-game wording requires a separate current-app review.
