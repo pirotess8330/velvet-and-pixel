@@ -14,6 +14,17 @@ Older app/media notes below describe prior milestones and may be superseded.
 Current catalog statuses and links come from `src/data/apps.ts`; verify app release
 claims independently before changing public copy.
 
+## Privacy-policy update — November 26, 2026
+
+The stable `/privacy/indexpilot/` route now names Website SEO & Index Checker
+(formerly IndexPilot). Its policy covers the active workflow plus up to 20 saved
+checks, bounded site crawling, explicit Google PageSpeed processing, and the
+separate current-result, history and Google-disconnection controls. The privacy
+directory uses the current product name. Disclosures were checked against the
+app repository at `0ba42d22ccbde5d3f2a91f4f95e11f917bd344f9`.
+This changes website policy content only: no app build, Google verification,
+Play publication, billing, new product page or other app policy is implied.
+
 ## Local development
 
 Use Node.js 24 (the CI version), or Node.js 22.23.4 or newer.
