@@ -215,3 +215,13 @@ Mosaics uses the supplied Play icon. Potion Lab's icon is the actual
 `assets/art/spirit.png` configured by `project.godot` in its Drive source archive.
 The legacy Mosaics privacy URL is retained, but is not linked from the new product
 page because its window-game wording requires a separate current-app review.
+
+## Tattoo Stencil Maker — November 27
+
+The former planned Tattoo Stencil Generator catalog entry is now Tattoo Stencil
+Maker, In Development, matching `pirotess8330/tattoo-stencil-maker`. Its dedicated
+page is `/apps/tattoo-stencil-maker/`, with the supplied neon rose icon and
+source-verified prototype features (detail presets, comparison, mirroring,
+Saved Designs, PNG and A4/Letter PDF preparation). Device/artwork and physical
+print acceptance remain open. No store URL, price, release date or simulated
+screenshots are shown. The icon uses the same rounded frames as the other apps.

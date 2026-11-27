@@ -14,7 +14,10 @@ const { src, app, variant = "card" } = Astro.props;
     "studio-app-icon",
     `icon-${variant}`,
     { "icon-spinreel": app === "spinreel" },
-    { "icon-flash": app === "tattoo-flash-sheet-maker" },
+    {
+      "icon-flash":
+        app === "tattoo-flash-sheet-maker" || app === "tattoo-stencil-maker",
+    },
   ]}
   aria-hidden="true"
 >

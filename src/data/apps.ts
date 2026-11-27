@@ -19,6 +19,8 @@ import mosaicsIcon from "../assets/cursed-gem-mosaics/icon.png";
 import potionsBanner from "../assets/cursed-potion-lab/banner.webp";
 import potionsIcon from "../assets/cursed-potion-lab/icon.png";
 
+import stencilIcon from "../assets/tattoo-stencil-maker/icon.png";
+
 export const categories = [
   {
     id: "games",
@@ -149,14 +151,16 @@ export const apps: App[] = [
     artwork: flashBanner,
   },
   {
-    slug: "tattoo-stencil-generator",
-    name: "Tattoo Stencil Generator",
-    status: "Planned",
+    slug: "tattoo-stencil-maker",
+    href: "apps/tattoo-stencil-maker/",
+    icon: stencilIcon,
+    name: "Tattoo Stencil Maker",
+    status: "In Development",
     category: "Tattoo & Creative Tools",
     categoryId: "tattoo-apps",
     platform: "Android",
     description:
-      "A mobile tool for converting photographs and artwork into clean, printable tattoo stencils. Designed for tattoo artists, with adjustable line extraction, contrast, detail cleanup, and stencil-ready output.",
+      "Turn imported artwork into black-and-white tattoo stencils. Compare detail presets, mirror your design, and prepare PNG or print-sized PDF output.",
   },
   {
     slug: "spinreel",

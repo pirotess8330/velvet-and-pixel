@@ -1,0 +1,165 @@
+---
+import { Image } from "astro:assets";
+import AppIcon from "../../components/AppIcon.astro";
+import Layout from "../../layouts/Layout.astro";
+import { url } from "../../data/apps";
+import icon from "../../assets/tattoo-stencil-maker/icon.png";
+const software = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Tattoo Stencil Maker",
+  url: new URL(url("apps/tattoo-stencil-maker/"), Astro.site).href,
+  operatingSystem: "Android",
+  applicationCategory: "DesignApplication",
+  description:
+    "Prepare black-and-white tattoo stencils from imported artwork, with detail presets, mirroring and PNG or print-sized PDF exports. Android prototype in development.",
+  image: new URL(icon.src, Astro.site).href,
+  author: { "@type": "Organization", name: "Velvet & Pixel" },
+};
+---
+
+<Layout
+  title="Tattoo Stencil Maker — Artwork to Stencil for Android"
+  description="Prepare tattoo stencil artwork with Detailed, Balanced and Simple presets, original-image comparison, mirroring and PNG/PDF output. In development for Android."
+  socialImage={icon.src}
+  socialImageAlt="Tattoo Stencil Maker neon rose icon, split between solid artwork and clean outlines inside a teal frame"
+  structuredData={software}
+>
+  <section class="wrap page-head product-head">
+    <p class="eyebrow">Tattoo &amp; Creative Tools / Android</p>
+    <span class="status">In Development</span>
+    <div class="product-title">
+      <AppIcon src={icon} app="tattoo-stencil-maker" variant="product" />
+      <h1>Tattoo Stencil Maker</h1>
+    </div>
+    <p class="intro">Your artwork. Ready for the next step.</p>
+    <p>
+      Bring your artwork into a focused stencil workspace. Compare the original,
+      choose how much detail to keep, and prepare a black-and-white design for
+      your tattoo transfer workflow.
+    </p>
+    <p class="availability">
+      An Android prototype is in development and being refined with real
+      artwork. A Google Play link will appear here when the app is publicly
+      available.
+    </p>
+  </section>
+  <section
+    class="wrap section stencil-introduction"
+    aria-labelledby="artwork-title"
+  >
+    <div class="stencil-mark">
+      <Image
+        src={icon}
+        alt="A hot-pink rose changes from filled artwork to outlined petals within a luminous teal frame: the Tattoo Stencil Maker icon."
+        width={512}
+        height={512}
+        widths={[320, 512]}
+        sizes="(max-width: 760px) 80vw, 360px"
+        format="webp"
+      />
+    </div>
+    <div>
+      <p class="eyebrow">From artwork to transfer</p>
+      <h2 id="artwork-title">
+        Find the lines.
+        <br />
+        <em>Keep the character.</em>
+      </h2>
+      <p>
+        Some designs need a little more detail. Others need room to breathe.
+        Compare Detailed, Balanced and Simple presets, check the result against
+        your original, and choose the direction that fits your artwork.
+      </p>
+      <p class="fine">
+        These are prototype capabilities. Stencil quality is still being tuned
+        with artist feedback; real-device and physical-print acceptance remain
+        in progress.
+      </p>
+    </div>
+  </section>
+  <section class="wrap section" aria-labelledby="features-title">
+    <p class="eyebrow">A focused artist workflow</p>
+    <h2 id="features-title">Prepare it. Save it. Revisit it.</h2>
+    <ul class="feature-summary">
+      <li>
+        Import PNG, JPEG or still WebP artwork using Android’s document picker.
+      </li>
+      <li>
+        Compare Detailed, Balanced and Simple stencil presets, with a zoomable
+        original-image comparison.
+      </li>
+      <li>
+        Mirror the design and set paper and artwork width in your preferred
+        units.
+      </li>
+      <li>
+        Prepare A4 or Letter output, then export a PNG or a PDF sized for print.
+      </li>
+      <li>
+        Keep local Saved Designs with optional names, detail choices and print
+        settings; reopen them to regenerate the stencil.
+      </li>
+      <li>
+        Process artwork on your device. The current prototype has no app server,
+        account, billing or analytics integration.
+      </li>
+    </ul>
+  </section>
+  <section class="wrap section" aria-labelledby="development-title">
+    <p class="eyebrow">On the studio workbench</p>
+    <h2 id="development-title">Built around real artwork.</h2>
+    <p>
+      Current work focuses on retaining useful outlines and structural folds
+      while reducing unwanted shading and stray marks. Presets use local image
+      processing and still need review across a wider range of designs.
+    </p>
+    <p>
+      Large imports may be reduced in resolution. Print size and mirrored
+      transfers still need physical-printer verification; this preview is not a
+      guarantee of transfer quality or compatibility with every printer.
+    </p>
+  </section>
+  <section class="wrap callout">
+    <h2>A stencil workflow worth talking about?</h2>
+    <div>
+      <a
+        class="text-link"
+        href="mailto:velvetandpixel@gmail.com?subject=Tattoo%20Stencil%20Maker%20enquiry"
+      >
+        Email the studio →
+      </a>
+      <a class="text-link" href={url("apps/")}>
+        Explore the collection →
+      </a>
+    </div>
+  </section>
+</Layout>
+<style>
+  .stencil-introduction {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: clamp(28px, 6vw, 90px);
+  }
+  .stencil-mark {
+    background: #000;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  .stencil-mark img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 760px) {
+    .stencil-introduction {
+      grid-template-columns: 1fr;
+    }
+    .stencil-mark {
+      width: min(100%, 360px);
+      margin-inline: auto;
+    }
+  }
+</style>
